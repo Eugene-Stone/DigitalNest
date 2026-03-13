@@ -1,0 +1,143 @@
+@use "inc/_colors" as *
+
+
+.top-screen,
+.top-slider-box
+	position: relative
+	&:first-child
+		margin-top: 0
+
+
+
+.top-screen-image
+	background-color: $dark
+	img
+		opacity: 0.75
+		display: block
+		width: 100%
+		height: auto
+		object-fit: cover
+
+		&.mobile
+			display: none
+
+
+
+.top-screen-inner
+	position: relative
+
+.top-screen-txt-box
+	position: absolute
+	z-index: 5
+	left: 0
+	bottom: 0
+	width: 100%
+	padding-bottom: 6rem
+	color: $light
+	// ~ .top-screen-image
+	// 	img
+	// 		height: calc(100vh - 10rem)
+	// 		min-height: 55rem
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6
+		color: inherit
+
+.top-screen-txt-top
+	// border-bottom: 1px solid $light
+	padding-bottom: 2.4rem
+	*
+		&:last-child
+			margin-bottom: 0
+
+.top-screen-txt-bottom
+	margin-top: 2.4rem
+
+.top-screen-txt-brief
+	max-width: 61rem
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width : 1399px)
+	.top-screen-txt-box
+		padding-bottom: 3rem
+
+
+
+@media only screen and (max-width : 991px)
+	.top-screen-txt-box
+		padding-bottom: 3rem
+		~ .top-screen-image
+			img
+				min-height: 50rem
+
+	.top-screen-txt-brief
+		margin-bottom: 2.4rem
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width : 767px)
+	.top-screen-image
+		img
+			&.desctop:not(:only-child)
+				display: none
+
+			&.mobile
+				display: block
+				aspect-ratio: 1/1
+
+
+
+
+
+
+@media only screen and (max-width : 576px)
+	.top-screen-txt-box
+		padding-bottom: 2rem
+
+	.top-screen-txt-top
+		padding-bottom: 2rem
+
+	.top-screen-txt-bottom
+		margin-top: 1rem
+		.btn
+			width: 100%
+	
+	.top-screen-txt-brief
+		margin-bottom: 1.6rem
+
+
+
+
+
+@media only screen and (min-width : 1200px)
+	.top-screen-txt-box
+		~ .top-screen-image
+			img
+				height: calc(100vh - 10rem)
+				min-height: 55rem
+
+
+
+
+

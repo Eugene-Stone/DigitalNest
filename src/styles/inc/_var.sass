@@ -1,0 +1,707 @@
+@use "_colors" as *
+
+	
+.cover-img
+	position: relative
+	display: block
+	border-radius: 0
+	overflow: hidden
+	background-color: #eee
+	img
+		margin: 0 !important
+
+	.base-img
+		display: block
+		position: relative
+		width: 100% !important
+		height: auto !important
+		opacity: 0
+
+	.main-img
+		display: block
+		position: absolute
+		z-index: 2
+		left: 50%
+		top: 50%
+		transform: translate(-50%,-50%)
+		width: calc(100% + 2px)
+		height: calc(100% + 2px)
+		object-fit: cover
+
+.contain-img
+	@extend .cover-img
+	.main-img
+		object-fit: contain
+
+// body =============================
+
+.modal-set
+	display: none
+
+.tabs__content
+	margin: 0 auto
+	height: 0
+	opacity: 0
+	overflow: hidden
+	transition: .3s
+	&.active
+		padding: 0
+		height: auto
+		opacity: 1
+		overflow: visible
+
+
+.tabs__caption-wrap
+	text-align: center
+	margin: 0 auto 2rem
+	position: relative
+	line-height: 1
+
+
+
+.tabs__caption
+	display: flex
+	justify-content: center
+	line-height: 1
+	> li
+		cursor: pointer
+		margin: 0 1rem
+		> a,
+		> span
+			// display: flex
+			// align-items: center
+			//min-height: 40px
+			display: table-cell
+			vertical-align: middle
+			height: 4rem
+			padding: .6rem 2.5rem .4rem
+			transition: .2s
+			background-color: #f5f5f4
+
+		&:hover
+			color: $main
+
+		&.active
+			color: $main
+			&:hover
+				color: $main
+				cursor: default
+
+
+
+.show-tabs__content-btn
+	display: none
+	cursor: pointer
+
+.tabs-nav
+	display: none
+
+.tab-left,
+.tab-right
+	position: absolute
+	top: 0
+	display: block
+	width: 4rem
+	height: 4rem
+	cursor: pointer
+	background-repeat: no-repeat
+	background-position: center
+	background-size: 2rem
+	filter: brightness(0)
+	opacity: .5
+	&:hover
+		filter: brightness(100%)
+		opacity: 1
+
+.tab-left
+	left: 0
+	background-image: url("../img/_style/_svg/arr_l.svg")
+.tab-right
+	right: 0
+	background-image: url("../img/_style/_svg/arr_r.svg")
+
+
+@media only screen and (max-width : 576px)
+	.tabs-nav
+		display: block
+
+	.tabs__caption-wrap
+		padding: 0 4rem
+		margin: 0 -1.5rem 4rem
+
+	.tabs__caption
+		width: 100%
+		position: relative
+		min-height: 4rem
+		> li
+			position: absolute
+			left: 0
+			top: 0
+			width: 100%
+			height: 0
+			overflow: hidden
+			margin: 0
+			> a,
+			> span
+				display: flex
+				align-items: center
+				justify-content: center
+
+			&.active
+				height: auto
+
+
+// Custom Tabs ======== END
+
+
+
+
+
+
+// Paralax scroll
+.with-parallax
+	position: relative
+
+.parallax-start
+	position: absolute
+	bottom: 200%
+	top: -75vh
+
+.parallax-itm
+	position: relative
+	top: 2.5rem
+
+
+
+
+
+
+// parallax
+.parallax-box
+	min-height: 30rem
+	background-position: 50% 0
+	background-repeat: no-repeat
+	background-size: cover
+	transform: translate3d(0,0,0)
+	transition-property: background-position
+	//transition: 0s linear
+	transition: .1s linear
+
+
+
+
+
+// fancybox
+.fancybox-content
+	cursor: pointer !important
+
+.fancybox-caption
+	background: none
+
+.fancybox,
+.fancy-photo
+	display: block
+
+@media all and (min-width: 768px)
+	.fancybox-show-thumbs .fancybox-inner
+		right: 0
+		bottom: 9.5rem
+
+	.fancybox-thumbs
+		top: auto
+		width: auto
+		bottom: 0
+		left: 0
+		right : 0
+		height: 9.5rem
+		// padding: 10px 10px 5px 10px
+		padding: 1rem 1rem .5rem 1rem
+		box-sizing: border-box
+		background-color: transparent
+		// background: rgba(0, 0, 0, 0.3)
+
+	.fancybox-thumbs__list
+		text-align: center
+		line-height: 0
+		margin: 0 auto
+		// display: flex
+		// flex-wrap: wrap
+		// justify-content: center
+		a
+			float: none
+			display: inline-block
+			width: 7.5rem
+			height: 7.5rem
+			&::before
+				border-width: 2px
+
+
+@media all and (max-width: 767px)
+	.fancybox-toolbar .fancybox-button--thumbs,
+	.fancybox-thumbs
+		display: none !important
+	
+	.fancybox-show-thumbs .fancybox-inner
+		right: 0 !important
+
+
+
+
+
+
+
+
+
+// cust-accordion
+.cust-accordion
+	padding: 2.5rem 0
+	display: block
+	> .accord-li
+		display: block
+		overflow: hidden
+		// &.open-start
+		// 	> .accord-content
+		// 		display: block
+
+
+	// > .accord-li
+	// 	> .accord-content
+	// 		// opacity: 0
+	// 		max-height: 0
+	// 		overflow: hidden
+	// 		transition: .25s
+	// 	&.open
+	// 		> .accord-content
+	// 			transition: 2s
+	// 			max-height: 5000px
+	// 			opacity: 1
+
+	// 	&.open-start
+	// 		> .accord-content
+	// 			transition: 2s
+	// 			max-height: 5000px
+	// 			opacity: 1
+
+
+
+.accord-content
+	display: none
+
+
+.accord-btn
+	display: flex
+	align-items: center
+	justify-content: space-between
+	// padding: 7px 25px 5px
+	padding: .7rem 2.5rem .5rem
+	//font-family: "", sans-serif
+	font-size: 2rem
+	line-height: 1.15
+	text-transform: uppercase
+	min-height: 5rem
+	cursor: pointer
+	transition: .2s
+	color: $accent
+	border-bottom: 1px solid $main
+
+	.arr-dn-ic
+		height: 1.2rem
+		width: 2.4rem
+		min-width: 2.4rem
+		background-image: url("../img/_style/_svg/arr_dn.svg")
+		// margin-top: -3px
+		margin-top: -.3rem
+
+	&.on
+		background-color: $main
+		color: #fff
+		.arr-dn-ic
+			filter: brightness(0) invert(100%)
+			transform: rotate(180deg)
+
+
+.accord-content-inner
+	padding: 3.5rem
+
+
+
+.field-itm
+	margin-bottom: 0
+
+.field-line
+	display: flex
+	.field-itm
+		flex: 1
+		margin-right: 3rem
+		&:last-child
+			margin-right: 0
+
+@media only screen and (max-width : 767px)
+	.field-line
+		display: block
+		.field-itm
+			margin-right: 0
+
+
+// cust-inp
+.cust-inp,
+.cust-textarea
+	display: block
+	position: relative
+	padding: 0
+	margin: 0
+	span
+		display: block
+
+	input
+		appearance: none
+		border-radius: 0
+		display: block
+		padding: 2.3rem 0
+		width: 100%
+		// height: 7.5rem
+		// font-size: 1.6rem
+		// line-height: 1
+		//line-height: 50px
+		border: none
+		border-bottom: 1px solid $bdc
+		transition: .3s
+		color: $title
+		background-color: transparent
+		font-family: inherit
+
+	textarea
+		appearance: none
+		border-radius: 0
+		display: block
+		// padding: 13px 20px
+		padding: 2rem 0 1.5rem
+		width: 100%
+		// min-height: 13rem
+		// font-size: 1.6rem
+		// line-height: 1.5
+		border: none
+		border-bottom: 1px solid $bdc
+		transition: .3s
+		color: $title
+		resize: none
+		background-color: transparent
+		font-family: inherit
+
+
+	*::placeholder
+		opacity: 1
+		transition: .3s
+		color: $text
+
+	*:focus
+		border-color: $main
+		&::placeholder
+			opacity: 0
+
+
+.wpcf7-not-valid-tip
+	font-size: 80%
+	line-height: 1.35
+	// font-weight: 300
+
+
+
+
+// Cust-sel
+.cust-sel
+	display: block
+	padding: 0
+	margin: 0
+	position: relative
+
+	// Simple select
+	select
+		appearance: none
+		outline: none
+		display: block
+		width: 100%
+		border: none
+		border-bottom: 1px solid $bdc
+		border-radius: 0
+		background-color: $tr
+		color: $text
+		font-size: inherit
+		font-family: inherit
+		transition: all 0.3s
+		padding: 2.3rem 0
+		cursor: pointer
+		background-image: url("../img/_style/_svg/arr_dn.svg")
+		background-repeat: no-repeat
+		background-position: right 1rem center
+		background-size: 1.5rem
+		overflow: hidden
+		white-space: nowrap
+		text-overflow: ellipsis
+
+		&::-ms-expand
+			display: none
+
+
+// cust checkbox
+.check-lst
+	color: inherit
+	margin-top: 2rem
+	margin-bottom: 2rem
+	.wpcf7-list-item
+		margin-right: 2.4rem
+
+.wpcf7-list-item
+	margin: 0
+
+
+.cust-check,
+.check-lst .wpcf7-list-item,
+.policy-field .wpcf7-list-item
+	position: relative
+	display: inline-flex
+	cursor: pointer
+	user-select: none
+	label
+		cursor: pointer
+		display: block
+		margin: 0
+
+	input
+		position: absolute
+		z-index: -1
+		width: 0
+		height: 0
+		opacity: 0
+		&:checked
+			~ .check-ic,
+			~ .wpcf7-list-item-label::before
+				background-image: url("../img/_style/_svg/check.svg")
+		
+		&[type=radio]
+			~ .check-ic,
+			~ .wpcf7-list-item-label::before
+				border-radius: 10em
+				// background-image: none
+
+			&:checked
+				~ .check-ic,
+				~ .wpcf7-list-item-label::before
+					background-color: $text
+					background-image: url("../img/_style/_svg/circle.svg")
+					// border: .5rem solid #fff
+					// box-shadow: 0 0 0 1px $bdc
+
+
+.check-lst .wpcf7-list-item-label,
+.policy-field .wpcf7-list-item-label
+	position: relative
+	&::before
+		content: ''
+
+.check-ic,
+.check-lst .wpcf7-list-item-label::before,
+.policy-field .wpcf7-list-item-label::before
+	position: absolute
+	left: 0
+	top: -.25rem
+	display: block
+	width: 2.4rem
+	height: 2.4rem
+	border: 1px solid $bdc
+	background-repeat: no-repeat
+	background-position: center
+	background-size: contain
+	transition: none !important
+
+.check-title,
+.check-lst .wpcf7-list-item-label,
+.policy-field .wpcf7-list-item-label
+	display: block
+	padding-left: 3.5rem
+	line-height: 1.25
+	a
+		color: $main
+		text-decoration: underline
+		&:hover
+			text-decoration: none
+
+
+.radio-lst
+	@extend .check-lst
+
+.cust-radio
+	@extend .cust-check
+
+.radio-ic
+	@extend .check-ic
+
+.radio-title
+	@extend .check-title
+
+
+
+
+
+
+// pagination
+.pagination-wrap
+	margin: 5rem 0
+
+ul.page-numbers
+	display: flex
+	align-items: center
+	li
+		font-size: 1.6rem
+		line-height: 1
+		padding-right: .4rem
+		color: #000
+		> a,
+		> span
+			display: inline-flex
+			align-items: center
+			justify-content: center
+			width: 3rem
+			height: 3rem
+			border: 2px solid $main
+			text-decoration: none
+			&.current
+				font-weight: 700
+				background-color: $main
+				color: #fff
+			&.prev,
+			&.next
+				&:hover
+					background-color: $main
+					color: #fff
+					.arr-left-ic,
+					.arr-right-ic
+						filter: brightness(0) invert(100%)
+
+.arr-left-ic,
+.arr-right-ic
+	width: 1.3rem
+	height: 1.3rem
+
+.arr-left-ic
+	background-image: url("../img/_style/_svg/arr_l.svg")
+.arr-right-ic
+	background-image: url("../img/_style/_svg/arr_r.svg")
+
+
+
+
+// modal
+.modal
+	padding-left: 1.5rem !important
+	padding-right: 1.5rem !important
+
+	.modal-dialog
+		margin-left: auto !important
+		margin-right: auto !important
+		max-width: 50rem
+
+	.modal-content
+		border: none
+		border-radius: 0
+
+	.modal-footer
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		padding: 0.75rem
+		.btn
+			margin: .75rem
+			min-width: 17.5rem
+
+.modal-header
+	padding-right: 5.5rem
+	border: none
+	.modal-title
+		margin: 0
+
+	.btn-close
+		padding: 0
+		margin: 0
+		position: absolute
+		z-index: 10
+		top: 1.5rem
+		right: 1.5rem
+		appearance: none
+		border: none
+		background-color: transparent
+		display: inline-block
+		width: 3rem
+		height: 3rem
+		background-image: url("../img/_style/_svg/close.svg")
+		background-repeat: no-repeat
+		background-position: center
+		background-size: contain
+		cursor: pointer
+		outline: none !important
+		box-shadow: none !important
+		background-size: 2rem
+		opacity: 1
+		&:hover
+			opacity: .75
+
+
+
+.modal-body
+	padding: 1.5rem
+
+.modal-title
+	margin-bottom: 2rem
+	text-align: center
+	.title-descr
+		margin-top: 1rem
+
+.modal-txt
+	text-align: center
+
+
+
+
+
+
+
+@media only screen and (max-width : 1399px)
+	.cust-inp,
+	.cust-textarea
+		input
+			padding: 1.5rem 0 1.3rem
+		textarea
+			padding: 1.5rem 0 1rem
+
+	.cust-sel
+		select
+			padding: 1.5rem 0 1.3rem
+
+
+
+
+
+@media only screen and (max-width : 576px)
+	.cust-inp,
+	.cust-textarea
+		input
+			padding: 1.3rem 0 1.1rem
+		textarea
+			padding: 1.3rem 0 .5rem
+
+	.cust-sel
+		select
+			padding: 1.3rem 0 1.1rem
+
+	.check-title,
+	.check-lst .wpcf7-list-item-label,
+	.policy-field .wpcf7-list-item-label
+		padding-left: 3.2rem
+
+	.check-ic,
+	.check-lst .wpcf7-list-item-label::before,
+	.policy-field .wpcf7-list-item-label::before
+		top: -.6rem
+
+
+

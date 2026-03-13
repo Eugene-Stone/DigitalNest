@@ -1,0 +1,109 @@
+@use "inc/flexboxgrid" as *
+
+	
+html
+	font-size: 10px
+	// font-size: 20px
+	// font-size: 0.5208333333vw // 10px if width 1920
+	scroll-padding-top: 15rem // Page offset on scroll when required input field is not filled
+
+
+
+// Media custom Bootstrap
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl
+	padding-left: 20px
+	padding-right: 20px
+
+.row
+	margin-left: -7px
+	margin-right: -7px
+	> *
+		padding-left: 7px
+		padding-right: 7px
+
+
+@media only screen and (min-width : 768px) and (max-width : 991px)
+	.container
+		max-width: 760px
+
+
+@media only screen and (min-width : 992px)
+	.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl
+		padding-left: 2rem
+		padding-right: 2rem
+
+	.row
+		margin-left: -2rem
+		margin-right: -2rem
+		> *
+			padding-left: 2rem
+			padding-right: 2rem
+
+	.container
+		max-width: 110rem
+
+
+@media only screen and (min-width : 1400px)
+	.container
+		max-width: 138rem
+
+
+@media only screen and (min-width : 1750px)
+	.container
+		max-width: 156rem
+
+
+
+@media only screen and (min-width : 2400px)
+	html
+		font-size: 14px
+
+@media only screen and (min-width : 3400px)
+	html
+		font-size: 20px
+
+
+
+// Media custom Bootstrap END
+
+
+
+
+
+/* footer at the bottom */
+.page-wrap
+	color: inherit
+.home-wrap
+	@extend .page-wrap
+
+.wrapper
+	display: flex
+	flex-direction: column
+	min-height: 100vh
+	width: 100%
+	overflow: hidden
+
+.layout
+	flex: 1
+	min-height: 200px
+	width: 100%
+
+.int-expl
+	body
+		overflow-x: hidden
+	.wrapper
+		display: table
+		min-height: 100vh
+		width: 100%
+		overflow: hidden
+		//min-width: 320px
+	.layout
+		min-height: 300px
+		display: table-row
+		height: 100%
+	.page-wrap
+		display: table-cell
+		max-width: 320px
+
+
+/* footer at the bottom END */

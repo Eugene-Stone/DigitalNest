@@ -1,0 +1,1103 @@
+@use "inc/_colors" as *
+@use "inc/_reset" as *
+@use "inc/_typography" as *
+@use "inc/_var" as *
+@use "inc/_btns" as *
+@use "grid-custom" as *
+@use "fonts" as *
+@use "header" as *
+@use "footer" as *
+@use "top-screen" as *
+
+
+// Main Styles =========================
+img
+	border-radius: 16px
+.about-image
+	img
+		display: block
+		width: 100%
+		height: auto
+
+
+
+.about-author-line
+	.about-image
+		margin-bottom: 4rem
+
+.about-author-title
+	h3
+		margin-bottom: 0
+		color: $main
+
+.gallery-box,
+.service-lst-box
+	.btn-more-wrap
+		margin-top: 6rem
+
+.service-lst
+	margin-top: -4rem
+
+.service-image
+	@extend .about-image
+
+.service-itm-number
+	margin-bottom: 0.8rem
+	color: $main
+
+.service-itm-brief
+	max-width: 62rem
+	*:last-child
+		margin-bottom: 0
+
+.service-itm
+	margin-top: 4rem
+	.btn-wrap
+		margin-top: 3.6rem
+
+	.service-txt-cell
+		position: relative
+		z-index: 2
+
+.service-itm-big
+	// background-color: pink
+	padding-top: 12rem
+	
+	.service-image
+		position: relative
+		img
+			position: relative
+			z-index: 2
+			transform: translateY(-12rem)
+		&::before
+			content: ""
+			display: block
+			position: absolute
+			left: 0
+			top: 0
+			width: 100%
+			height: 100%
+			background-color: $bgc
+			transform: translate(-50%,0)
+			border-radius: 16px
+
+
+
+
+
+
+
+.why-us-lst-box
+
+.why-us-lst
+	margin-top: -3.6rem
+
+.why-us-itm
+	margin-top: 3.6rem
+	position: relative
+	.why-us-itm-title,
+	.why-us-itm-brief
+		margin-left: 6.4rem
+
+	.why-us-itm-icon
+		position: absolute
+		left: 2rem
+		top: -.5rem
+
+.why-us-itm-icon
+	width: 4.8rem
+	height: 4.8rem
+	svg
+		display: block
+		width: 100%
+		height: 100%
+		object-fit: contain
+
+.why-us-itm-title
+	margin-top: 0
+	margin-bottom: 1.6rem
+
+.why-us-itm-brief
+	max-width: 58rem
+	*:last-child
+		margin-bottom: 0
+
+
+
+
+
+.gallery-filters
+	margin-bottom: 6rem
+
+.gallery-filters-lst
+	display: flex
+	justify-content: center
+	font-size: 2.4rem
+	line-height: 1.3
+	color: $title
+	text-align: center
+	margin-left: -1.6rem
+	margin-right: -1.6rem
+	a
+		position: relative
+		text-decoration: none
+		display: block
+		padding-bottom: 1.6rem
+		&::after
+			content: ""
+			display: block
+			position: absolute
+			left: 0
+			// bottom: 0
+			bottom: 1.6rem
+			width: 100%
+			height: 3px
+			background-color: $main
+			opacity: 0
+			transition: 0.25s
+
+		&:hover
+			text-decoration: none
+			color: $main
+
+
+	> li
+		position: relative
+		margin: 0 1.6rem
+		z-index: 10
+		&.active
+			a
+				color: $main
+				cursor: default
+				&::after
+					bottom: 0
+					opacity: 1	
+
+
+
+.gallery
+	margin-top: -0.7rem
+	margin-bottom: -0.7rem
+
+	.gallery-itm
+		padding-top: 0.7rem
+		padding-bottom: 0.7rem
+		&.col-12
+			.gallery-image
+				img
+					aspect-ratio: 740/350
+					// aspect-ratio: 510/235
+
+.gallery-image
+	display: block
+	position: relative
+	overflow: hidden
+	.gallery-number
+		position: absolute
+		z-index: 2
+		left: 0
+		top: 0
+
+	img
+		display: block
+		width: 100%
+		height: auto
+		aspect-ratio: 1/1
+		object-fit: cover
+		transition: 1s ease
+		transform: scale(1)
+
+a.gallery-image
+	&:hover
+		img
+			transform: scale(1.05)
+
+
+.sect-reviews
+	background-color: $bgc
+	overflow: hidden
+	.title-sect
+		padding-left: 2rem
+		padding-right: 2rem
+
+
+
+.sect-how-we-work
+	.btn-more-wrap
+		margin-top: 6rem
+
+.how-we-work-image
+	@extend .about-image
+
+.how-we-work-itm
+	margin-top: 2.4rem
+	&:first-child
+		margin-top: 0
+
+.how-we-work-itm-number
+	margin-bottom: 0.4rem
+	color: $main
+
+.how-we-work-itm-brief
+	max-width: 42rem
+	*:last-child
+		margin-bottom: 0
+
+.how-we-work-box
+	// background-color: pink
+
+	.how-we-work-image
+		position: relative
+		padding-bottom: 12rem
+		img
+			position: relative
+			z-index: 2
+
+		// &::before
+		// 	content: ""
+		// 	display: block
+		// 	position: absolute
+		// 	left: 0
+		// 	bottom: 0
+		// 	width: 100%
+		// 	height: calc(100% - 12rem)
+		// 	background-color: $bgc
+		// 	transform: translate(12rem,0)
+		// 	border-radius: 16px
+
+
+.how-we-work-txt-cell
+	display: flex
+
+.how-we-work-lst
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	// background-color: orange
+	position: relative
+	width: 100%
+	// &::before
+	// 	content: ""
+	// 	display: block
+	// 	position: absolute
+	// 	top: 1.5rem
+	// 	left: -7rem
+	// 	bottom: 0
+	// 	width: 1px
+	// 	background-color: $title
+
+
+	> *
+		width: 100%
+
+	.how-we-work-itm
+		position: relative
+		// &::before
+		// 	content: ""
+		// 	display: block
+		// 	position: absolute
+		// 	top: 1.5rem
+		// 	left: -7rem
+		// 	width: 11px
+		// 	height: 11px
+		// 	border-radius: 50%
+		// 	background-color: $title
+		// 	transform: translateX(-50%)
+
+
+
+
+
+
+.btn-form-wrap
+	margin-top: 4rem
+
+.contact-form
+	.form-title
+		margin-bottom: 4rem
+
+
+
+.sect-contacts
+	.title-sect
+		margin-bottom: 3.2rem
+
+	.title-descr
+		max-width: 45rem
+
+.contacts-lst
+	*:last-child
+		margin-bottom: 0
+
+	a
+		text-decoration: none
+		// font-size: 3.2rem
+		// color: $title
+		// line-height: 1.1
+		&:hover
+			color: $main
+	
+	li
+		margin-bottom: 0.8rem
+	
+	ul
+		+ ul
+			margin-top: 4rem
+
+.soc-wrap
+	margin-top: 4rem
+
+.soc-lst
+	margin-left: -1.2rem
+	margin-right: -1.2rem
+	margin-top: -2.4rem
+
+	.soc-btn
+		margin: 2.4rem 1rem 0
+
+
+
+.soc-btn
+	display: inline-block
+	width: 3.6rem
+	height: 3.6rem
+	background-repeat: no-repeat
+	background-position: center
+	background-size: contain
+	&:hover
+		filter: invert(12%) sepia(29%) saturate(7467%) hue-rotate(322deg) brightness(93%) contrast(88%)
+
+
+
+
+.slick-arrow
+	position: relative
+	width: 6.4rem
+	height: 6.4rem
+	background-color: transparent
+	border: 1px solid $main
+	cursor: pointer
+	transition: .15s
+	overflow: hidden
+	color: transparent
+	outline: none !important
+	margin-left: 2rem
+	&::after
+		content: ""
+		display: block
+		position: absolute
+		left: 50%
+		top: 50%
+		transform: translate(-50%,-50%)
+		width: 2.4rem
+		height: 2.4rem
+		background-repeat: no-repeat
+		background-size: contain
+		background-position: center
+		// filter: brightness(0) invert(100%)
+
+	&:hover
+		background-color: $main
+		&::after
+			filter: brightness(0) invert(100%)
+
+.slick-prev
+	left: 0
+	&::after
+		background-image: url("../img/_style/_svg/arrow_back_ios_24px.svg")
+
+.slick-next
+	right: 0
+	&::after
+		background-image: url("../img/_style/_svg/arrow_forward_ios_24px-2.svg")
+
+.slide-controls
+	margin-top: 4rem
+	margin-left: auto
+	margin-right: auto
+	max-width: 100vw
+
+.slide-controls-inner
+	display: flex
+	justify-content: space-between
+	align-items: center
+	.dots-nav
+		flex: 1
+		height: 1px
+		background-color: $main
+
+
+
+
+// .reviews-slider-box
+// 	margin-left: -33rem
+// 	margin-right: -33rem
+
+.reviews-slider
+	.slick-track
+		display: flex
+
+	.slick-slide
+		float: none
+		height: auto
+
+
+.review-slide-itm
+	padding-left: 2rem
+	padding-right: 2rem
+
+.review-slide-inner
+	padding: 4rem
+	// height: 100%
+	// min-height: 44rem
+
+.review-slide-top-line
+	display: flex
+	align-items: center
+	margin-bottom: 3.5rem
+
+.review-slide-top-photo
+	border-radius: 50%
+	overflow: hidden
+	margin-right: 2.4rem
+	img
+		display: block
+		width: 8rem
+		height: 8rem
+		aspect-ratio: 1/1
+		object-fit: cover
+
+.review-slide-author
+	font-size: 3.2rem
+	line-height: 1.1
+	color: $title
+	margin-bottom: 0.4rem
+
+
+
+
+
+/* ========================== Media Queries ========================== */
+
+@media only screen and (max-width : 1399px)
+	.service-itm-brief
+		max-width: 50rem
+
+	.service-itm-big
+		padding-top: 8rem
+		.service-image
+			img
+				transform: translateY(-8rem)
+
+	.why-us-itm
+		.why-us-itm-icon
+			top: -1rem
+
+
+	.gallery-filters
+		margin-bottom: 4rem
+
+	.gallery-filters-lst
+		font-size: 2rem
+		margin-left: -1.2rem
+		margin-right: -1.2rem
+		> li
+			margin: 0 1.2rem
+
+		a
+			padding-bottom: 1rem
+
+
+
+	.how-we-work-box
+		.how-we-work-image
+			padding-bottom: 8rem
+			&::before
+				height: calc(100% - 8rem)
+				transform: translate(8rem,0)
+
+	.how-we-work-lst
+		&::before
+			top: .8rem
+			left: -5rem
+		.how-we-work-itm
+			&::before
+				top: .8rem
+				left: -5rem
+
+
+
+	.contact-form
+		.form-title
+			margin-bottom: 2rem
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width : 1199px)
+	.gallery-filters-lst
+		font-size: 1.8rem
+
+
+
+	.how-we-work-box
+		.how-we-work-image
+			padding-bottom: 6rem
+			&::before
+				height: calc(100% - 6rem)
+				transform: translate(6rem,0)
+
+	.how-we-work-lst
+		&::before
+			left: -2.4rem
+		.how-we-work-itm
+			&::before
+				left: -2.4rem
+
+
+	.review-slide-inner
+		padding: 2.4rem
+
+	.review-slide-itm
+		padding-left: 1.5rem
+		padding-right: 1.5rem
+
+
+
+
+
+
+
+@media only screen and (max-width : 991px)
+	.about-author-line
+		.about-image
+			margin-bottom: 2rem
+
+	.sect-about-title
+		.col-lg-3
+			margin-bottom: 1rem
+
+
+	.service-lst
+		.service-itm
+			&:nth-child(even)
+				> .row
+					flex-direction: row-reverse
+
+
+	.service-itm-brief
+		max-width: none
+
+	.service-txt-cell
+		.btn
+			width: 100%
+			
+	.service-itm
+		.btn-wrap
+			margin-top: 1.6rem
+
+	.service-itm-big
+		padding-top: 0
+		.service-image-cell
+			margin-bottom: 2rem
+
+		.service-image
+			img
+				transform: none
+			&::before
+				transform: translate(2rem,2rem)
+
+
+	.service-itm-number
+		margin-bottom: 0.4rem
+
+	.service-itm-title
+		margin-bottom: 0.8rem
+
+	.gallery-box,
+	.service-lst-box,
+	.sect-how-we-work
+		.btn-more-wrap
+			margin-top: 4rem
+
+
+	.why-us-itm
+		.why-us-itm-icon
+			position: static
+			margin-bottom: 0.8rem
+
+		.why-us-itm-title,
+		.why-us-itm-brief
+			margin-left: 0
+
+
+	.gallery-filters
+		margin-bottom: 2rem
+
+	.gallery-filters-lst
+		font-size: 1.4rem
+		a
+			&::after
+				height: 2px
+
+
+
+	.how-we-work-box
+		.how-we-work-image-cell
+			margin-bottom: 2rem
+
+		.how-we-work-image
+			padding-bottom: 2rem
+			&::before
+				height: calc(100% - 2rem)
+				transform: translate(2rem,0)
+
+	.how-we-work-lst
+		margin-left: 4rem
+		&::before
+			top: .8rem
+			left: -4rem
+		.how-we-work-itm
+			&::before
+				top: .8rem
+				left: -4rem
+
+	.how-we-work-itm-brief
+		max-width: none
+
+
+
+
+	.sect-contacts
+		.title-sect
+			margin-bottom: 3.6rem
+
+		.title-descr
+			max-width: none
+
+		.contact-form
+			margin-top: 6rem
+
+
+		.contacts-lst
+			display: flex
+			> ul
+				width: 50%
+				+ ul
+					margin-top: 0
+					padding-left: 0.7rem
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width : 767px)
+	.about-images-line
+		margin-bottom: -2rem
+		.about-image
+			margin-bottom: 2rem
+
+	.about-author-line
+		margin-bottom: 2rem
+		.about-image
+			margin-bottom: 0
+
+
+	.sect-about-title
+		margin-bottom: 0 !important
+		position: relative
+		z-index: 2
+		.title-descr
+			&:not(.title-descr-big)
+				float: right
+				width: 60%
+				min-height: 6rem
+				margin-bottom: -6rem
+
+
+
+	.why-us-itm-icon
+		width: 2.4rem
+		height: 2.4rem
+
+	.why-us-itm-title
+		margin-bottom: 0.4rem
+		// font-size: 1.8rem
+
+	.why-us-lst
+		margin-top: -2.4rem
+
+	.why-us-itm
+		margin-top: 2.4rem
+
+
+	.contact-form
+		.form-title
+			margin-bottom: 1rem
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width : 576px)
+	.gallery-box,
+	.service-lst-box
+		.btn-more-wrap
+			margin-top: 2rem
+
+	.service-lst
+		margin-top: -2rem
+
+	.service-itm
+		margin-top: 2rem
+
+	.service-itm-big
+		padding-bottom: 2rem
+
+
+	.gallery-filters
+		margin-bottom: 0
+
+	.gallery-filters-lst
+		justify-content: flex-start
+		text-align: left
+		white-space: nowrap
+		font-size: 1.4rem
+		margin-left: -2rem
+		margin-right: -2rem
+		padding-bottom: 2rem
+		overflow-x: auto
+		> li
+			margin: 0 2.4rem 0 0
+			&:first-child
+				margin-left: 2rem
+
+		a
+			&::after
+				height: 1px
+
+
+
+
+	.how-we-work-lst
+		margin-left: 3.5rem
+		&::before
+			top: .3rem
+			left: -3.5rem
+		.how-we-work-itm
+			&::before
+				top: .3rem
+				left: -3.5rem
+
+
+	.btn-form-wrap
+		margin-top: 2rem
+
+
+	.soc-wrap
+		margin-top: 3.6rem
+
+
+	.soc-btn
+		width: 2.4rem
+		height: 2.4rem
+
+
+	.sect-contacts
+		.contact-form
+			margin-top: 4rem
+
+
+
+	.reviews-slider-box
+		margin-left: 0
+		margin-right: 0
+
+	.review-slide-itm
+		padding-left: 1rem
+		padding-right: 1rem
+
+	.review-slide-inner
+		padding: 2rem
+		min-height: 35rem
+
+	.review-slide-top-line
+		margin-bottom: 1.6rem
+
+	.review-slide-author
+		font-size: 14px
+		margin-bottom: 0
+
+	.review-slide-top-photo
+		margin-right: 0.8rem
+		img
+			width: 6rem
+			height: 6rem
+
+	.slide-controls
+		margin-top: 2rem
+		
+	.slick-arrow
+		width: 4rem
+		height: 4rem
+		margin-left: 1.6rem
+
+
+
+
+
+
+// Min width ================================================
+@media only screen and (min-width : 351px)
+	/*  */
+
+
+
+@media only screen and (min-width : 577px)
+	.gallery
+		.gallery-itm
+			// &:nth-child(1),
+			// &:nth-child(6),
+			// &:nth-child(11),
+			// &:nth-child(16)
+			// 	z-index: 10
+			// 	transform: translateY(50%)
+
+			// &:nth-child(3),
+			// &:nth-child(8),
+			// &:nth-child(13),
+			// &:nth-child(18)
+			// 	transform: translateY(-200%)
+
+			&:nth-child(1)
+				&:not(:nth-last-child(2))
+					z-index: 10
+					transform: translateY(50%)
+
+			&:nth-child(3)
+				transform: translateY(-200%)
+
+
+
+
+
+
+@media only screen and (min-width : 768px)	
+	.gallery
+		.gallery-itm
+			&.col-12
+				.gallery-image
+					img
+						aspect-ratio: 353/169.5
+
+
+
+
+
+
+
+@media only screen and (min-width : 992px)
+	.service-lst
+		.service-itm
+			&:nth-child(4),
+			&:nth-child(5),
+			&:nth-child(8),
+			&:nth-child(9),
+			&:nth-child(12),
+			&:nth-child(13),
+			&:nth-child(16),
+			&:nth-child(17),
+			&:nth-child(20),
+			&:nth-child(21),
+			&:nth-child(24),
+			&:nth-child(25),
+			&:nth-child(28),
+			&:nth-child(29),
+			&:nth-child(32),
+			&:nth-child(33),
+			&:nth-child(36),
+			&:nth-child(37),
+			&:nth-child(40),
+			&:nth-child(41),
+			&:nth-child(44),
+			&:nth-child(45),
+			&:nth-child(48),
+			&:nth-child(49),
+			&:nth-child(52),
+			&:nth-child(53),
+			&:nth-child(56),
+			&:nth-child(57),
+			&:nth-child(60),
+			&:nth-child(61),
+			&:nth-child(64),
+			&:nth-child(65),
+			&:nth-child(68),
+			&:nth-child(69),
+			&:nth-child(72),
+			&:nth-child(73),
+			&:nth-child(76),
+			&:nth-child(77),
+			&:nth-child(80),
+			&:nth-child(81),
+			&:nth-child(84),
+			&:nth-child(85),
+			&:nth-child(88),
+			&:nth-child(89),
+			&:nth-child(92),
+			&:nth-child(93),
+			&:nth-child(96),
+			&:nth-child(97),
+			&:nth-child(100),
+			&:nth-child(101)
+				> .row
+					flex-direction: row-reverse
+
+
+
+	.gallery
+		margin-top: -2rem
+		margin-bottom: -2rem
+
+		.gallery-itm
+			padding-top: 2rem
+			padding-bottom: 2rem
+			&.col-12
+				.gallery-image
+					img
+						aspect-ratio: 467.5/213.75
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width : 1200px)
+	/*  */
+
+
+
+@media only screen and (min-width : 1400px)
+	.sect-gallery
+		.title-sect
+			margin-bottom: 4rem
+
+	.gallery
+		.gallery-itm
+			&.col-12
+				.gallery-image
+					img
+						aspect-ratio: 650/305
+
+
+	.sect-contacts
+		.title-sect
+			.title-descr
+				margin-top: 2.4rem
+
+
+
+
+
+
+@media only screen and (min-width : 1750px)
+	.gallery
+		.gallery-itm
+			&.col-12
+				.gallery-image
+					img
+						aspect-ratio: 740/350
+						
+
+
+
+
+
+@media screen and (orientation : portrait)
+	/*  */
+	
+@media screen and (orientation : landscape)
+	/*  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media print
+	.btn-top
+		display: none
+	body
+		font-family: "Arial", sans-serif
+		background-color: #fff
+	*
+		color: #000
+	.div-class
+		page-break-inside: avoid
+
+	.main-head,
+	.main-foot,
+	.sidebar,
+	.inner-pages
+		display: none
+
+
+

@@ -1,0 +1,182 @@
+@use "_colors" as *
+
+.btn-more-wrap
+	display: flex
+	flex-wrap: wrap
+	margin: 0 -1rem
+	> *
+		margin: 0 1rem 2rem
+
+	&:last-child
+		margin-bottom: -2rem
+	
+	&.center
+		justify-content: center
+	
+	.button-description
+		width: 100%
+		min-width: 100%
+
+.btn
+	text-decoration: none !important
+	box-shadow: none !important
+	outline: none !important
+	border-radius: 16px
+	cursor: pointer
+	appearance: none
+	background-color: $main
+	text-align: center
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	padding: .7rem 2.5rem .5rem
+	min-height: 6.4rem
+	min-width: 35rem
+	border: 1px solid $main
+	color: $light
+	font-size: 2.4rem
+	transition: .15s
+
+	&:hover
+		color: $light
+		border-color: $accent
+		background-color: $accent
+		i[class*="-ic"]
+			filter: brightness(0) invert(100%)
+
+	&:active
+		opacity: .9
+
+	i[class*="-ic"]
+		margin-right: 1rem
+		transition: .3s
+		
+	span:not(.wpcf7-spinner)
+		+ i[class*="-ic"]
+			margin-left: 1rem
+			margin-right: 0
+	
+
+.btn-ic
+	width: 2rem
+	min-width: 2rem
+	height: 2rem
+
+.btn-link
+	text-decoration: none !important
+	box-shadow: none !important
+	outline: none !important
+	border-radius: 0
+	cursor: pointer
+	appearance: none
+	background-color: transparent
+	text-align: center
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	padding: 0
+	color: $title
+	font-size: 2.4rem
+	transition: .15s
+	&:hover
+		color: $main
+
+	i[class*="-ic"]
+		margin-right: .8rem
+		transition: .3s
+		
+	span:not(.wpcf7-spinner)
+		+ i[class*="-ic"]
+			margin-left: .8rem
+			margin-right: 0
+
+
+
+
+
+.btn-form
+	@extend .btn
+	position: relative
+	input
+		position: absolute
+		z-index: 20
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		opacity: 0
+		cursor: pointer
+
+	.ajax-loader
+
+
+
+.btn-top
+	position: fixed
+	z-index: 555
+	right: 5px
+	bottom: 5px
+	width: 4rem
+	height: 4rem
+	background-color: $main
+	cursor: pointer
+	transition: .3s
+	background-image: url("../img/_style/_svg/btn-top.svg")
+	background-position: center
+	background-repeat: no-repeat
+	background-size: 2rem
+	border-radius: .3rem
+	box-shadow: 0 0 3px 1px rgba(255,255,255,.25)
+	opacity: 0
+	&.on
+		opacity: 1
+	
+	&:hover
+		background-color: $accent
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width : 1399px)
+	.btn
+		font-size: 1.8rem
+		min-width: 23.5rem
+		min-height: 5rem
+
+	.btn-link
+		font-size: 1.8rem
+
+
+
+
+@media only screen and (max-width : 576px)
+	.btn
+		padding: .7rem 2.5rem .6rem
+		min-height: 4rem
+		min-width: 0
+		width: 100%
+
+	.btn,
+	.btn-link
+		font-size: 1.4rem
+		i[class*="-ic"]
+			margin-right: .4rem
+			
+		span:not(.wpcf7-spinner)
+			+ i[class*="-ic"]
+				margin-left: .4rem
+				margin-right: 0
+
+	.btn-ic
+		width: 1.6rem
+		min-width: 1.6rem
+		height: 1.6rem
