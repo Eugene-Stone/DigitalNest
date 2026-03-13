@@ -6,7 +6,13 @@ export const ScrollToSectionLink = ({ className, to, children, setMenuIsOpen }) 
 	const navigate = useNavigate();
 
 	const handleSetActive = (to) => {
-		console.log(to);
+		// console.log(to);
+	};
+
+	const closeMenu = () => {
+		if (setMenuIsOpen) {
+			setMenuIsOpen(false);
+		}
 	};
 
 	const scrollToSection = (to) => {
@@ -16,7 +22,7 @@ export const ScrollToSectionLink = ({ className, to, children, setMenuIsOpen }) 
 			scroller.scrollTo(to, {
 				smooth: true,
 				offset: -150,
-				duration: 700,
+				duration: 900,
 			});
 		}, 500);
 	};
@@ -31,16 +37,14 @@ export const ScrollToSectionLink = ({ className, to, children, setMenuIsOpen }) 
 				onSetActive={handleSetActive}
 				smooth={true}
 				offset={-150}
-				duration={500}
-				onClick={() => setMenuIsOpen(false)}>
+				duration={900}
+				onClick={closeMenu}>
 				{children}
 			</Link>
 		);
 	} else {
 		return (
-			<button
-				className={className}
-				onClick={() => (setMenuIsOpen(false), scrollToSection(to))}>
+			<button className={className} onClick={() => (closeMenu(), scrollToSection(to))}>
 				{children}
 			</button>
 		);

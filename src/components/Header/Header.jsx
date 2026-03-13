@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { NavLink } from 'react-router';
-import { ScrollToSectionLink } from './ScrollToSectionLink';
+import { ScrollToSectionLink } from '../ScrollToSectionLink/ScrollToSectionLink';
 
 export default function Header() {
 	const [menuIsOpen, setMenuIsOpen] = useState(false);

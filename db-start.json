@@ -1,0 +1,203 @@
+{
+	"pages": [
+		{
+			"id": "home",
+			"slug": "home",
+			"sections": [
+				"hero",
+				"about",
+				"services",
+				"features",
+				"projects",
+				"workflow",
+				"reviews",
+				"contacts"
+			]
+		}
+	],
+
+	"hero": {
+		"id": "hero-main",
+		"title": "Advanced Digital Ecosystem Solutions",
+		"subtitle": "Scalable Tech & Smart Data Harmony",
+		"description": "Engineering resilient digital ecosystems powered by cloud computing and deep data analytics.",
+		"buttonText": "Contact us",
+		"backgroundImage": "/img/hero-bg.jpg"
+	},
+
+	"about": {
+		"id": "about-main",
+		"title": "About",
+		"content": [
+			"DigitalNest — engineering resilient digital ecosystems powered by cloud computing, neural networks, and deep data analytics.",
+			"Our mission is to fundamentally optimize business workflows, building high-performance environments through cutting-edge protocols and sophisticated system architecture.",
+			"Leveraging nearly a decade of expertise in systems integration, we architect bespoke software products and scalable API frameworks."
+		],
+		"images": ["/img/inner/4.png", "/img/inner/5.png"]
+	},
+
+	"services": [
+		{
+			"id": "service-1",
+			"title": "Cloud Infrastructure",
+			"description": "Design and deployment of scalable cloud architectures and distributed computing environments.",
+			"image": "/img/services/cloud.jpg",
+			"highlight": true
+		},
+		{
+			"id": "service-2",
+			"title": "Tech Audit & Optimization",
+			"description": "Deep infrastructure analysis and performance optimization for enterprise platforms.",
+			"image": "/img/services/audit.jpg"
+		},
+		{
+			"id": "service-3",
+			"title": "Custom Web Engineering",
+			"description": "Development of complex web platforms, SaaS products, and scalable digital ecosystems.",
+			"image": "/img/services/web.jpg"
+		},
+		{
+			"id": "service-4",
+			"title": "UI/UX Product Design",
+			"description": "User-centered product design focused on usability, accessibility, and visual clarity.",
+			"image": "/img/services/uiux.jpg"
+		},
+		{
+			"id": "service-5",
+			"title": "Enterprise Support",
+			"description": "Dedicated infrastructure monitoring and long-term technical support.",
+			"image": "/img/services/support.jpg"
+		}
+	],
+
+	"features": [
+		{
+			"id": "feature-1",
+			"title": "9+ years in system engineering",
+			"description": "Extensive experience designing scalable digital platforms."
+		},
+		{
+			"id": "feature-2",
+			"title": "Custom & proprietary stack",
+			"description": "Modern technology stack tailored for each project."
+		},
+		{
+			"id": "feature-3",
+			"title": "Scalable for any workload",
+			"description": "Infrastructure designed to scale with growing traffic."
+		},
+		{
+			"id": "feature-4",
+			"title": "Data-driven architecture",
+			"description": "Architecture decisions based on deep analytics and metrics."
+		},
+		{
+			"id": "feature-5",
+			"title": "Automated & zero-Ops",
+			"description": "Fully automated deployment and infrastructure management."
+		},
+		{
+			"id": "feature-6",
+			"title": "High security & encryption",
+			"description": "Advanced security layers protecting enterprise data."
+		}
+	],
+
+	"projects": [
+		{
+			"id": "project-1",
+			"title": "Cloud Monitoring Platform",
+			"category": "Cloud Systems",
+			"image": "/img/projects/1.jpg"
+		},
+		{
+			"id": "project-2",
+			"title": "AI Data Dashboard",
+			"category": "Data Analytics",
+			"image": "/img/projects/2.jpg"
+		},
+		{
+			"id": "project-3",
+			"title": "Mobile Fintech App",
+			"category": "Mobile Apps",
+			"image": "/img/projects/3.jpg"
+		},
+		{
+			"id": "project-4",
+			"title": "Enterprise Admin Panel",
+			"category": "Web Interface",
+			"image": "/img/projects/4.jpg"
+		},
+		{
+			"id": "project-5",
+			"title": "UX Prototype System",
+			"category": "UI/UX",
+			"image": "/img/projects/5.jpg"
+		}
+	],
+
+	"workflow": [
+		{
+			"id": "step-1",
+			"step": "01",
+			"title": "Discovery & Analysis",
+			"description": "Understanding product goals, user needs, and system constraints."
+		},
+		{
+			"id": "step-2",
+			"step": "02",
+			"title": "Architecture Blueprint",
+			"description": "Designing scalable system architecture and data pipelines."
+		},
+		{
+			"id": "step-3",
+			"step": "03",
+			"title": "Agile Development",
+			"description": "Iterative development with continuous integration and testing."
+		},
+		{
+			"id": "step-4",
+			"step": "04",
+			"title": "Deployment & Support",
+			"description": "Production deployment and long-term system maintenance."
+		}
+	],
+
+	"reviews": [
+		{
+			"id": "review-1",
+			"name": "Alex R.",
+			"position": "CTO",
+			"company": "FinCore",
+			"avatar": "/img/reviews/1.jpg",
+			"text": "DigitalNest delivered a highly scalable infrastructure solution that significantly improved our platform stability."
+		},
+		{
+			"id": "review-2",
+			"name": "Sarah J.",
+			"position": "Product Owner",
+			"company": "CloudLabs",
+			"avatar": "/img/reviews/2.jpg",
+			"text": "Their engineering team transformed our architecture and dramatically improved performance."
+		},
+		{
+			"id": "review-3",
+			"name": "Mihesel V.",
+			"position": "Founder",
+			"company": "DataForge",
+			"avatar": "/img/reviews/3.jpg",
+			"text": "Professional team with strong expertise in cloud infrastructure and enterprise solutions."
+		}
+	],
+
+	"contacts": {
+		"id": "contacts-main",
+		"phone": "+12345678",
+		"email": "dev@digitalnest.tech",
+		"address": "DigitalNest HQ",
+		"social": {
+			"linkedin": "https://linkedin.com/company/digitalnest",
+			"instagram": "https://instagram.com/digitalnest"
+		}
+	}
+}
