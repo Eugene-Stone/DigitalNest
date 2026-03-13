@@ -1,7 +1,7 @@
 import { useLocation, useNavigate } from 'react-router';
 import { Link, scroller } from 'react-scroll';
 
-export const ScrollToSectionLink = ({ className, to, children }) => {
+export const ScrollToSectionLink = ({ className, to, children, setMenuIsOpen }) => {
 	const location = useLocation();
 	const navigate = useNavigate();
 
@@ -18,7 +18,7 @@ export const ScrollToSectionLink = ({ className, to, children }) => {
 				offset: -150,
 				duration: 700,
 			});
-		}, 100);
+		}, 500);
 	};
 
 	if (location.pathname === '/') {
@@ -31,13 +31,16 @@ export const ScrollToSectionLink = ({ className, to, children }) => {
 				onSetActive={handleSetActive}
 				smooth={true}
 				offset={-150}
-				duration={500}>
+				duration={500}
+				onClick={() => setMenuIsOpen(false)}>
 				{children}
 			</Link>
 		);
 	} else {
 		return (
-			<button className={className} onClick={() => scrollToSection(to)}>
+			<button
+				className={className}
+				onClick={() => (setMenuIsOpen(false), scrollToSection(to))}>
 				{children}
 			</button>
 		);
