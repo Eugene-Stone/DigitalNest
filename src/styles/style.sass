@@ -40,6 +40,9 @@ img
 
 .service-image
 	@extend .about-image
+	img
+		aspect-ratio: 3/2.5
+		object-fit: cover
 
 .service-itm-number
 	margin-bottom: 0.8rem
@@ -424,7 +427,7 @@ a.gallery-image
 	.dots-nav
 		flex: 1
 		height: 1px
-		background-color: $main
+		// background-color: $main
 
 
 
@@ -699,8 +702,9 @@ a.gallery-image
 					margin-top: 0
 					padding-left: 0.7rem
 
-
-
+	.align-self-end
+		.about-image
+			margin-top: 2rem
 
 
 
@@ -729,9 +733,9 @@ a.gallery-image
 		.title-descr
 			&:not(.title-descr-big)
 				float: right
-				width: 60%
+				// width: 60%
 				min-height: 6rem
-				margin-bottom: -6rem
+				// margin-bottom: -6rem
 
 
 
@@ -755,7 +759,9 @@ a.gallery-image
 			margin-bottom: 1rem
 
 
-
+	.align-self-end
+		.about-image
+			margin-top: 0
 
 
 
@@ -872,6 +878,13 @@ a.gallery-image
 		width: 4rem
 		height: 4rem
 		margin-left: 1.6rem
+
+
+
+
+
+
+
 
 
 
