@@ -17,7 +17,7 @@
 	],
 
 	"hero": {
-		"id": "hero-main",
+		"id": "hero",
 		"title": "Advanced Digital Ecosystem Solutions",
 		"subtitle": "Scalable Tech & Smart Data Harmony",
 		"description": "High-tech infrastructure with cloud systems: efficiency, security, and power for your network—automated and maintenance-free.",
@@ -26,7 +26,7 @@
 	},
 
 	"about": {
-		"id": "about-main",
+		"id": "about",
 		"title": "About",
 		"content": [
 			"DigitalNest — engineering resilient digital ecosystems powered by cloud computing, neural networks, and deep data analytics.",
@@ -36,39 +36,47 @@
 		"images": ["/img/inner/4.png", "/img/inner/5.png"]
 	},
 
-	"services": [
-		{
-			"id": "service-1",
-			"title": "Cloud Infrastructure",
-			"description": "Design and deployment of scalable cloud architectures and distributed computing environments.",
-			"image": "/img/services/cloud.jpg",
-			"highlight": true
-		},
-		{
-			"id": "service-2",
-			"title": "Tech Audit & Optimization",
-			"description": "Deep infrastructure analysis and performance optimization for enterprise platforms.",
-			"image": "/img/services/audit.jpg"
-		},
-		{
-			"id": "service-3",
-			"title": "Custom Web Engineering",
-			"description": "Development of complex web platforms, SaaS products, and scalable digital ecosystems.",
-			"image": "/img/services/web.jpg"
-		},
-		{
-			"id": "service-4",
-			"title": "UI/UX Product Design",
-			"description": "User-centered product design focused on usability, accessibility, and visual clarity.",
-			"image": "/img/services/uiux.jpg"
-		},
-		{
-			"id": "service-5",
-			"title": "Enterprise Support",
-			"description": "Dedicated infrastructure monitoring and long-term technical support.",
-			"image": "/img/services/support.jpg"
-		}
-	],
+	"services": {
+		"id": "services",
+		"title": "<strong>How</strong> we build",
+		"description": [
+			"Every solution we architect is more than just code – it’s a synergy of performance, security, and scalability, transforming",
+			"your digital presence into a high-velocity, reliable ecosystem."
+		],
+		"content": [
+			{
+				"id": "service-1",
+				"title": "Cloud Infrastructure",
+				"description": "Design and deployment of scalable cloud architectures and distributed computing environments.",
+				"image": "/img/inner/6.png",
+				"highlight": true
+			},
+			{
+				"id": "service-2",
+				"title": "Tech Audit & Optimization",
+				"description": "Deep infrastructure analysis and performance optimization for enterprise platforms.",
+				"image": "/img/inner/7.png"
+			},
+			{
+				"id": "service-3",
+				"title": "Custom Web Engineering",
+				"description": "Development of complex web platforms, SaaS products, and scalable digital ecosystems.",
+				"image": "/img/inner/8.png"
+			},
+			{
+				"id": "service-4",
+				"title": "UI/UX Product Design",
+				"description": "User-centered product design focused on usability, accessibility, and visual clarity.",
+				"image": "/img/inner/9.png"
+			},
+			{
+				"id": "service-5",
+				"title": "Enterprise Support",
+				"description": "Dedicated infrastructure monitoring and long-term technical support.",
+				"image": "/img/inner/10.png"
+			}
+		]
+	},
 
 	"features": [
 		{

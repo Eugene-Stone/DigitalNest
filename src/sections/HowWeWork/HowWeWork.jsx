@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function HowWeWork() {
 	return (
-		<section id="sect-how-we-work" className="sect-how-we-work">
+		<section id="how-we-work" className="sect-how-we-work">
 			<div className="container">
 				<div className="title-sect center">
 					<h2 className="h2-title">

@@ -49,7 +49,7 @@ export default function Header() {
 									<ul className="main-mnu scroll-lnks container">
 										<li>
 											<ScrollToSectionLink
-												to="sect-about"
+												to="about"
 												className="menu__link"
 												setMenuIsOpen={setMenuIsOpen}>
 												About
@@ -57,7 +57,7 @@ export default function Header() {
 										</li>
 										<li>
 											<ScrollToSectionLink
-												to="sect-service"
+												to="services"
 												className="menu__link"
 												setMenuIsOpen={setMenuIsOpen}>
 												Services
@@ -65,7 +65,7 @@ export default function Header() {
 										</li>
 										<li>
 											<ScrollToSectionLink
-												to="sect-why-us"
+												to="why-us"
 												className="menu__link"
 												setMenuIsOpen={setMenuIsOpen}>
 												Why DigitalNest?
@@ -73,7 +73,7 @@ export default function Header() {
 										</li>
 										<li>
 											<ScrollToSectionLink
-												to="sect-gallery"
+												to="gallery"
 												className="menu__link"
 												setMenuIsOpen={setMenuIsOpen}>
 												Showcase
@@ -81,7 +81,7 @@ export default function Header() {
 										</li>
 										<li>
 											<ScrollToSectionLink
-												to="sect-how-we-work"
+												to="how-we-work"
 												className="menu__link"
 												setMenuIsOpen={setMenuIsOpen}>
 												Workflow
@@ -89,7 +89,7 @@ export default function Header() {
 										</li>
 										<li>
 											<ScrollToSectionLink
-												to="sect-contacts"
+												to="contacts"
 												className="menu__link"
 												setMenuIsOpen={setMenuIsOpen}>
 												Contacts
@@ -99,7 +99,7 @@ export default function Header() {
 									<div className="btn-wrap-mobile">
 										<div className="container">
 											<ScrollToSectionLink
-												to="sect-contacts"
+												to="contacts"
 												className="btn"
 												setMenuIsOpen={setMenuIsOpen}>
 												<span>Contact us</span>

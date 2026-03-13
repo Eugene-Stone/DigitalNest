@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Gallery() {
 	return (
-		<section id="sect-gallery" className="sect-gallery">
+		<section id="gallery" className="sect-gallery">
 			<div className="container">
 				<div className="title-sect center">
 					<h2 className="h2-title">

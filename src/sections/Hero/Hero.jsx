@@ -5,7 +5,6 @@ export default function Hero() {
 	const { section, loading, errorData } = useSectionData('/hero');
 
 	if (!section) return null;
-	const { id, title, subtitle, description, buttonText, backgroundImage } = section || {};
 
 	if (loading) {
 		return <div>Loading...</div>;
@@ -14,6 +13,8 @@ export default function Hero() {
 	if (errorData) {
 		return <div>Error fetch data</div>;
 	}
+
+	const { id, title, subtitle, description, buttonText, backgroundImage } = section || {};
 
 	return (
 		<div id={id} className="top-screen">

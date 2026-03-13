@@ -1,32 +1,37 @@
+import { useSectionData } from '../../hooks/useSectionData';
+
 export default function About() {
+	const { section, loading, errorData } = useSectionData('/about');
+
+	if (!section) return null;
+
+	if (loading) {
+		return <div>Loading...</div>;
+	}
+
+	if (errorData) {
+		return <div>Error fetch data</div>;
+	}
+
+	const { id, title, content, images } = section || {};
+
 	return (
-		<section id="sect-about" className="sect-about">
+		<section id={id} className="sect-about">
 			<div className="container">
 				<div className="sect-about-title">
 					<div className="row">
 						<div className="col-lg-3">
 							<h2 className="h2-title">
-								<strong>About</strong>
+								<strong>{title}</strong>
 							</h2>
 						</div>
 						<div className="col-lg-9">
 							<div className="title-descr-big">
-								<p>
-									DigitalNest — engineering resilient digital ecosystems powered
-									by cloud computing, neural networks, and deep data analytics.
-									Our mission is to fundamentally optimize business workflows,
-									building high-performance environments through cutting-edge
-									protocols and sophisticated system architecture.
-								</p>
+								<p>{content[0]}</p>
 							</div>
 							<div className="title-descr">
-								<p>
-									Leveraging nearly a decade of expertise in systems integration,
-									we architect bespoke software products, scalable API frameworks,
-									and secure automated databases. From startup platforms to
-									enterprise portals and fintech solutions, we ensure a seamless
-									synthesis of velocity, security, and stability.
-								</p>
+								<p>{content[1]}</p>
+								<p>{content[2]}</p>
 							</div>
 						</div>
 					</div>
@@ -42,18 +47,17 @@ export default function About() {
 						</div>
 						<div className="col-md-6">
 							<div className="about-image">
-								<img src="/img/inner/4.png" alt="image" />
+								<img src={images[0]} alt="image" />
 							</div>
 						</div>
 						<div className="col-6 col-md-3 align-self-end">
 							<div className="about-image">
-								<img src="/img/inner/5.png" alt="image" />
+								<img src={images[1]} alt="image" />
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			{/* container END */}
 		</section>
 	);
 }
