@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router';
-import { Link } from 'react-scroll';
+import { ScrollToSectionLink } from './ScrollToSectionLink';
 
 export default function Header() {
 	const scrollToTop = () => {
@@ -7,10 +7,6 @@ export default function Header() {
 			top: 0,
 			behavior: 'smooth', // Smooth scrolling behavior
 		});
-	};
-
-	const handleSetActive = (to) => {
-		console.log(to);
 	};
 
 	return (
@@ -30,87 +26,53 @@ export default function Header() {
 								<div className="mnu-wrap-inner">
 									<ul className="main-mnu scroll-lnks container">
 										<li>
-											<Link
+											<ScrollToSectionLink
 												to="sect-about"
-												spy={true}
-												activeClass="active"
-												onSetActive={handleSetActive}
-												smooth={true}
-												offset={-150}
-												duration={500}>
+												className="menu__link">
 												About
-											</Link>
+											</ScrollToSectionLink>
 										</li>
 										<li>
-											<Link
+											<ScrollToSectionLink
 												to="sect-service"
-												spy={true}
-												activeClass="active"
-												onSetActive={handleSetActive}
-												smooth={true}
-												offset={-150}
-												duration={500}>
+												className="menu__link">
 												Services
-											</Link>
+											</ScrollToSectionLink>
 										</li>
 										<li>
-											<Link
+											<ScrollToSectionLink
 												to="sect-why-us"
-												spy={true}
-												activeClass="active"
-												onSetActive={handleSetActive}
-												smooth={true}
-												offset={-150}
-												duration={500}>
+												className="menu__link">
 												Why DigitalNest?
-											</Link>
+											</ScrollToSectionLink>
 										</li>
 										<li>
-											<Link
+											<ScrollToSectionLink
 												to="sect-gallery"
-												spy={true}
-												activeClass="active"
-												onSetActive={handleSetActive}
-												smooth={true}
-												offset={-150}
-												duration={500}>
+												className="menu__link">
 												Showcase
-											</Link>
+											</ScrollToSectionLink>
 										</li>
 										<li>
-											<Link
+											<ScrollToSectionLink
 												to="sect-how-we-work"
-												spy={true}
-												activeClass="active"
-												onSetActive={handleSetActive}
-												smooth={true}
-												offset={-150}
-												duration={500}>
+												className="menu__link">
 												Workflow
-											</Link>
+											</ScrollToSectionLink>
 										</li>
 										<li>
-											<Link
+											<ScrollToSectionLink
 												to="sect-contacts"
-												spy={true}
-												activeClass="active"
-												onSetActive={handleSetActive}
-												smooth={true}
-												offset={-150}
-												duration={500}>
+												className="menu__link">
 												Contacts
-											</Link>
+											</ScrollToSectionLink>
 										</li>
 									</ul>
 									<div className="btn-wrap-mobile">
 										<div className="container">
-											<Link
-												to="#sect-contacts"
-												smooth={true}
-												duration={500}
-												className="btn">
+											<ScrollToSectionLink to="sect-contacts" className="btn">
 												<span>Contact us</span>
-											</Link>
+											</ScrollToSectionLink>
 										</div>
 									</div>
 								</div>

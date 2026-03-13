@@ -1,4 +1,4 @@
-import React from 'react';
+import { Link } from 'react-router';
 
 export default function Footer() {
 	return (
@@ -14,7 +14,7 @@ export default function Footer() {
 								</div>
 							</div>
 							<div className="col-6 right">
-								<a href="/privacy">Privacy</a>
+								<Link to="/privacy">Privacy</Link>
 							</div>
 						</div>
 					</div>

@@ -283,6 +283,19 @@ body
 		overflow: hidden
 
 
+.menu__link
+	display: inline
+	appearance: none
+	border: none
+	color: inherit
+	background-color: $tr
+	transition: 0.15s
+	font-family: inherit
+	font-size: inherit
+	line-height: inherit
+	font-weight: inherit
+	cursor: pointer
+
 .main-mnu
 	display: flex
 	> li
@@ -290,7 +303,8 @@ body
 		margin: 0 3.2rem 0 0
 		z-index: 10
 
-	a
+	a,
+	.menu__link
 		position: relative
 		text-decoration: none
 		display: block
@@ -381,7 +395,8 @@ body
 		> li
 			margin: 0 2.4rem 0 0
 
-		a
+		a,
+		.menu__link
 			padding-top: 1rem
 			padding-bottom: 1rem
 
@@ -413,13 +428,13 @@ body
 	.mnu-wrap
 		display: none
 		position: absolute
-		z-index: 50
+		z-index: 500
 		left: 0
 		top: 100%
 		width: 100%
 		height: calc(100vh - 8rem)
 		border-top: 1px solid $bdc
-		background-color: $light
+		background-color: $dark
 
 		.btn-wrap-mobile
 			height: auto
@@ -449,7 +464,8 @@ body
 			margin-right: 0
 			margin-bottom: 1rem
 
-		a
+		a,
+		.menu__link
 			display: inline-flex
 
 
@@ -498,7 +514,8 @@ body
 		// font-size: 2.4rem
 		height: calc(100vh - 15rem)
 		padding-top: 3rem !important
-		a
+		a,
+		.menu__link
 			padding-top: 0.5rem
 			padding-bottom: 0.5rem
 		li
