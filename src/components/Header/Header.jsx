@@ -1,6 +1,18 @@
-import React from 'react';
+import { NavLink } from 'react-router';
+import { Link } from 'react-scroll';
 
 export default function Header() {
+	const scrollToTop = () => {
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth', // Smooth scrolling behavior
+		});
+	};
+
+	const handleSetActive = (to) => {
+		console.log(to);
+	};
+
 	return (
 		<header className="head-general">
 			<div className="head-top ">
@@ -8,9 +20,9 @@ export default function Header() {
 					<div className="head-line">
 						<div className="head-cell">
 							<div className="logo-wrap">
-								<a href="/" className="logo">
+								<NavLink to={'/'} className="logo" onClick={scrollToTop}>
 									<img src="/logo.svg" alt="logo" />
-								</a>
+								</NavLink>
 							</div>
 						</div>
 						<div className="head-cell">
@@ -18,29 +30,87 @@ export default function Header() {
 								<div className="mnu-wrap-inner">
 									<ul className="main-mnu scroll-lnks container">
 										<li>
-											<a href="#sect-about">About</a>
+											<Link
+												to="sect-about"
+												spy={true}
+												activeClass="active"
+												onSetActive={handleSetActive}
+												smooth={true}
+												offset={-150}
+												duration={500}>
+												About
+											</Link>
 										</li>
 										<li>
-											<a href="#sect-service">Services</a>
+											<Link
+												to="sect-service"
+												spy={true}
+												activeClass="active"
+												onSetActive={handleSetActive}
+												smooth={true}
+												offset={-150}
+												duration={500}>
+												Services
+											</Link>
 										</li>
 										<li>
-											<a href="#sect-why-us">Why DigitalNest?</a>
+											<Link
+												to="sect-why-us"
+												spy={true}
+												activeClass="active"
+												onSetActive={handleSetActive}
+												smooth={true}
+												offset={-150}
+												duration={500}>
+												Why DigitalNest?
+											</Link>
 										</li>
 										<li>
-											<a href="#sect-gallery">Showcase</a>
+											<Link
+												to="sect-gallery"
+												spy={true}
+												activeClass="active"
+												onSetActive={handleSetActive}
+												smooth={true}
+												offset={-150}
+												duration={500}>
+												Showcase
+											</Link>
 										</li>
 										<li>
-											<a href="#sect-how-we-work">Workflow</a>
+											<Link
+												to="sect-how-we-work"
+												spy={true}
+												activeClass="active"
+												onSetActive={handleSetActive}
+												smooth={true}
+												offset={-150}
+												duration={500}>
+												Workflow
+											</Link>
 										</li>
 										<li>
-											<a href="#sect-contacts">Contacts</a>
+											<Link
+												to="sect-contacts"
+												spy={true}
+												activeClass="active"
+												onSetActive={handleSetActive}
+												smooth={true}
+												offset={-150}
+												duration={500}>
+												Contacts
+											</Link>
 										</li>
 									</ul>
 									<div className="btn-wrap-mobile">
 										<div className="container">
-											<a href="#sect-contacts" className="btn quick-lnk">
+											<Link
+												to="#sect-contacts"
+												smooth={true}
+												duration={500}
+												className="btn">
 												<span>Contact us</span>
-											</a>
+											</Link>
 										</div>
 									</div>
 								</div>

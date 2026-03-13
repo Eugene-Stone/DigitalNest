@@ -4,7 +4,6 @@ export default function Footer() {
 	return (
 		<>
 			<footer className="foot-general">
-				<div className="btn-top" />
 				<div className="container">
 					<div className="foot-bottom">
 						<div className="row">

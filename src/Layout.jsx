@@ -1,12 +1,13 @@
 import { Outlet } from 'react-router-dom';
-import ScrollToTop from './utils/ScrollToTOp';
+import ReloadToTop from './utils/ReloadToTop';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import ButtonScrollTop from './components/ButtonScrollTop/ButtonScrollTop';
 
 export default function Layout() {
 	return (
 		<>
-			<ScrollToTop />
+			<ReloadToTop />
 			<Header />
 
 			<div className="layout">
@@ -23,6 +24,7 @@ export default function Layout() {
 			</div>
 
 			<Footer />
+			<ButtonScrollTop />
 		</>
 	);
 }
