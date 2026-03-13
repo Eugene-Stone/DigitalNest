@@ -8,11 +8,14 @@ export default function Footer() {
 				<div className="container">
 					<div className="foot-bottom">
 						<div className="row">
-							<div className="col-12 center">
+							<div className="col-6">
 								<div className="copyright">
 									Copyright © DigitalNest 2022, <br />
 									All rights reserved.
 								</div>
+							</div>
+							<div className="col-6 right">
+								<a href="/privacy">Privacy</a>
 							</div>
 						</div>
 					</div>
