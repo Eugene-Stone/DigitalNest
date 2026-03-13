@@ -1,30 +1,11 @@
-import { useEffect, useState } from 'react';
-import { request } from '../../api/request.js';
+import { useSectionData } from '../../hooks/useSectionData';
 import { ScrollToSectionLink } from '../../components/ScrollToSectionLink/ScrollToSectionLink';
 
 export default function Hero() {
-	const [section, setSection] = useState(null);
-	const [loading, setLoading] = useState(true);
-	const [errorData, setErrorData] = useState(null);
+	const { section, loading, errorData } = useSectionData('/hero');
+
+	if (!section) return null;
 	const { id, title, subtitle, description, buttonText, backgroundImage } = section || {};
-
-	useEffect(() => {
-		async function fetchData() {
-			try {
-				const data = await request('/hero', {
-					method: 'GET',
-				});
-
-				setSection(data);
-			} catch (error) {
-				setErrorData(error);
-			} finally {
-				setLoading(false);
-			}
-		}
-
-		fetchData();
-	}, []);
 
 	if (loading) {
 		return <div>Loading...</div>;
