@@ -1,155 +1,52 @@
-import React from 'react';
+import { ScrollToSectionLink } from '../../components/ScrollToSectionLink/ScrollToSectionLink';
+import { useSectionData } from '../../hooks/useSectionData';
+import TitleHtml from '../../utils/TitleHtml';
 
 export default function WhyUs() {
+	const { section, loading, errorData } = useSectionData('/features');
+
+	if (!section) return null;
+
+	if (loading) {
+		return <div>Loading...</div>;
+	}
+
+	if (errorData) {
+		return <div>Error fetch data</div>;
+	}
+
+	const { id, title, content } = section || {};
+
 	return (
-		<section id="why-us" className="sect-why-us">
+		<section id={id} className="sect-why-us">
 			<div className="container">
 				<div className="title-sect center">
-					<h2 className="h2-title">
-						<strong>Why</strong> choose DigitalNest?
-					</h2>
+					<TitleHtml className="h2-title">{title}</TitleHtml>
 				</div>
 				<div className="why-us-lst-box">
 					<div className="why-us-lst row">
-						<div className="why-us-itm col-6">
-							<div className="why-us-itm-icon">
-								<svg
-									height="14"
-									viewBox="0 0 14 14"
-									width="14"
-									xmlns="http://www.w3.org/2000/svg">
-									<g fill="#fff">
-										<rect height="14" rx="7" width="14" />
-										<path d="m7 3a4 4 0 1 0 4 4 4 4 0 0 0 -4-4m0-3a7 7 0 1 1 -7 7 7 7 0 0 1 7-7z" />
-									</g>
-								</svg>
-							</div>
-							<div className="why-us-itm-title h3-title">
-								9+ years in system engineering
-							</div>
-							<div className="why-us-itm-brief">
-								<p>
-									Deploying robust infrastructures for clients across the EU, UK,
-									and North America with global reach.
-								</p>
-							</div>
-						</div>
-						<div className="why-us-itm col-6">
-							<div className="why-us-itm-icon">
-								<svg
-									height="14"
-									viewBox="0 0 14 14"
-									width="14"
-									xmlns="http://www.w3.org/2000/svg">
-									<g fill="#fff">
-										<rect height="14" rx="7" width="14" />
-										<path d="m7 3a4 4 0 1 0 4 4 4 4 0 0 0 -4-4m0-3a7 7 0 1 1 -7 7 7 7 0 0 1 7-7z" />
-									</g>
-								</svg>
-							</div>
-							<div className="why-us-itm-title h3-title">
-								Custom &amp; proprietary stack
-							</div>
-							<div className="why-us-itm-brief">
-								<p>
-									Tailored digital solutions built by senior developers,
-									architects, and cybersecurity experts.
-								</p>
-							</div>
-						</div>
-						<div className="why-us-itm col-6">
-							<div className="why-us-itm-icon">
-								<svg
-									height="14"
-									viewBox="0 0 14 14"
-									width="14"
-									xmlns="http://www.w3.org/2000/svg">
-									<g fill="#fff">
-										<rect height="14" rx="7" width="14" />
-										<path d="m7 3a4 4 0 1 0 4 4 4 4 0 0 0 -4-4m0-3a7 7 0 1 1 -7 7 7 7 0 0 1 7-7z" />
-									</g>
-								</svg>
-							</div>
-							<div className="why-us-itm-title h3-title">
-								Scalable for any workload
-							</div>
-							<div className="why-us-itm-brief">
-								<p>
-									Engineered to handle high-traffic platforms, SaaS tools, and
-									complex enterprise-level databases.
-								</p>
-							</div>
-						</div>
-						<div className="why-us-itm col-6">
-							<div className="why-us-itm-icon">
-								<svg
-									height="14"
-									viewBox="0 0 14 14"
-									width="14"
-									xmlns="http://www.w3.org/2000/svg">
-									<g fill="#fff">
-										<rect height="14" rx="7" width="14" />
-										<path d="m7 3a4 4 0 1 0 4 4 4 4 0 0 0 -4-4m0-3a7 7 0 1 1 -7 7 7 7 0 0 1 7-7z" />
-									</g>
-								</svg>
-							</div>
-							<div className="why-us-itm-title h3-title">
-								Data-driven architecture
-							</div>
-							<div className="why-us-itm-brief">
-								<p>
-									We optimize every node for efficiency, low latency, and maximum
-									operational performance.
-								</p>
-							</div>
-						</div>
-						<div className="why-us-itm col-6">
-							<div className="why-us-itm-icon">
-								<svg
-									height="14"
-									viewBox="0 0 14 14"
-									width="14"
-									xmlns="http://www.w3.org/2000/svg">
-									<g fill="#fff">
-										<rect height="14" rx="7" width="14" />
-										<path d="m7 3a4 4 0 1 0 4 4 4 4 0 0 0 -4-4m0-3a7 7 0 1 1 -7 7 7 7 0 0 1 7-7z" />
-									</g>
-								</svg>
-							</div>
-							<div className="why-us-itm-title h3-title">
-								Automated &amp; Zero-Ops
-							</div>
-							<div className="why-us-itm-brief">
-								<p>
-									Self-healing systems and AI-driven monitoring guarantee
-									stability for years without manual intervention or server
-									downtime.
-								</p>
-							</div>
-						</div>
-						<div className="why-us-itm col-6">
-							<div className="why-us-itm-icon">
-								<svg
-									height="14"
-									viewBox="0 0 14 14"
-									width="14"
-									xmlns="http://www.w3.org/2000/svg">
-									<g fill="#fff">
-										<rect height="14" rx="7" width="14" />
-										<path d="m7 3a4 4 0 1 0 4 4 4 4 0 0 0 -4-4m0-3a7 7 0 1 1 -7 7 7 7 0 0 1 7-7z" />
-									</g>
-								</svg>
-							</div>
-							<div className="why-us-itm-title h3-title">
-								High security &amp; encryption
-							</div>
-							<div className="why-us-itm-brief">
-								<p>
-									Military-grade protocols and advanced encryption ensure your
-									data environment remains safe, stable, and private.
-								</p>
-							</div>
-						</div>
+						{content.map((item, i) => {
+							return (
+								<div key={item.id} className="why-us-itm col-6">
+									<div className="why-us-itm-icon">
+										<svg
+											height="14"
+											viewBox="0 0 14 14"
+											width="14"
+											xmlns="http://www.w3.org/2000/svg">
+											<g fill="#fff">
+												<rect height="14" rx="7" width="14" />
+												<path d="m7 3a4 4 0 1 0 4 4 4 4 0 0 0 -4-4m0-3a7 7 0 1 1 -7 7 7 7 0 0 1 7-7z" />
+											</g>
+										</svg>
+									</div>
+									<div className="why-us-itm-title h3-title">{item.title}</div>
+									<div className="why-us-itm-brief">
+										<p>{item.description}</p>
+									</div>
+								</div>
+							);
+						})}
 					</div>
 				</div>
 			</div>

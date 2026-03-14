@@ -141,11 +141,14 @@ img
 	text-align: center
 	margin-left: -1.6rem
 	margin-right: -1.6rem
-	a
+	a,
+	span
 		position: relative
 		text-decoration: none
 		display: block
 		padding-bottom: 1.6rem
+		cursor: pointer
+		transition: 0.15s
 		&::after
 			content: ""
 			display: block
@@ -169,7 +172,8 @@ img
 		margin: 0 1.6rem
 		z-index: 10
 		&.active
-			a
+			a,
+			span
 				color: $main
 				cursor: default
 				&::after
@@ -507,7 +511,8 @@ a.gallery-image
 		> li
 			margin: 0 1.2rem
 
-		a
+		a,
+		span
 			padding-bottom: 1rem
 
 
@@ -651,7 +656,8 @@ a.gallery-image
 
 	.gallery-filters-lst
 		font-size: 1.4rem
-		a
+		a,
+		span
 			&::after
 				height: 2px
 
@@ -809,7 +815,8 @@ a.gallery-image
 			&:first-child
 				margin-left: 2rem
 
-		a
+		a,
+		span
 			&::after
 				height: 1px
 

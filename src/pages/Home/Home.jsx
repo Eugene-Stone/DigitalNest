@@ -7,17 +7,17 @@ import Services from '../../sections/Services/Services';
 import Reviews from '../../sections/Reviews/Reviews';
 import Contacts from '../../sections/Contacts/Contacts';
 
-import Features from '../../sections/WhyUs/WhyUs';
-import Projects from '../../sections/Gallery/Gallery';
-import Workflow from '../../sections/HowWeWork/HowWeWork';
+import WhyUs from '../../sections/WhyUs/WhyUs';
+import Gallery from '../../sections/Gallery/Gallery';
+import HowWeWork from '../../sections/HowWeWork/HowWeWork';
 
 const sectionComponents = {
 	hero: Hero,
 	about: About,
 	services: Services,
-	features: Features,
-	projects: Projects,
-	workflow: Workflow,
+	features: WhyUs,
+	projects: Gallery,
+	workflow: HowWeWork,
 	reviews: Reviews,
 	contacts: Contacts,
 };

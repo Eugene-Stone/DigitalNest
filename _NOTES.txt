@@ -90,6 +90,7 @@ npm install -D concurrently
 GET    http://localhost:3001/favorites?userId=1
 POST   http://localhost:3001/favorites
 PATCH  http://localhost:3001/favorites/1
+PUT    http://localhost:3001/favorites/1
 DELETE http://localhost:3001/favorites/1
 
 
