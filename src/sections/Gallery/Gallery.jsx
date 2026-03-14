@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useEffectEvent } from 'react';
 import { request } from '../../api/request.js';
 import { useSectionData } from '../../hooks/useSectionData';
 import TitleHtml from '../../utils/TitleHtml';
@@ -8,10 +8,14 @@ export default function Gallery() {
 	const [categoryList, setCategoryList] = useState([]);
 	const [imagesLimit, setImagesLimit] = useState(5);
 
+	const updateCategoryList = useEffectEvent(() => {
+		setCategoryList(section.content);
+	});
+
 	useEffect(() => {
 		if (!section) return;
 
-		setCategoryList(section.content);
+		updateCategoryList();
 	}, [section]);
 
 	if (loading) {
@@ -48,6 +52,15 @@ export default function Gallery() {
 				body: JSON.stringify({
 					content: newContent,
 				}),
+
+				// Если использовать PUT, Нужно отправлять весь объект целиком.
+				// method: 'PUT',
+				// body: JSON.stringify({
+				// 	id: section.id,
+				// 	title: section.title,
+				// 	description: section.description,
+				// 	content: newContent
+				// })
 			});
 
 			setCategoryList(newContent);
