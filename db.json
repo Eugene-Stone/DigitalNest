@@ -149,7 +149,7 @@
           "/img/inner/14.png",
           "/img/inner/15.png"
         ],
-        "isActive": true
+        "isActive": false
       },
       {
         "id": "project-3",
@@ -189,7 +189,7 @@
           "/img/inner/14.png",
           "/img/inner/15.png"
         ],
-        "isActive": false
+        "isActive": true
       }
     ]
   },

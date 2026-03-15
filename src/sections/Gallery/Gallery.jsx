@@ -1,4 +1,9 @@
 import { useState, useEffect, useEffectEvent } from 'react';
+import Lightbox from 'yet-another-react-lightbox';
+import Counter from 'yet-another-react-lightbox/plugins/counter';
+import 'yet-another-react-lightbox/styles.css';
+import 'yet-another-react-lightbox/plugins/counter.css';
+
 import { request } from '../../api/request.js';
 import { useSectionData } from '../../hooks/useSectionData';
 import TitleHtml from '../../utils/TitleHtml';
@@ -7,6 +12,7 @@ export default function Gallery() {
 	const { section, loading, errorData } = useSectionData('/projects');
 	const [categoryList, setCategoryList] = useState([]);
 	const [imagesLimit, setImagesLimit] = useState(5);
+	const [index, setIndex] = useState(-1);
 
 	const updateCategoryList = useEffectEvent(() => {
 		setCategoryList(section.content);
@@ -64,6 +70,7 @@ export default function Gallery() {
 			});
 
 			setCategoryList(newContent);
+			setImagesLimit(5);
 		} catch (err) {
 			console.error(err);
 		}
@@ -73,6 +80,11 @@ export default function Gallery() {
 		setImagesLimit(galleryList?.images.length);
 		console.log(galleryList?.images.length);
 	}
+
+	const slides =
+		galleryList?.images.slice(0, imagesLimit).map((img, i) => {
+			return { src: img };
+		}) || [];
 
 	return (
 		<section id={id} className="sect-gallery">
@@ -112,17 +124,27 @@ export default function Gallery() {
 
 							return (
 								<div key={i} className={classNameItem}>
-									<a
-										href={image}
-										data-thumb={image}
-										className="gallery-image fancy-photo"
-										data-fancybox="fancy_gallery">
-										<img src={image} alt="Image" />
-									</a>
+									<span className="gallery-image">
+										<img
+											src={image}
+											alt="Image"
+											className="gallery-image"
+											onClick={() => setIndex(i)}
+										/>
+									</span>
 								</div>
 							);
 						})}
 					</div>
+
+					<Lightbox
+						index={index}
+						slides={slides}
+						open={index >= 0}
+						close={() => setIndex(-1)}
+						plugins={[Counter]}
+					/>
+
 					{imagesLimit < galleryList?.images.length ? (
 						<div className="btn-more-wrap center">
 							<span className="btn-link" onClick={showAllImages}>
