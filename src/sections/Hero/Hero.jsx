@@ -4,15 +4,13 @@ import { ScrollToSectionLink } from '../../components/ScrollToSectionLink/Scroll
 export default function Hero() {
 	const { section, loading, errorData } = useSectionData('/hero');
 
-	if (!section) return null;
-
 	if (loading) {
-		return <div>Loading...</div>;
+		return <div>Loading Hero...</div>;
 	}
-
 	if (errorData) {
 		return <div>Error fetch data</div>;
 	}
+	if (!section) return null;
 
 	const { id, title, subtitle, description, buttonText, backgroundImage } = section || {};
 
@@ -52,7 +50,7 @@ export default function Hero() {
 					</div>
 				</div>
 				<div className="top-screen-image">
-					<img src={backgroundImage} alt="image" />
+					<img src={backgroundImage} alt="image" width={1000} height={562} />
 				</div>
 			</div>
 		</div>

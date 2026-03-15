@@ -25,12 +25,12 @@ export default function Gallery() {
 	}, [section]);
 
 	if (loading) {
-		return <div>Loading...</div>;
+		return <div>Loading Gallery...</div>;
 	}
-
 	if (errorData) {
 		return <div>Error fetch data</div>;
 	}
+	if (!section) return null;
 
 	const { id, title, description, content } = section || {};
 	const galleryList = categoryList.find((categoryItem) => categoryItem.isActive);
@@ -39,7 +39,7 @@ export default function Gallery() {
 		return <div>No active category</div>;
 	}
 
-	console.log(galleryList);
+	// console.log(galleryList);
 
 	async function toggleActiveCategory(categoryItem) {
 		console.log(categoryItem);

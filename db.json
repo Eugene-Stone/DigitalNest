@@ -17,7 +17,7 @@
   ],
   "hero": {
     "id": "hero",
-    "title": "Advanced Digital Ecosystem Solutions",
+    "title": "Advanced Digital Ecosystem Solutions ",
     "subtitle": "Scalable Tech & Smart Data Harmony",
     "description": "High-tech infrastructure with cloud systems: efficiency, security, and power for your network—automated and maintenance-free.",
     "buttonText": "Contact us",
@@ -161,7 +161,7 @@
           "/img/inner/12.png",
           "/img/inner/11.png"
         ],
-        "isActive": false
+        "isActive": true
       },
       {
         "id": "project-4",
@@ -189,7 +189,7 @@
           "/img/inner/14.png",
           "/img/inner/15.png"
         ],
-        "isActive": true
+        "isActive": false
       }
     ]
   },

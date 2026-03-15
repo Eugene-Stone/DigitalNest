@@ -23,7 +23,13 @@ const sectionComponents = {
 };
 
 export default function Home() {
-	const [page, setPage] = useState(null);
+	const storageKey = 'homePageData';
+
+	const [page, setPage] = useState(() => {
+		const cached = localStorage.getItem(storageKey);
+		return cached ? JSON.parse(cached) : null;
+	});
+
 	const [errorData, setErrorData] = useState(null);
 
 	useEffect(() => {
@@ -34,6 +40,7 @@ export default function Home() {
 				});
 
 				setPage(data);
+				localStorage.setItem(storageKey, JSON.stringify(data));
 			} catch (error) {
 				setErrorData(error);
 			} finally {
@@ -49,7 +56,7 @@ export default function Home() {
 	}
 
 	if (!page) {
-		return <div>Loading...</div>;
+		return <div>Loading HomePage...</div>;
 	}
 
 	return (

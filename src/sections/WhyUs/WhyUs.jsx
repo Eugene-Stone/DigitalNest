@@ -5,15 +5,13 @@ import TitleHtml from '../../utils/TitleHtml';
 export default function WhyUs() {
 	const { section, loading, errorData } = useSectionData('/features');
 
-	if (!section) return null;
-
 	if (loading) {
-		return <div>Loading...</div>;
+		return <div>Loading WhyUs...</div>;
 	}
-
 	if (errorData) {
 		return <div>Error fetch data</div>;
 	}
+	if (!section) return null;
 
 	const { id, title, content } = section || {};
 

@@ -2,8 +2,14 @@ import { useEffect, useState } from 'react';
 import { request } from '../api/request.js';
 
 export function useSectionData(endpoint) {
-	const [section, setSection] = useState(null);
-	const [loading, setLoading] = useState(true);
+	const storageKey = `sectionData${endpoint}`;
+
+	const [section, setSection] = useState(() => {
+		const cached = localStorage.getItem(storageKey);
+		return cached ? JSON.parse(cached) : null;
+	});
+
+	const [loading, setLoading] = useState(!section);
 	const [errorData, setErrorData] = useState(null);
 
 	useEffect(() => {
@@ -17,6 +23,7 @@ export function useSectionData(endpoint) {
 
 				if (!isCancelled) {
 					setSection(data);
+					localStorage.setItem(`sectionData${endpoint}`, JSON.stringify(data));
 				}
 			} catch (error) {
 				if (!isCancelled) {

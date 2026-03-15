@@ -3,15 +3,13 @@ import { useSectionData } from '../../hooks/useSectionData';
 export default function About() {
 	const { section, loading, errorData } = useSectionData('/about');
 
-	if (!section) return null;
-
 	if (loading) {
-		return <div>Loading...</div>;
+		return <div>Loading About...</div>;
 	}
-
 	if (errorData) {
 		return <div>Error fetch data</div>;
 	}
+	if (!section) return null;
 
 	const { id, title, content, images } = section || {};
 
