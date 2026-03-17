@@ -1,67 +1,82 @@
-import React from 'react';
+import { useSectionData } from '../../hooks/useSectionData';
+import TitleHtml from '../../utils/TitleHtml';
 
 export default function Contacts() {
+	const { section, loading, errorData } = useSectionData('/contacts');
+
+	if (loading) {
+		return <div>Loading Services...</div>;
+	}
+	if (errorData) {
+		return <div>Error fetch data</div>;
+	}
+	if (!section) return null;
+
+	const { id, title, description, phone, email, social } = section || {};
+	const iconSocial = {
+		instagram: '/img/_style/_svg/_social/inst.svg',
+		wts: 'img/_style/_svg/_social/wts.svg',
+	};
+
 	return (
 		<section id="contacts" className="sect-contacts">
 			<div className="container">
 				<div className="row">
 					<div className="col-lg-6">
 						<div className="title-sect">
-							<h2 className="h2-title">
-								<strong>Contacts</strong>
-							</h2>
-							<div className="title-descr">
-								<p>
-									Let’s build your next digital breakthrough together! We provide
-									remote engineering and on-site consulting across the EU, UK, and
-									North America.
-								</p>
-								<p>
-									*Global availability – our distributed team operates across
-									multiple time zones to support you.
-								</p>
-							</div>
+							<TitleHtml titleClass="h2-title">{title}</TitleHtml>
+
+							{description && (
+								<div className="title-descr">
+									{description.map((p, i) => {
+										return <p key={i}>{p}</p>;
+									})}
+								</div>
+							)}
 						</div>
 						<div className="contacts-lst">
-							<ul>
-								<li>Telegram / WhatsApp:</li>
-								<li>
-									<div className="h3-title">
-										<a href="tel:+12345678">+12345678</a>
-									</div>
-								</li>
-							</ul>
-							<ul>
-								<li>E-mail:</li>
-								<li>
-									<div className="h3-title">
-										<a href="mailto:dev@DigitalNest.tech">
-											dev@DigitalNest.tech
-										</a>
-									</div>
-								</li>
-							</ul>
+							{phone && (
+								<ul>
+									<li>Telegram / WhatsApp:</li>
+									<li>
+										<div className="h3-title">
+											<a href={`tel:${phone}`}>{phone}</a>
+										</div>
+									</li>
+								</ul>
+							)}
+
+							{email && (
+								<ul>
+									<li>E-mail:</li>
+									<li>
+										<div className="h3-title">
+											<a href={`mailto:${email}`}>{email}</a>
+										</div>
+									</li>
+								</ul>
+							)}
 						</div>
-						<div className="soc-wrap">
-							<div className="soc-lst">
-								<a
-									href="#"
-									className="soc-btn"
-									title="#"
-									style={{
-										backgroundImage: 'url(/img/_style/_svg/_social/wts.svg)',
-									}}
-								/>
-								<a
-									href="#"
-									className="soc-btn"
-									title="#"
-									style={{
-										backgroundImage: 'url(/img/_style/_svg/_social/inst.svg)',
-									}}
-								/>
+
+						{social && (
+							<div className="soc-wrap">
+								<div className="soc-lst">
+									{Object.entries(social || {}).map(([key, url]) => (
+										<a
+											key={key}
+											href={url}
+											className="soc-btn"
+											title={key}
+											target="_blank"
+											rel="noreferrer"
+											style={{
+												backgroundImage: `url(${iconSocial[key]})`,
+											}}
+										/>
+									))}
+								</div>
 							</div>
-						</div>
+						)}
 					</div>
 					<div className="col-lg-6">
 						<form action="#" className="contact-form">

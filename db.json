@@ -261,12 +261,24 @@
 	},
 	"contacts": {
 		"id": "contacts-main",
+		"title": "<strong>Contacts</strong>",
+		"description": [
+			"Let’s build your next digital breakthrough together! We provide remote engineering and on-site consulting across the EU, UK, and North America.",
+			"*Global availability – our distributed team operates across multiple time zones to support you."
+		],
 		"phone": "+12345678",
 		"email": "dev@digitalnest.tech",
-		"address": "DigitalNest HQ",
 		"social": {
-			"linkedin": "https://linkedin.com/company/digitalnest",
-			"instagram": "https://instagram.com/digitalnest"
+			"wts": "https://wts.com/company/digital123",
+			"instagram": "https://instagram.com/digital123"
 		}
+	},
+	"requests": {
+		"id": 1,
+		"name": "John Doe",
+		"phone": "+380...",
+		"email": "john@mail.com",
+		"message": "Хочу консультацию",
+		"createdAt": "2026-03-17T20:00:00Z"
 	}
 }
