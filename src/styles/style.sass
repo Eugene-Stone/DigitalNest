@@ -234,6 +234,11 @@ img
 .sect-how-we-work
 	.btn-more-wrap
 		margin-top: 6rem
+	.button-description
+		p
+			max-width: 600px
+			margin-left: auto
+			margin-right: auto
 
 .how-we-work-image
 	@extend .about-image
@@ -438,9 +443,9 @@ img
 
 
 
-// .reviews-slider-box
-// 	margin-left: -33rem
-// 	margin-right: -33rem
+.reviews-slider-box
+	position: relative
+	--swiper-pagination-bullet-inactive-color: #fff
 
 .reviews-slider
 	.slick-track
@@ -452,8 +457,9 @@ img
 
 
 .review-slide-itm
-	padding-left: 2rem
-	padding-right: 2rem
+	max-width: 800px
+	margin-left: auto
+	margin-right: auto
 
 .review-slide-inner
 	padding: 4rem
@@ -864,8 +870,8 @@ img
 		padding-right: 1rem
 
 	.review-slide-inner
-		padding: 2rem
-		min-height: 35rem
+		padding: 2rem 5rem 4rem
+		// min-height: 35rem
 
 	.review-slide-top-line
 		margin-bottom: 1.6rem

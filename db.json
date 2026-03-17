@@ -192,8 +192,13 @@
 	},
 	"workflow": {
 		"id": "workflow",
-		"title": "<strong>Showcase</strong>",
-		"description": "Explore our recent digital deployments and architecture solutions.",
+		"title": "<strong>Our</strong> workflow",
+		"description": [
+			"Build a resilient digital presence with DigitalNest’s custom engineering. Accelerate your technological growth today!."
+		],
+		"descriptionBottom": [
+			"Ready to scale? Connect with us – we’ll dive into technical details and help you architect the perfect system!"
+		],
 		"content": [
 			{
 				"id": "step-1",
@@ -223,32 +228,34 @@
 	},
 	"reviews": {
 		"id": "reviews",
-		"title": "<strong>Showcase</strong>",
-		"description": "Explore our recent digital deployments and architecture solutions.",
+		"title": "<strong>Reviews</strong>",
+		"description": [
+			"Every system built by DigitalNest is engineered for stability and exceptional performance."
+		],
 		"content": [
 			{
 				"id": "review-1",
 				"name": "Alex R.",
 				"position": "CTO",
-				"company": "FinCore",
+				"date": "12 February 2026",
 				"avatar": "/img/reviews/1.jpg",
-				"text": "DigitalNest delivered a highly scalable infrastructure solution that significantly improved our platform stability."
+				"text": ["DigitalNest delivered a highly scalable infrastructure solution that significantly improved our platform stability."]
 			},
 			{
 				"id": "review-2",
 				"name": "Sarah J.",
 				"position": "Product Owner",
-				"company": "CloudLabs",
+				"date": "1 February 2026",
 				"avatar": "/img/reviews/2.jpg",
-				"text": "Their engineering team transformed our architecture and dramatically improved performance."
+				"text": ["Their engineering team transformed our architecture and dramatically improved performance."]
 			},
 			{
 				"id": "review-3",
 				"name": "Mihesel V.",
 				"position": "Founder",
-				"company": "DataForge",
+				"date": "25 February 2026",
 				"avatar": "/img/reviews/3.jpg",
-				"text": "Professional team with strong expertise in cloud infrastructure and enterprise solutions."
+				"text": ["Professional team with strong expertise in cloud infrastructure and enterprise solutions."]
 			}
 		]
 	},

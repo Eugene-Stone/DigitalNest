@@ -1,104 +1,102 @@
-import React from 'react';
+import { useSectionData } from '../../hooks/useSectionData';
+import TitleHtml from '../../utils/TitleHtml';
+
+// import Swiper core and required modules
+import { Navigation, Pagination, Scrollbar, A11y, Mousewheel } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
 export default function Reviews() {
+	const { section, loading, errorData } = useSectionData('/reviews');
+
+	if (loading) {
+		return <div>Loading Services...</div>;
+	}
+	if (errorData) {
+		return <div>Error fetch data</div>;
+	}
+	if (!section) return null;
+
+	const { id, title, description, content } = section || {};
+
 	return (
 		<section className="sect-reviews">
 			<div className="title-sect center">
-				<h2 className="h2-title">
-					<strong>Reviews</strong>
-				</h2>
-				<div className="title-descr">
-					<p>
-						Every system built by DigitalNest is engineered for stability and
-						exceptional performance.
-					</p>
-				</div>
-			</div>
-			<div className="reviews-slider-box">
-				<div className="reviews-slider">
-					<div className="review-slide-itm">
-						<div className="review-slide-inner">
-							<div className="review-slide-top-line">
-								<div className="review-slide-top-photo">
-									<img src="/img/inner/18.png" alt="Alex R." />
-								</div>
-								<div className="review-slide-top-txt">
-									<div className="review-slide-author">Alex R. (CTO)</div>
-									<div className="review-slide-date">12 February 2026</div>
-								</div>
-							</div>
-							<div className="review-slide-txt">
-								<p>
-									DigitalNest completely refactored our legacy infrastructure. The
-									transition to a microservices architecture was seamless,
-									resulting in a 40% increase in deployment speed. Their team
-									demonstrated deep expertise in Node.js and cloud security
-									protocols throughout the project.
-								</p>
-							</div>
-						</div>
+				<TitleHtml className="h2-title">{title}</TitleHtml>
+
+				{description && (
+					<div className="title-descr">
+						{description.map((p, i) => {
+							return <p key={i}>{p}</p>;
+						})}
 					</div>
-					{/* review-slide-itm */}
-					<div className="review-slide-itm">
-						<div className="review-slide-inner">
-							<div className="review-slide-top-line">
-								<div className="review-slide-top-photo">
-									<img src="/img/inner/18.png" alt="Sarah J." />
-								</div>
-								<div className="review-slide-top-txt">
-									<div className="review-slide-author">
-										Sarah J. (Product Owner)
+				)}
+			</div>
+
+			<div className="reviews-slider-box slider--swiper">
+				<Swiper
+					modules={[Navigation, Pagination, Scrollbar, Mousewheel]}
+					spaceBetween={0}
+					slidesPerView={1}
+					loop={true}
+					scrollbar={{ draggable: true }}
+					navigation={{
+						prevEl: '.swiper-button-prev',
+						nextEl: '.swiper-button-next',
+					}}
+					pagination={{
+						el: '.swiper-pagination',
+						clickable: true,
+					}}
+					mousewheel={{
+						enabled: true,
+						forceToAxis: true,
+						sensitivity: 1,
+					}}>
+					{content.map((review, i) => {
+						return (
+							<SwiperSlide>
+								<div className="review-slide-itm">
+									<div className="review-slide-inner">
+										<div className="review-slide-top-line">
+											<div className="review-slide-top-photo">
+												<img src="/img/inner/18.png" alt="Alex R." />
+											</div>
+											<div className="review-slide-top-txt">
+												<div className="review-slide-author">
+													{review.name} ({review.position})
+												</div>
+												<div className="review-slide-date">
+													{review.date}
+												</div>
+											</div>
+										</div>
+										<div className="review-slide-txt">
+											{review.text.map((p, i) => {
+												return <p key={i}>{p}</p>;
+											})}
+										</div>
 									</div>
-									<div className="review-slide-date">28 January 2026</div>
 								</div>
-							</div>
-							<div className="review-slide-txt">
-								<p>
-									The UI/UX transformation they provided for our SaaS platform was
-									incredible. DigitalNest doesn't just write code; they build
-									intuitive user experiences. Their clean, modular frontend
-									components made it easy for our internal team to scale the
-									product further.
-								</p>
-							</div>
-						</div>
-					</div>
-					{/* review-slide-itm */}
-					<div className="review-slide-itm">
-						<div className="review-slide-inner">
-							<div className="review-slide-top-line">
-								<div className="review-slide-top-photo">
-									<img src="/img/inner/18.png" alt="Michael V." />
-								</div>
-								<div className="review-slide-top-txt">
-									<div className="review-slide-author">Michael V. (Founder)</div>
-									<div className="review-slide-date">15 January 2026</div>
-								</div>
-							</div>
-							<div className="review-slide-txt">
-								<p>
-									Finding a partner that understands both business logic and
-									high-end engineering is rare. DigitalNest delivered our MVP on
-									time and exceeded our expectations regarding system uptime and
-									API responsiveness. A truly reliable partner for any tech-driven
-									venture.
-								</p>
-							</div>
-						</div>
-					</div>
-					{/* review-slide-itm */}
-				</div>
-				{/* reviews-slider */}
+							</SwiperSlide>
+						);
+					})}
+				</Swiper>
+
 				<div className="slide-controls">
-					<div className="container">
-						<div className="slide-controls-inner">
-							<div className="dots-nav" />
-							<div className="slider-nav" />
-						</div>
+					<div className="slider-pagination">
+						<div className="swiper-pagination"></div>
+					</div>
+					<div className="slider-navigation">
+						<div className="swiper-button-prev"></div>
+						<div className="swiper-button-next"></div>
 					</div>
 				</div>
 			</div>
-			{/* reviews-slider-box */}
 		</section>
 	);
 }
