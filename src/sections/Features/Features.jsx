@@ -2,7 +2,7 @@ import { ScrollToSectionLink } from '../../components/ScrollToSectionLink/Scroll
 import { useSectionData } from '../../hooks/useSectionData';
 import TitleHtml from '../../utils/TitleHtml';
 
-export default function WhyUs() {
+export default function Features() {
 	const { section, loading, errorData } = useSectionData('/features');
 
 	if (loading) {

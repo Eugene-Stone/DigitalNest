@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function HowWeWork() {
+export default function Workflow() {
 	return (
 		<section id="how-we-work" className="sect-how-we-work">
 			<div className="container">

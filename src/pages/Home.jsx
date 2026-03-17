@@ -1,23 +1,23 @@
-import { request } from '../../api/request.js';
+import { request } from '../api/request.js';
 import { useEffect, useState } from 'react';
 
-import Hero from '../../sections/Hero/Hero';
-import About from '../../sections/About/About';
-import Services from '../../sections/Services/Services';
-import Reviews from '../../sections/Reviews/Reviews';
-import Contacts from '../../sections/Contacts/Contacts';
+import Hero from '../sections/Hero/Hero.jsx';
+import About from '../sections/About/About.jsx';
+import Services from '../sections/Services/Services.jsx';
+import Reviews from '../sections/Reviews/Reviews.jsx';
+import Contacts from '../sections/Contacts/Contacts.jsx';
 
-import WhyUs from '../../sections/WhyUs/WhyUs';
-import Gallery from '../../sections/Gallery/Gallery';
-import HowWeWork from '../../sections/HowWeWork/HowWeWork';
+import Features from '../sections/Features/Features.jsx';
+import Projects from '../sections/Projects/Projects.jsx';
+import Workflow from '../sections/Workflow/Workflow';
 
 const sectionComponents = {
 	hero: Hero,
 	about: About,
 	services: Services,
-	features: WhyUs,
-	projects: Gallery,
-	workflow: HowWeWork,
+	features: Features,
+	projects: Projects,
+	workflow: Workflow,
 	reviews: Reviews,
 	contacts: Contacts,
 };
@@ -26,8 +26,17 @@ export default function Home() {
 	const storageKey = 'homePageData';
 
 	const [page, setPage] = useState(() => {
-		const cached = localStorage.getItem(storageKey);
-		return cached ? JSON.parse(cached) : null;
+		// const cached = localStorage.getItem(storageKey);
+		// return cached ? JSON.parse(cached) : null;
+
+		// С проверкой на случай битого кеша
+		try {
+			const cached = localStorage.getItem(storageKey);
+			return cached ? JSON.parse(cached) : null;
+		} catch {
+			localStorage.removeItem(storageKey);
+			return null;
+		}
 	});
 
 	const [errorData, setErrorData] = useState(null);

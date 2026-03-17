@@ -5,10 +5,10 @@ import 'yet-another-react-lightbox/styles.css';
 import 'yet-another-react-lightbox/plugins/counter.css';
 
 import { request } from '../../api/request.js';
-import { useSectionData } from '../../hooks/useSectionData';
-import TitleHtml from '../../utils/TitleHtml';
+import { useSectionData } from '../../hooks/useSectionData.jsx';
+import TitleHtml from '../../utils/TitleHtml.jsx';
 
-export default function Gallery() {
+export default function Projects() {
 	const { section, loading, errorData } = useSectionData('/projects');
 	const [categoryList, setCategoryList] = useState([]);
 	const [imagesLimit, setImagesLimit] = useState(5);
