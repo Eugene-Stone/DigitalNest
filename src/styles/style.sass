@@ -913,28 +913,15 @@ img
 
 
 @media only screen and (min-width : 577px)
-	.gallery
-		.gallery-itm
-			// &:nth-child(1),
-			// &:nth-child(6),
-			// &:nth-child(11),
-			// &:nth-child(16)
-			// 	z-index: 10
-			// 	transform: translateY(50%)
+	// .gallery
+	// 	.gallery-itm
+			// &:nth-child(1)
+			// 	&:not(:nth-last-child(2))
+			// 		z-index: 10
+			// 		transform: translateY(50%)
 
-			// &:nth-child(3),
-			// &:nth-child(8),
-			// &:nth-child(13),
-			// &:nth-child(18)
+			// &:nth-child(3)
 			// 	transform: translateY(-200%)
-
-			&:nth-child(1)
-				&:not(:nth-last-child(2))
-					z-index: 10
-					transform: translateY(50%)
-
-			&:nth-child(3)
-				transform: translateY(-200%)
 
 
 
@@ -948,6 +935,16 @@ img
 				.gallery-image
 					img
 						aspect-ratio: 353/169.5
+
+
+			&:nth-child(1)
+				&:not(:nth-last-child(2))
+					z-index: 10
+					transform: translateY(50%)
+
+			&:nth-child(3)
+				transform: translateY(-200%)
+
 
 
 

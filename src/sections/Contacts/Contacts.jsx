@@ -1,8 +1,51 @@
+import { useForm } from 'react-hook-form';
 import { useSectionData } from '../../hooks/useSectionData';
+import { request } from '../../api/request';
 import TitleHtml from '../../utils/TitleHtml';
 
 export default function Contacts() {
 	const { section, loading, errorData } = useSectionData('/contacts');
+
+	const {
+		register,
+		handleSubmit,
+		reset,
+		formState: { errors, isValid },
+	} = useForm({
+		mode: 'onChange',
+		defaultValues: {
+			fullName: 'Full Name Initial',
+		},
+	});
+
+	async function sendForm(value) {
+		// const newFormIncome = self.crypto?.randomUUID();
+		const newFormIncome = Date.now();
+
+		try {
+			await request('/requests', {
+				method: 'POST',
+				body: JSON.stringify({
+					dateSend: newFormIncome,
+					selectField: value.selectField,
+					fullName: value.fullName,
+					companyPhone: value.companyPhone,
+					textarea: value.textarea,
+					checkboxes: value.checkboxes,
+				}),
+			});
+		} catch (error) {
+			console.log(error.message);
+		}
+	}
+
+	function onSubmit(data) {
+		console.log(JSON.stringify(data));
+		sendForm(data);
+		reset();
+	}
+
+	// console.log(useForm);
 
 	if (loading) {
 		return <div>Loading Services...</div>;
@@ -79,7 +122,7 @@ export default function Contacts() {
 						)}
 					</div>
 					<div className="col-lg-6">
-						<form action="#" className="contact-form">
+						<form onSubmit={handleSubmit(onSubmit)} className="contact-form">
 							<div className="form-title h3-title">
 								Start a conversation about your project and get a free technical
 								infrastructure audit.
@@ -87,127 +130,98 @@ export default function Contacts() {
 							<div className="fields-box">
 								<div className="field-itm">
 									<div className="cust-sel">
-										<span className="wpcf7-form-control-wrap dropdown">
-											<select
-												name="dropdown"
-												className="wpcf7-form-control wpcf7-select wpcf7-validates-as-required"
-												aria-required="true"
-												aria-invalid="false">
-												<option value="">Select Project Type</option>
-												<option value="web">Web Engineering</option>
-												<option value="cloud">Cloud Infrastructure</option>
-												<option value="audit">Technical Audit</option>
-											</select>
-										</span>
+										<select {...register('selectField')}>
+											<option value="">Select Project Type</option>
+											<option value="web">Web Engineering</option>
+											<option value="cloud">Cloud Infrastructure</option>
+											<option value="audit">Technical Audit</option>
+										</select>
 									</div>
 								</div>
 								<div className="field-itm">
 									<div className="cust-inp">
-										<span className="wpcf7-form-control-wrap address">
-											<input
-												type="text"
-												name="address"
-												defaultValue=""
-												size={40}
-												className="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-												aria-required="true"
-												aria-invalid="false"
-												placeholder="Full Name"
-											/>
-										</span>
+										<input
+											{...register('fullName', {
+												required: 'Field required',
+												minLength: {
+													value: 3,
+													message: 'Min length 3 symbols',
+												},
+											})}
+											type="text"
+											// placeholder="Full Name"
+										/>
+									</div>
+									{errors.fullName && (
+										<div className="error-field">
+											{errors.fullName.message || 'Full name is required.'}
+										</div>
+									)}
+								</div>
+								<div className="field-itm">
+									<div className="cust-inp">
+										<input
+											{...register('companyPhone')}
+											placeholder="Company Phone"
+										/>
 									</div>
 								</div>
 								<div className="field-itm">
 									<div className="cust-inp">
-										<span className="wpcf7-form-control-wrap address">
-											<input
-												type="text"
-												name="address"
-												defaultValue=""
-												size={40}
-												className="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-												aria-required="true"
-												aria-invalid="false"
-												placeholder="Company Phone"
-											/>
-										</span>
+										<input
+											{...register('email')}
+											type="email"
+											placeholder="Business E-Mail"
+										/>
 									</div>
-								</div>
-								<div className="field-itm">
-									<div className="cust-inp">
-										<span className="wpcf7-form-control-wrap address">
-											<input
-												type="text"
-												name="address"
-												defaultValue=""
-												size={40}
-												className="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-												aria-required="true"
-												aria-invalid="false"
-												placeholder="Business E-Mail"
-											/>
-										</span>
-									</div>
+									{errors.email && (
+										<div className="error-field">{errors.email.message}</div>
+									)}
 								</div>
 								<div className="field-itm">
 									<div className="cust-textarea">
-										<span className="wpcf7-form-control-wrap textarea">
-											<textarea
-												name="textarea"
-												cols={40}
-												rows={4}
-												className="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required"
-												aria-required="true"
-												aria-invalid="false"
-												placeholder="Briefly describe your project or tech stack"
-												defaultValue={''}
-											/>
-										</span>
+										<textarea
+											{...register('textarea')}
+											cols={40}
+											rows={4}
+											placeholder="Briefly describe your project or tech stack"
+											defaultValue={''}
+										/>
 									</div>
 								</div>
 								<div className="field-itm">
-									<div className="check-lst">
-										<span className="wpcf7-form-control-wrap checkbox">
-											<span className="wpcf7-form-control wpcf7-checkbox wpcf7-validates-as-required">
-												<span className="wpcf7-list-item first">
-													<label>
-														<input
-															type="checkbox"
-															name="checkbox[]"
-															defaultValue={1}
-														/>
+									<ul className="check-lst">
+										<li>
+											<label className="cust-check">
+												<input
+													type="checkbox"
+													{...register('checkboxes')}
+													defaultValue={'Checkbox 1'}
+												/>
 
-														<span className="wpcf7-list-item-label">
-															Checkbox 1
-														</span>
-													</label>
+												<span className="wpcf7-list-item-label">
+													Checkbox 1
 												</span>
+											</label>
+										</li>
+										<li>
+											<label className="cust-check">
+												<input
+													type="checkbox"
+													{...register('checkboxes')}
+													defaultValue={'Checkbox 2'}
+												/>
 
-												<span className="wpcf7-list-item">
-													<label>
-														<input
-															type="checkbox"
-															name="checkbox[]"
-															defaultValue={2}
-														/>
-
-														<span className="wpcf7-list-item-label">
-															Checkbox 2
-														</span>
-													</label>
+												<span className="wpcf7-list-item-label">
+													Checkbox 2
 												</span>
-											</span>
-										</span>
-									</div>
+											</label>
+										</li>
+									</ul>
 								</div>
 								<div className="btn-form-wrap">
-									<span className="btn-form">
-										<input
-											type="submit"
-											defaultValue="Submit Request"
-											className="wpcf7-form-control wpcf7-submit"
-										/>
-										<span className="ajax-loader" />
+									<span className={`btn-form ${isValid ? '' : 'disabled'}`}>
+										<input type="submit" />
 										<span>Send</span>
 									</span>
 								</div>
