@@ -292,61 +292,23 @@
       "createdAt": "2026-03-17T20:00:00Z"
     },
     {
-      "id": "735c4248-4260-4983-b90c-b0b35f6b9395",
+      "id": "ce27",
+      "dateSend": "2026-03-19T21:46:11.452Z",
       "selectField": "",
       "fullName": "Full Name Initial",
       "companyPhone": "",
+      "email": "",
       "textarea": "",
       "checkboxes": false
     },
     {
-      "id": "98df51bd-e03b-4624-a96b-13bf841b12eb",
+      "id": "c7b8",
+      "dateSend": "2026-03-19T21:47:59.808Z",
+      "dateSendSt": 1773956879808,
       "selectField": "",
       "fullName": "Full Name Initial",
       "companyPhone": "",
-      "textarea": "",
-      "checkboxes": false
-    },
-    {
-      "id": "1239",
-      "selectField": "",
-      "fullName": "Full Name Initial",
-      "companyPhone": "",
-      "textarea": "",
-      "checkboxes": false
-    },
-    {
-      "id": "1bdc",
-      "selectField": "",
-      "fullName": "Full Name Initial",
-      "companyPhone": "",
-      "textarea": "",
-      "checkboxes": false
-    },
-    {
-      "id": "6976",
-      "dateSend": 1773955691657,
-      "selectField": "",
-      "fullName": "Full Name Initial",
-      "companyPhone": "",
-      "textarea": "",
-      "checkboxes": false
-    },
-    {
-      "id": "35d3",
-      "dateSend": 1773955896296,
-      "selectField": "",
-      "fullName": "Full Name Initial",
-      "companyPhone": "",
-      "textarea": "",
-      "checkboxes": false
-    },
-    {
-      "id": "34ad",
-      "dateSend": 1773955897522,
-      "selectField": "",
-      "fullName": "Full Name Initial",
-      "companyPhone": "",
+      "email": "",
       "textarea": "",
       "checkboxes": false
     }
