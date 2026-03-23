@@ -3,10 +3,11 @@ import ReloadToTop from './utils/ReloadToTop';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import ButtonScrollTop from './components/ButtonScrollTop/ButtonScrollTop';
+import LanguageProvider from './context/LanguageContext';
 
 export default function Layout() {
 	return (
-		<>
+		<LanguageProvider>
 			<ReloadToTop />
 			<Header />
 
@@ -25,6 +26,6 @@ export default function Layout() {
 
 			<Footer />
 			<ButtonScrollTop />
-		</>
+		</LanguageProvider>
 	);
 }

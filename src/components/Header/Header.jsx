@@ -1,9 +1,16 @@
 import { useState, useEffect, useRef } from 'react';
 import { NavLink } from 'react-router';
 import { ScrollToSectionLink } from '../ScrollToSectionLink/ScrollToSectionLink';
+import useLanguageContext from '../../context/useLanguageContext.js';
 
 export default function Header() {
 	const [menuIsOpen, setMenuIsOpen] = useState(false);
+
+	const { currentLang, setCurrentLang } = useLanguageContext();
+
+	// console.log(currentLang);
+
+	const langList = ['En', 'Ru'];
 
 	const handleToggleMenu = () => {
 		setMenuIsOpen(!menuIsOpen);
@@ -108,6 +115,45 @@ export default function Header() {
 									</div>
 								</div>
 							</nav>
+
+							<ul className="head-sett">
+								<li className="lang-choose hover-dropdown ">
+									<div className="hover-dropdown-btn">
+										<span>{currentLang}</span>
+										<i className="hover-dropdown-ic">
+											<svg
+												width={24}
+												height={25}
+												viewBox="0 0 24 25"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M3.87039 6.66504L2.10039 8.43504L12.0004 18.335L21.9004 8.43504L20.1304 6.66504L12.0004 14.795L3.87039 6.66504V6.66504Z"
+													fill="currentColor"
+												/>
+											</svg>
+										</i>
+									</div>
+									<div className="lang-lst hover-dropdown-box">
+										<div className="hover-dropdown-inner">
+											<ul>
+												{langList.map((langItem, index) => {
+													return (
+														<li key={langItem}>
+															<button
+																onClick={() =>
+																	setCurrentLang(langItem)
+																}>
+																{langItem}
+															</button>
+														</li>
+													);
+												})}
+											</ul>
+										</div>
+									</div>
+								</li>
+							</ul>
 
 							<button
 								className={`toggle-btn ${menuIsOpen ? 'on' : ''}`}

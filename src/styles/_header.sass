@@ -37,10 +37,11 @@ body
 	z-index: 100
 	//display: block
 	display: inline-flex
-	.arr-dn-ic
+	.hover-dropdown-ic
 		transition: .2s
+		margin-left: 10px
 
-	&.hover
+	&:hover
 		overflow: visible
 		z-index: 110
 
@@ -48,6 +49,11 @@ body
 			color: $main
 			transform: rotateX(180deg)
 
+		.hover-dropdown-box
+			margin-top: 0
+			opacity: 1
+			overflow: visible
+			max-height: none
 
 .hover-dropdown-btn
 	cursor: default
@@ -93,7 +99,7 @@ body
 		color: $main
 
 .hover-dropdown-inner
-	background-color: $light
+	background-color: $main
 	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25)
 	line-height: 1.3
 	padding-top: 0.8rem
@@ -101,15 +107,19 @@ body
 	li
 		margin-bottom: 0.8rem
 
+	button
+		appearance: none
+		cursor: pointer
+		border: none
+		background-color: $tr
+		color: #fff
+		display: block
+		width: 100%
+		&:hover
+			background-color: $accent
 
 
 
-.hover
-	.hover-dropdown-box
-		margin-top: 0
-		opacity: 1
-		overflow: visible
-		max-height: none
 
 
 
