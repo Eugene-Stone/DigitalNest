@@ -1,9 +1,13 @@
 import { ScrollToSectionLink } from '../../components/ScrollToSectionLink/ScrollToSectionLink';
 import { useSectionData } from '../../hooks/useSectionData';
 import TitleHtml from '../../utils/TitleHtml';
+import useLanguageContext from '../../context/useLanguageContext';
+import getLang from '../../utils/getLang.js';
 
 export default function Workflow() {
 	const { section, loading, errorData } = useSectionData('/workflow');
+	const { currentLang } = useLanguageContext();
+	// {getLang(text, currentLang)}
 
 	if (loading) {
 		return <div>Loading Services...</div>;
@@ -19,12 +23,12 @@ export default function Workflow() {
 		<section id="how-we-work" className="sect-how-we-work">
 			<div className="container">
 				<div className="title-sect center">
-					<TitleHtml titleClass="h2-title">{title}</TitleHtml>
+					<TitleHtml titleClass="h2-title">{getLang(title, currentLang)}</TitleHtml>
 
 					{description && (
 						<div className="title-descr">
 							{description.map((p, i) => {
-								return <p key={i}>{p}</p>;
+								return <p key={i}>{getLang(p, currentLang)}</p>;
 							})}
 						</div>
 					)}
@@ -46,10 +50,10 @@ export default function Workflow() {
 												{number}
 											</div>
 											<div className="h3-title how-we-work-itm-title">
-												{item.title}
+												{getLang(item.title, currentLang)}
 											</div>
 											<div className="how-we-work-itm-brief">
-												<p>{item.description}</p>
+												<p>{getLang(item.description, currentLang)}</p>
 											</div>
 										</li>
 									);
@@ -63,13 +67,13 @@ export default function Workflow() {
 					{descriptionBottom && (
 						<div className="button-description">
 							{descriptionBottom.map((d, i) => {
-								return <p key={i}>{d}</p>;
+								return <p key={i}>{getLang(d, currentLang)}</p>;
 							})}
 						</div>
 					)}
 
 					<ScrollToSectionLink className="btn" to="sect-contacts">
-						<span>Start a project</span>
+						<span>{currentLang === 'Ru' ? 'Начать проект' : 'Start a project'}</span>
 					</ScrollToSectionLink>
 				</div>
 			</div>

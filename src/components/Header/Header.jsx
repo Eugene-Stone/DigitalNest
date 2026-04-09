@@ -147,6 +147,11 @@ export default function Header() {
 													return (
 														<li key={langItem}>
 															<button
+																className={
+																	currentLang === langItem
+																		? 'active'
+																		: ''
+																}
 																onClick={() =>
 																	setCurrentLang(langItem)
 																}>

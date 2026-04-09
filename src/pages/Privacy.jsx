@@ -1,90 +1,105 @@
-import { Link } from 'react-router-dom';
+import { useSectionData } from '../hooks/useSectionData';
+import TitleHtml from '../utils/TitleHtml';
+import useLanguageContext from '../context/useLanguageContext';
+import getLang from '../utils/getLang.js';
 
-export default function NotFoundPage() {
+export default function Privacy() {
+	const { section, loading, errorData } = useSectionData('/privacy');
+	const { currentLang } = useLanguageContext();
+	// {getLang(text, currentLang)}
+
+	if (loading) {
+		return <div>Loading Services...</div>;
+	}
+	if (errorData) {
+		return <div>Error fetch data</div>;
+	}
+	if (!section) return null;
+
+	const { id, title, description, content } = section || {};
+
 	return (
 		<section className="sect-txt">
 			<div className="container">
 				<div className="title-sect">
-					<h1 className="h1-title">Title section</h1>
+					<TitleHtml TitleHtml="h1" titleClass="h1-title">
+						{getLang(title, currentLang)}
+					</TitleHtml>
 					<div className="title-descr">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+						{description.map((p, index) => {
+							return <p key={index}>{getLang(p, currentLang)}</p>;
+						})}
 					</div>
 				</div>
 				<div className="txt-box">
 					<div className="row justify-content-center">
 						<div className="col-lg-12">
-							<h1>h1 - Title styles</h1>
-							<h2>h2 - Title styles</h2>
-							<h3>h3 - Title styles</h3>
-							<h4>h4 - Title styles</h4>
-							<h5>h5 - Title styles</h5>
-							<h6>h6 - Title styles</h6>
-							<p>
-								Lorem ipsum dolor sit amet, <a href="#">Link styles</a> consectetur
-								adipisicing elit. Laboriosam obcaecati magni quasi quod nam
-								nesciunt.
-							</p>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elitLorem ipsum
-								dolor sit amet, consectetur adipisicing elit . Laboriosam obcaecati
-								magni quasi quod nam nesciunt.
-							</p>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam
-								obcaecati magni quasi quod nam nesciunt.
-							</p>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elitLorem ipsum
-								dolor sit amet, consectetur adipisicing elit . Laboriosam obcaecati
-								magni quasi quod nam nesciunt.
-							</p>
-							<ol>
-								<li>
-									Füllen Sie die Stimm/-Wahlzettel aus und verschliessen Sie diese
-									im Stimmkuvert oder in einem privaten, neutralen Kuvert.
-								</li>
-								<li>
-									Unterschreiben Sie die untenstehende Erklärung. Ohne
-									Unterschrift ist die Stimmabgabe ungültig.
-								</li>
-								<li>
-									Legen Sie das Stimmkuvert oder das private neutrale Kuvert mit
-									den Stimmzetteln und dem Stimmausweis mit der unterzeichneten
-									Erklärung in das Zustellkuvert, mit dem Sie das
-									Abstimmungsmaterial erhalten haben (oder in ein mit dem Vermerk
-									«briefliche Stimmabgabe» versehenes privates Rücksendekuvert.)
-								</li>
-								<li>
-									Das Zustellkuvert ist in der Folge entweder frankiert der Post
-									zu übergeben oder in den von der Gemeinde bezeichneten
-									Briefkasten der Gemeindeverwaltung einzuwerfen.
-								</li>
-							</ol>
-							<ul>
-								<li>
-									Füllen Sie die Stimm/-Wahlzettel aus und verschliessen Sie diese
-									im Stimmkuvert oder in einem privaten, neutralen Kuvert.
-								</li>
-								<li>
-									Unterschreiben Sie die untenstehende Erklärung. Ohne
-									Unterschrift ist die Stimmabgabe ungültig.
-								</li>
-								<li>
-									Legen Sie das Stimmkuvert oder das private neutrale Kuvert mit
-									den Stimmzetteln und dem Stimmausweis mit der unterzeichneten
-									Erklärung in das Zustellkuvert, mit dem Sie das
-									Abstimmungsmaterial erhalten haben (oder in ein mit dem Vermerk
-									«briefliche Stimmabgabe» versehenes privates Rücksendekuvert.)
-								</li>
-								<li>
-									Das Zustellkuvert ist in der Folge entweder frankiert der Post
-									zu übergeben oder in den von der Gemeinde bezeichneten
-									Briefkasten der Gemeindeverwaltung einzuwerfen.
-								</li>
-							</ul>
-							<p>
-								<img src="img/inner/7.png" alt="image" />
-							</p>
+							{content.map((block, index) => {
+								const text = block.text ? getLang(block.text, currentLang) : '';
+
+								switch (block.type) {
+									case 'h1':
+										return <h1 key={index}>{text}</h1>;
+									case 'h2':
+										return <h2 key={index}>{text}</h2>;
+									case 'h3':
+										return <h3 key={index}>{text}</h3>;
+									case 'h4':
+										return <h4 key={index}>{text}</h4>;
+									case 'h5':
+										return <h5 key={index}>{text}</h5>;
+									case 'h6':
+										return <h6 key={index}>{text}</h6>;
+									case 'p':
+										return (
+											<p
+												key={index}
+												dangerouslySetInnerHTML={{ __html: text }}
+											/>
+										);
+
+									case 'ol':
+										return (
+											<ol key={index}>
+												{block.items.map((item, i) => (
+													<li
+														key={i}
+														dangerouslySetInnerHTML={{
+															__html: getLang(item, currentLang),
+														}}
+													/>
+												))}
+											</ol>
+										);
+
+									case 'ul':
+										return (
+											<ul key={index}>
+												{block.items.map((item, i) => (
+													<li
+														key={i}
+														dangerouslySetInnerHTML={{
+															__html: getLang(item, currentLang),
+														}}
+													/>
+												))}
+											</ul>
+										);
+
+									case 'img':
+										return (
+											<p key={index}>
+												<img
+													src={block.src}
+													alt={getLang(block.alt, currentLang)}
+												/>
+											</p>
+										);
+
+									default:
+										return null;
+								}
+							})}
 						</div>
 					</div>
 				</div>

@@ -1,5 +1,7 @@
 import { useSectionData } from '../../hooks/useSectionData';
 import TitleHtml from '../../utils/TitleHtml';
+import useLanguageContext from '../../context/useLanguageContext';
+import getLang from '../../utils/getLang.js';
 
 // import Swiper core and required modules
 import { Navigation, Pagination, Scrollbar, A11y, Mousewheel } from 'swiper/modules';
@@ -12,6 +14,8 @@ import 'swiper/css/scrollbar';
 
 export default function Reviews() {
 	const { section, loading, errorData } = useSectionData('/reviews');
+	const { currentLang } = useLanguageContext();
+	// {getLang(text, currentLang)}
 
 	if (loading) {
 		return <div>Loading Services...</div>;
@@ -26,12 +30,12 @@ export default function Reviews() {
 	return (
 		<section className="sect-reviews">
 			<div className="title-sect center">
-				<TitleHtml className="h2-title">{title}</TitleHtml>
+				<TitleHtml className="h2-title">{getLang(title, currentLang)}</TitleHtml>
 
 				{description && (
 					<div className="title-descr">
 						{description.map((p, i) => {
-							return <p key={i}>{p}</p>;
+							return <p key={i}>{getLang(p, currentLang)}</p>;
 						})}
 					</div>
 				)}
@@ -68,16 +72,17 @@ export default function Reviews() {
 											</div>
 											<div className="review-slide-top-txt">
 												<div className="review-slide-author">
-													{review.name} ({review.position})
+													{review.name} <br />
+													{getLang(review.position, currentLang)}
 												</div>
 												<div className="review-slide-date">
-													{review.date}
+													{getLang(review.date, currentLang)}
 												</div>
 											</div>
 										</div>
 										<div className="review-slide-txt">
 											{review.text.map((p, i) => {
-												return <p key={i}>{p}</p>;
+												return <p key={i}>{getLang(p, currentLang)}</p>;
 											})}
 										</div>
 									</div>

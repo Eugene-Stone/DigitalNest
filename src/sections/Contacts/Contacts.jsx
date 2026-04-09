@@ -1,11 +1,13 @@
 import Form from '../../components/Form/Form';
 import { useSectionData } from '../../hooks/useSectionData';
 import TitleHtml from '../../utils/TitleHtml';
+import useLanguageContext from '../../context/useLanguageContext';
+import getLang from '../../utils/getLang.js';
 
 export default function Contacts() {
 	const { section, loading, errorData } = useSectionData('/contacts');
-
-	// console.log(useForm);
+	const { currentLang } = useLanguageContext();
+	// {getLang(text, currentLang)}
 
 	if (loading) {
 		return <div>Loading Services...</div>;
@@ -27,12 +29,14 @@ export default function Contacts() {
 				<div className="row">
 					<div className="col-lg-6">
 						<div className="title-sect">
-							<TitleHtml titleClass="h2-title">{title}</TitleHtml>
+							<TitleHtml titleClass="h2-title">
+								{getLang(title, currentLang)}
+							</TitleHtml>
 
 							{description && (
 								<div className="title-descr">
 									{description.map((p, i) => {
-										return <p key={i}>{p}</p>;
+										return <p key={i}>{getLang(p, currentLang)}</p>;
 									})}
 								</div>
 							)}
@@ -82,7 +86,7 @@ export default function Contacts() {
 						)}
 					</div>
 					<div className="col-lg-6">
-						<Form />
+						<Form sectionInfo={section} />
 					</div>
 				</div>
 			</div>

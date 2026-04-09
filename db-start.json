@@ -199,5 +199,15 @@
 			"linkedin": "https://linkedin.com/company/digitalnest",
 			"instagram": "https://instagram.com/digitalnest"
 		}
-	}
+	},
+	 "requests": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "phone": "+380...",
+      "email": "john@mail.com",
+      "message": "Хочу консультацию",
+      "createdAt": "2026-03-17T20:00:00Z"
+    }
+  ]
 }

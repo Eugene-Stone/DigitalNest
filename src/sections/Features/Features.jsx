@@ -1,9 +1,13 @@
 import { ScrollToSectionLink } from '../../components/ScrollToSectionLink/ScrollToSectionLink';
 import { useSectionData } from '../../hooks/useSectionData';
 import TitleHtml from '../../utils/TitleHtml';
+import useLanguageContext from '../../context/useLanguageContext';
+import getLang from '../../utils/getLang.js';
 
 export default function Features() {
 	const { section, loading, errorData } = useSectionData('/features');
+	const { currentLang } = useLanguageContext();
+	// {getLang(text, currentLang)}
 
 	if (loading) {
 		return <div>Loading WhyUs...</div>;
@@ -19,7 +23,7 @@ export default function Features() {
 		<section id={id} className="sect-why-us">
 			<div className="container">
 				<div className="title-sect center">
-					<TitleHtml className="h2-title">{title}</TitleHtml>
+					<TitleHtml className="h2-title">{getLang(title, currentLang)}</TitleHtml>
 				</div>
 				<div className="why-us-lst-box">
 					<div className="why-us-lst row">
@@ -38,9 +42,11 @@ export default function Features() {
 											</g>
 										</svg>
 									</div>
-									<div className="why-us-itm-title h3-title">{item.title}</div>
+									<div className="why-us-itm-title h3-title">
+										{getLang(item.title, currentLang)}
+									</div>
 									<div className="why-us-itm-brief">
-										<p>{item.description}</p>
+										<p>{getLang(item.description, currentLang)}</p>
 									</div>
 								</div>
 							);

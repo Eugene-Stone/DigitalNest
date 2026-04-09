@@ -1,7 +1,11 @@
 import { useSectionData } from '../../hooks/useSectionData';
+import useLanguageContext from '../../context/useLanguageContext';
+import getLang from '../../utils/getLang.js';
 
 export default function About() {
 	const { section, loading, errorData } = useSectionData('/about');
+	const { currentLang } = useLanguageContext();
+	// {getLang(text, currentLang)}
 
 	if (loading) {
 		return <div>Loading About...</div>;
@@ -20,16 +24,16 @@ export default function About() {
 					<div className="row">
 						<div className="col-lg-3">
 							<h2 className="h2-title">
-								<strong>{title}</strong>
+								<strong>{getLang(title, currentLang)}</strong>
 							</h2>
 						</div>
 						<div className="col-lg-9">
 							<div className="title-descr-big">
-								<p>{content[0]}</p>
+								<p>{getLang(content[0], currentLang)}</p>
 							</div>
 							<div className="title-descr">
-								<p>{content[1]}</p>
-								<p>{content[2]}</p>
+								<p>{getLang(content[1], currentLang)}</p>
+								<p>{getLang(content[2], currentLang)}</p>
 							</div>
 						</div>
 					</div>

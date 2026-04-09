@@ -1,9 +1,13 @@
 import { ScrollToSectionLink } from '../../components/ScrollToSectionLink/ScrollToSectionLink';
 import { useSectionData } from '../../hooks/useSectionData';
 import TitleHtml from '../../utils/TitleHtml';
+import useLanguageContext from '../../context/useLanguageContext';
+import getLang from '../../utils/getLang.js';
 
 export default function Services() {
 	const { section, loading, errorData } = useSectionData('/services');
+	const { currentLang } = useLanguageContext();
+	// {getLang(text, currentLang)}
 
 	if (loading) {
 		return <div>Loading Services...</div>;
@@ -13,7 +17,7 @@ export default function Services() {
 	}
 	if (!section) return null;
 
-	const { id, title, description, content } = section || {};
+	const { id, title, description, content, button, buttonCard } = section || {};
 
 	return (
 		<section id={id} className="sect-service">
@@ -21,12 +25,14 @@ export default function Services() {
 				<div className="title-sect">
 					<div className="row">
 						<div className="col-xl-6">
-							<TitleHtml titleClass="h2-title">{title}</TitleHtml>
+							<TitleHtml titleClass="h2-title">
+								{getLang(title, currentLang)}
+							</TitleHtml>
 
 							{description && (
 								<div className="title-descr">
 									{description.map((p, i) => {
-										return <p key={i}>{p}</p>;
+										return <p key={i}>{getLang(p, currentLang)}</p>;
 									})}
 								</div>
 							)}
@@ -45,7 +51,10 @@ export default function Services() {
 											<div className="row align-items-center flex-lg-row-reverse">
 												<div className="col-lg-6 service-image-cell">
 													<div className="service-image">
-														<img src={serv.image} alt={serv.title} />
+														<img
+															src={serv.image}
+															alt={getLang(serv.title, currentLang)}
+														/>
 													</div>
 												</div>
 												<div className="col-lg-6 service-txt-cell">
@@ -54,16 +63,26 @@ export default function Services() {
 															{i < 10 ? `0${i + 1}` : i}
 														</div>
 														<div className="h3-title service-itm-title">
-															{serv.title}
+															{getLang(serv.title, currentLang)}
 														</div>
 														<div className="service-itm-brief">
-															<p>{serv.description}</p>
+															<p>
+																{getLang(
+																	serv.description,
+																	currentLang,
+																)}
+															</p>
 														</div>
 														<div className="btn-wrap">
 															<ScrollToSectionLink
 																to="gallery"
 																className="btn">
-																<span>Explore stack</span>
+																<span>
+																	{getLang(
+																		buttonCard,
+																		currentLang,
+																	)}
+																</span>
 															</ScrollToSectionLink>
 														</div>
 													</div>
@@ -82,16 +101,21 @@ export default function Services() {
 														{i < 10 ? `0${i + 1}` : i}
 													</div>
 													<div className="h3-title service-itm-title">
-														{serv.title}
+														{getLang(serv.title, currentLang)}
 													</div>
 													<div className="service-itm-brief">
-														<p>{serv.description}</p>
+														<p>
+															{getLang(serv.description, currentLang)}
+														</p>
 													</div>
 												</div>
 											</div>
 											<div className="col-6 service-image-cell">
 												<div className="service-image">
-													<img src={serv.image} alt={serv.title} />
+													<img
+														src={serv.image}
+														alt={getLang(serv.title, currentLang)}
+													/>
 												</div>
 											</div>
 										</div>
@@ -102,7 +126,7 @@ export default function Services() {
 					</div>
 					<div className="btn-more-wrap center">
 						<ScrollToSectionLink to="contacts" className="btn">
-							<span>Get a quote</span>
+							<span>{getLang(button, currentLang)}</span>
 						</ScrollToSectionLink>
 					</div>
 				</div>

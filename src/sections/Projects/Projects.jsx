@@ -7,12 +7,16 @@ import 'yet-another-react-lightbox/plugins/counter.css';
 import { request } from '../../api/request.js';
 import { useSectionData } from '../../hooks/useSectionData.jsx';
 import TitleHtml from '../../utils/TitleHtml.jsx';
+import useLanguageContext from '../../context/useLanguageContext';
+import getLang from '../../utils/getLang.js';
 
 export default function Projects() {
 	const { section, loading, errorData } = useSectionData('/projects');
 	const [categoryList, setCategoryList] = useState([]);
 	const [imagesLimit, setImagesLimit] = useState(5);
 	const [index, setIndex] = useState(-1);
+	const { currentLang } = useLanguageContext();
+	// {getLang(text, currentLang)}
 
 	const updateCategoryList = useEffectEvent(() => {
 		setCategoryList(section.content);
@@ -90,9 +94,9 @@ export default function Projects() {
 		<section id={id} className="sect-gallery">
 			<div className="container">
 				<div className="title-sect center">
-					<TitleHtml className="h2-title">{title}</TitleHtml>
+					<TitleHtml className="h2-title">{getLang(title, currentLang)}</TitleHtml>
 					<div className="title-descr">
-						<p>{description}</p>
+						<p>{getLang(description, currentLang)}</p>
 					</div>
 				</div>
 				<div className="gallery-box">
@@ -104,7 +108,7 @@ export default function Projects() {
 										key={categoryItem.id}
 										className={`${categoryItem.isActive ? 'active' : ''}`}
 										onClick={() => toggleActiveCategory(categoryItem)}>
-										<span>{categoryItem.category}</span>
+										<span>{getLang(categoryItem.category, currentLang)}</span>
 									</li>
 								);
 							})}
@@ -148,7 +152,9 @@ export default function Projects() {
 					{imagesLimit < galleryList?.images.length ? (
 						<div className="btn-more-wrap center">
 							<span className="btn-link" onClick={showAllImages}>
-								<span>View all projects</span>
+								<span>
+									{currentLang === 'Ru' ? 'Все проекты' : 'View all projects'}
+								</span>
 								<i className="btn-ic">
 									<svg
 										width={24}

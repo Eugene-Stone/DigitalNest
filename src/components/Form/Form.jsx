@@ -1,9 +1,15 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { request } from '../../api/request';
+import useLanguageContext from '../../context/useLanguageContext';
+import getLang from '../../utils/getLang.js';
 
-export default function Form() {
+export default function Form({ sectionInfo }) {
 	const [status, setStatus] = useState();
+	const { currentLang } = useLanguageContext();
+	// {getLang(text, currentLang)}
+
+	const { titleForm } = sectionInfo;
 
 	const {
 		register,
@@ -42,7 +48,7 @@ export default function Form() {
 
 				console.log(JSON.stringify(value));
 				reset();
-			}, 1000);
+			}, 2000);
 		} catch (error) {
 			console.log(error.message);
 			setStatus('error');
@@ -57,10 +63,7 @@ export default function Form() {
 		<form
 			className={status === 'loading' ? 'contact-form sending' : 'contact-form'}
 			onSubmit={handleSubmit(onSubmit)}>
-			<div className="form-title h3-title">
-				Start a conversation about your project and get a free technical infrastructure
-				audit.
-			</div>
+			<div className="form-title h3-title">{getLang(titleForm, currentLang)}</div>
 			<div className="fields-box">
 				<div className="field-itm">
 					<div className="cust-sel">
@@ -158,8 +161,16 @@ export default function Form() {
 				</div>
 			</div>
 
-			{status === 'success' && <p className="success">Form send success</p>}
-			{status === 'error' && <p className="error">Form not send</p>}
+			{status === 'success' && (
+				<p className="success">
+					{currentLang === 'Ru' ? 'Форма успешно отправлена' : 'Form send success'}
+				</p>
+			)}
+			{status === 'error' && (
+				<p className="error">
+					{currentLang === 'Ru' ? 'Форма не отправлена' : 'Form not send'}
+				</p>
+			)}
 		</form>
 	);
 }
