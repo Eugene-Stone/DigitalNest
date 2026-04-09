@@ -1,7 +1,11 @@
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { request } from '../../api/request';
 
 export default function Form() {
+	const [isSending, setIsSending] = useState();
+	const [success, setSuccess] = useState();
+
 	const {
 		register,
 		handleSubmit,
@@ -38,13 +42,24 @@ export default function Form() {
 	}
 
 	function onSubmit(data) {
-		console.log(JSON.stringify(data));
+		setIsSending(true);
+		setSuccess(false);
+
 		sendForm(data);
-		reset();
+
+		setTimeout(() => {
+			setIsSending(false);
+			setSuccess(true);
+
+			console.log(JSON.stringify(data));
+			reset();
+		}, 2000);
 	}
 
 	return (
-		<form onSubmit={handleSubmit(onSubmit)} className="contact-form">
+		<form
+			className={isSending ? 'contact-form sending' : 'contact-form'}
+			onSubmit={handleSubmit(onSubmit)}>
 			<div className="form-title h3-title">
 				Start a conversation about your project and get a free technical infrastructure
 				audit.
@@ -82,8 +97,18 @@ export default function Form() {
 				</div>
 				<div className="field-itm">
 					<div className="cust-inp">
-						<input {...register('companyPhone')} placeholder="Company Phone" />
+						<input
+							{...register('companyPhone', {
+								required: 'Field required',
+							})}
+							placeholder="Company Phone"
+						/>
 					</div>
+					{errors.companyPhone && (
+						<div className="error-field">
+							{errors.companyPhone.message || 'Phone is required.'}
+						</div>
+					)}
 				</div>
 				<div className="field-itm">
 					<div className="cust-inp">
@@ -135,6 +160,8 @@ export default function Form() {
 					</span>
 				</div>
 			</div>
+
+			{success && <p className="success">Form send success</p>}
 		</form>
 	);
 }

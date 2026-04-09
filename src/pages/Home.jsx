@@ -11,6 +11,8 @@ import Features from '../sections/Features/Features.jsx';
 import Projects from '../sections/Projects/Projects.jsx';
 import Workflow from '../sections/Workflow/Workflow';
 
+import useLanguageContext from '../context/useLanguageContext.js';
+
 const sectionComponents = {
 	hero: Hero,
 	about: About,
