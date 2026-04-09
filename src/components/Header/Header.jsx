@@ -59,7 +59,7 @@ export default function Header() {
 												to="about"
 												className="menu__link"
 												setMenuIsOpen={setMenuIsOpen}>
-												About
+												{currentLang === 'Ru' ? 'О нас' : 'About'}
 											</ScrollToSectionLink>
 										</li>
 										<li>
@@ -67,7 +67,7 @@ export default function Header() {
 												to="services"
 												className="menu__link"
 												setMenuIsOpen={setMenuIsOpen}>
-												Services
+												{currentLang === 'Ru' ? 'Сервисы' : 'Services'}
 											</ScrollToSectionLink>
 										</li>
 										<li>
@@ -75,7 +75,9 @@ export default function Header() {
 												to="why-us"
 												className="menu__link"
 												setMenuIsOpen={setMenuIsOpen}>
-												Why DigitalNest?
+												{currentLang === 'Ru'
+													? 'Почему мы'
+													: 'Why DigitalNest?'}
 											</ScrollToSectionLink>
 										</li>
 										<li>
@@ -83,7 +85,7 @@ export default function Header() {
 												to="gallery"
 												className="menu__link"
 												setMenuIsOpen={setMenuIsOpen}>
-												Showcase
+												{currentLang === 'Ru' ? 'Галлерея' : 'Showcase'}
 											</ScrollToSectionLink>
 										</li>
 										<li>
@@ -91,7 +93,7 @@ export default function Header() {
 												to="how-we-work"
 												className="menu__link"
 												setMenuIsOpen={setMenuIsOpen}>
-												Workflow
+												{currentLang === 'Ru' ? 'Воркфлоу' : 'Workflow'}
 											</ScrollToSectionLink>
 										</li>
 										<li>
@@ -99,7 +101,7 @@ export default function Header() {
 												to="contacts"
 												className="menu__link"
 												setMenuIsOpen={setMenuIsOpen}>
-												Contacts
+												{currentLang === 'Ru' ? 'Контакты' : 'Contacts'}
 											</ScrollToSectionLink>
 										</li>
 									</ul>
@@ -109,7 +111,11 @@ export default function Header() {
 												to="contacts"
 												className="btn"
 												setMenuIsOpen={setMenuIsOpen}>
-												<span>Contact us</span>
+												<span>
+													{currentLang === 'Ru'
+														? 'Связаться'
+														: 'Contact us'}
+												</span>
 											</ScrollToSectionLink>
 										</div>
 									</div>
