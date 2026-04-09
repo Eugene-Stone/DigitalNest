@@ -3,8 +3,7 @@ import { useForm } from 'react-hook-form';
 import { request } from '../../api/request';
 
 export default function Form() {
-	const [isSending, setIsSending] = useState();
-	const [success, setSuccess] = useState();
+	const [status, setStatus] = useState();
 
 	const {
 		register,
@@ -20,6 +19,7 @@ export default function Form() {
 
 	async function sendForm(value) {
 		const newFormIncome = new Date().toISOString();
+		setStatus('loading');
 
 		try {
 			await request('/requests', {
@@ -36,29 +36,26 @@ export default function Form() {
 					checkboxes: value.checkboxes,
 				}),
 			});
+
+			setTimeout(() => {
+				setStatus('success');
+
+				console.log(JSON.stringify(value));
+				reset();
+			}, 1000);
 		} catch (error) {
 			console.log(error.message);
+			setStatus('error');
 		}
 	}
 
 	function onSubmit(data) {
-		setIsSending(true);
-		setSuccess(false);
-
 		sendForm(data);
-
-		setTimeout(() => {
-			setIsSending(false);
-			setSuccess(true);
-
-			console.log(JSON.stringify(data));
-			reset();
-		}, 2000);
 	}
 
 	return (
 		<form
-			className={isSending ? 'contact-form sending' : 'contact-form'}
+			className={status === 'loading' ? 'contact-form sending' : 'contact-form'}
 			onSubmit={handleSubmit(onSubmit)}>
 			<div className="form-title h3-title">
 				Start a conversation about your project and get a free technical infrastructure
@@ -161,7 +158,8 @@ export default function Form() {
 				</div>
 			</div>
 
-			{success && <p className="success">Form send success</p>}
+			{status === 'success' && <p className="success">Form send success</p>}
+			{status === 'error' && <p className="error">Form not send</p>}
 		</form>
 	);
 }
