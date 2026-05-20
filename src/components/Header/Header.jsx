@@ -72,7 +72,7 @@ export default function Header() {
 										</li>
 										<li>
 											<ScrollToSectionLink
-												to="why-us"
+												to="features"
 												className="menu__link"
 												setMenuIsOpen={setMenuIsOpen}>
 												{currentLang === 'Ru'
