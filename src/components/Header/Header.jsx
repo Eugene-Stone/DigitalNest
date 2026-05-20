@@ -10,7 +10,7 @@ export default function Header() {
 
 	// console.log(currentLang);
 
-	const langList = ['En', 'Ru'];
+	const langList = ['en', 'ru'];
 
 	const handleToggleMenu = () => {
 		setMenuIsOpen(!menuIsOpen);
@@ -59,7 +59,7 @@ export default function Header() {
 												to="about"
 												className="menu__link"
 												setMenuIsOpen={setMenuIsOpen}>
-												{currentLang === 'Ru' ? 'О нас' : 'About'}
+												{currentLang === 'ru' ? 'О нас' : 'About'}
 											</ScrollToSectionLink>
 										</li>
 										<li>
@@ -67,7 +67,7 @@ export default function Header() {
 												to="services"
 												className="menu__link"
 												setMenuIsOpen={setMenuIsOpen}>
-												{currentLang === 'Ru' ? 'Сервисы' : 'Services'}
+												{currentLang === 'ru' ? 'Сервисы' : 'Services'}
 											</ScrollToSectionLink>
 										</li>
 										<li>
@@ -75,7 +75,7 @@ export default function Header() {
 												to="features"
 												className="menu__link"
 												setMenuIsOpen={setMenuIsOpen}>
-												{currentLang === 'Ru'
+												{currentLang === 'ru'
 													? 'Почему мы'
 													: 'Why DigitalNest?'}
 											</ScrollToSectionLink>
@@ -85,7 +85,7 @@ export default function Header() {
 												to="gallery"
 												className="menu__link"
 												setMenuIsOpen={setMenuIsOpen}>
-												{currentLang === 'Ru' ? 'Галлерея' : 'Showcase'}
+												{currentLang === 'ru' ? 'Галлерея' : 'Showcase'}
 											</ScrollToSectionLink>
 										</li>
 										<li>
@@ -93,7 +93,7 @@ export default function Header() {
 												to="how-we-work"
 												className="menu__link"
 												setMenuIsOpen={setMenuIsOpen}>
-												{currentLang === 'Ru' ? 'Воркфлоу' : 'Workflow'}
+												{currentLang === 'ru' ? 'Воркфлоу' : 'Workflow'}
 											</ScrollToSectionLink>
 										</li>
 										<li>
@@ -101,7 +101,7 @@ export default function Header() {
 												to="contacts"
 												className="menu__link"
 												setMenuIsOpen={setMenuIsOpen}>
-												{currentLang === 'Ru' ? 'Контакты' : 'Contacts'}
+												{currentLang === 'ru' ? 'Контакты' : 'Contacts'}
 											</ScrollToSectionLink>
 										</li>
 									</ul>
@@ -112,7 +112,7 @@ export default function Header() {
 												className="btn"
 												setMenuIsOpen={setMenuIsOpen}>
 												<span>
-													{currentLang === 'Ru'
+													{currentLang === 'ru'
 														? 'Связаться'
 														: 'Contact us'}
 												</span>

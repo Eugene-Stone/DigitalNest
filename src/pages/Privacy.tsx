@@ -1,7 +1,7 @@
 import { useSectionData } from '../hooks/useSectionData';
 import TitleHtml from '../utils/TitleHtml';
 import useLanguageContext from '../context/useLanguageContext';
-import getLang from '../utils/getLang.js';
+import getLang from '../utils/getLang';
 
 export default function Privacy() {
 	const { section, loading, errorData } = useSectionData('/privacy');
