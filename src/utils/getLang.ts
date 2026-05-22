@@ -1,11 +1,6 @@
-type Lang = 'en' | 'ru';
+import { Lang, FieldLang } from '../types';
 
-type Field = {
-	en?: string;
-	ru?: string;
-};
-
-export default function getLang(field: Field, lang: Lang) {
+export default function getLang(field: FieldLang, lang: Lang) {
 	// return field?.[lang.toLowerCase()] || field?.en || 'not translation';
 	return field?.[lang] || field?.en || 'not translation';
 }

@@ -1,25 +1,7 @@
 import { useEffect, useState } from 'react';
 import { request } from '../api/request';
 
-type TranslateField = {
-	en: string;
-	ru: string;
-};
-
-type ContentType = {
-	type: string;
-	text: TranslateField;
-};
-
-type SectionType = {
-	id: string;
-	title?: TranslateField;
-	subtitle?: TranslateField;
-	description?: TranslateField;
-	content?: TranslateField | ContentType[];
-	buttonText?: TranslateField;
-	backgroundImage?: string;
-};
+import { TranslateField, ContentType, SectionType } from '../types.ts';
 
 export function useSectionData(endpoint: string) {
 	const storageKey = `sectionData${endpoint}`;

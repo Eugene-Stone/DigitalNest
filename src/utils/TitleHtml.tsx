@@ -1,8 +1,5 @@
-type TitleHtmlType = {
-	children: string;
-	titleTag?: React.ElementType;
-	titleClass: string;
-};
+import { TitleHtmlType } from '../types.ts';
+
 export default function TitleHtml({ children, titleTag: Tag = 'h2', titleClass }: TitleHtmlType) {
 	// const Tag = titleTag;
 
