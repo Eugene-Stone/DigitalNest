@@ -1,12 +1,18 @@
 import { createContext, useState, useEffect } from 'react';
+import { Lang } from '../types';
 
-const LanguageContext = createContext(null);
+type LanguageContextType = {
+	currentLang: Lang;
+	setCurrentLang: React.Dispatch<React.SetStateAction<boolean>>;
+};
 
-export default function LanguageProvider({ children }) {
+const LanguageContext = createContext<LanguageContextType | null>(null);
+
+export default function LanguageProvider({ children }: React.PropsWithChildren) {
 	const [currentLang, setCurrentLang] = useState(() => {
 		const savedLang = localStorage.getItem('lang');
 
-		return savedLang ? JSON.parse(savedLang) : 'En';
+		return savedLang ? JSON.parse(savedLang) : 'en';
 	});
 
 	useEffect(() => {

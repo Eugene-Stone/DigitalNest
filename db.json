@@ -144,10 +144,12 @@
       "en": "Scalable Tech & Smart Data Harmony",
       "ru": "Масштабируемые технологии и гармония интеллектуальных данных"
     },
-    "description": {
-      "en": "High-tech infrastructure with cloud systems: efficiency, security, and power for your network—automated and maintenance-free.",
-      "ru": "Высокотехнологичная инфраструктура с облачными системами: эффективность, безопасность и мощность для вашей сети — автоматизировано и без лишних затрат на обслуживание."
-    },
+    "description": [
+		{
+				"en": "High-tech infrastructure with cloud systems: efficiency, security, and power for your network—automated and maintenance-free.",
+				"ru": "Высокотехнологичная инфраструктура с облачными системами: эффективность, безопасность и мощность для вашей сети — автоматизировано и без лишних затрат на обслуживание."
+		}
+	 ],
     "buttonText": {
       "en": "Contact us",
       "ru": "Связаться с нами"

@@ -22,11 +22,11 @@ export default function Privacy() {
 		<section className="sect-txt">
 			<div className="container">
 				<div className="title-sect">
-					<TitleHtml TitleHtml="h1" titleClass="h1-title">
+					<TitleHtml titleTag="h1" titleClass="h1-title">
 						{getLang(title, currentLang)}
 					</TitleHtml>
 					<div className="title-descr">
-						{description.map((p, index) => {
+						{description?.map((p, index) => {
 							return <p key={index}>{getLang(p, currentLang)}</p>;
 						})}
 					</div>
@@ -34,8 +34,12 @@ export default function Privacy() {
 				<div className="txt-box">
 					<div className="row justify-content-center">
 						<div className="col-lg-12">
-							{content.map((block, index) => {
-								const text = block.text ? getLang(block.text, currentLang) : '';
+							{content?.map((block, index) => {
+								// const text = block.text ? getLang(block.text, currentLang) : '';
+								let text = '';
+								if ('text' in block) {
+									text = getLang(block.text, currentLang);
+								}
 
 								switch (block.type) {
 									case 'h1':

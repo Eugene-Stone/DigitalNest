@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { request } from '../api/request';
-
 import { TranslateField, ContentType, SectionType } from '../types.ts';
 
 export function useSectionData(endpoint: string) {
