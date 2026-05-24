@@ -8,12 +8,12 @@ export default function NotFoundPage() {
 		<section className="section page-404" style={{ textAlign: 'center' }}>
 			<div className="container">
 				<br />
-				<h1>{currentLang === 'Ru' ? 'Страница не найдена' : 'Page not found'}</h1>
+				<h1>{currentLang === 'ru' ? 'Страница не найдена' : 'Page not found'}</h1>
 				<br />
 				<div className="button__box">
 					<Link to={'/'}>
 						<button className="btn">
-							{currentLang === 'Ru' ? 'На главную' : 'Go back home'}
+							{currentLang === 'ru' ? 'На главную' : 'Go back home'}
 						</button>
 					</Link>
 				</div>

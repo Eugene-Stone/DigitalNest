@@ -1,17 +1,34 @@
-import { request } from '../api/request.js';
-import { useEffect, useState } from 'react';
+import { request } from '../api/request';
+import { useEffect, useState, ComponentType } from 'react';
 
-import Hero from '../sections/Hero/Hero.jsx';
-import About from '../sections/About/About.jsx';
-import Services from '../sections/Services/Services.jsx';
-import Reviews from '../sections/Reviews/Reviews.jsx';
-import Contacts from '../sections/Contacts/Contacts.jsx';
+import Hero from '../sections/Hero/Hero';
+import About from '../sections/About/About';
+import Services from '../sections/Services/Services';
+import Reviews from '../sections/Reviews/Reviews';
+import Contacts from '../sections/Contacts/Contacts';
 
-import Features from '../sections/Features/Features.jsx';
-import Projects from '../sections/Projects/Projects.jsx';
+import Features from '../sections/Features/Features';
+import Projects from '../sections/Projects/Projects';
 import Workflow from '../sections/Workflow/Workflow';
 
-const sectionComponents = {
+type sectionComponentsType = {
+	hero: ComponentType;
+	about: ComponentType;
+	services: ComponentType;
+	features: ComponentType;
+	projects: ComponentType;
+	workflow: ComponentType;
+	reviews: ComponentType;
+	contacts: ComponentType;
+};
+
+type SectionNameType = keyof typeof sectionComponents;
+
+type PageDataType = {
+	sections: SectionNameType[];
+};
+
+const sectionComponents: sectionComponentsType = {
 	hero: Hero,
 	about: About,
 	services: Services,
@@ -25,7 +42,7 @@ const sectionComponents = {
 export default function Home() {
 	const storageKey = 'homePageData';
 
-	const [page, setPage] = useState(() => {
+	const [page, setPage] = useState<PageDataType | null>(() => {
 		// const cached = localStorage.getItem(storageKey);
 		// return cached ? JSON.parse(cached) : null;
 
@@ -39,19 +56,19 @@ export default function Home() {
 		}
 	});
 
-	const [errorData, setErrorData] = useState(null);
+	const [errorData, setErrorData] = useState<string | null>(null);
 
 	useEffect(() => {
 		async function fetchData() {
 			try {
-				const data = await request('/pages/home', {
+				const data: PageDataType = await request('/pages/home', {
 					method: 'GET',
 				});
 
 				setPage(data);
 				localStorage.setItem(storageKey, JSON.stringify(data));
 			} catch (error) {
-				setErrorData(error);
+				setErrorData(error as string);
 			} finally {
 				// setLoading(false);
 			}
@@ -70,7 +87,7 @@ export default function Home() {
 
 	return (
 		<>
-			{page.sections.map((sectionName) => {
+			{page.sections.map((sectionName: SectionNameType) => {
 				const SectionComponent = sectionComponents[sectionName];
 
 				if (!SectionComponent) return null;
