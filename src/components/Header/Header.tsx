@@ -1,7 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
 import { NavLink } from 'react-router';
 import { ScrollToSectionLink } from '../ScrollToSectionLink/ScrollToSectionLink';
-import useLanguageContext from '../../context/useLanguageContext.js';
+import useLanguageContext from '../../context/useLanguageContext';
+import { Lang } from '../../types.ts';
 
 export default function Header() {
 	const [menuIsOpen, setMenuIsOpen] = useState(false);
@@ -10,7 +11,7 @@ export default function Header() {
 
 	// console.log(currentLang);
 
-	const langList = ['en', 'ru'];
+	const langList: Lang[] = ['en', 'ru'];
 
 	const handleToggleMenu = () => {
 		setMenuIsOpen(!menuIsOpen);

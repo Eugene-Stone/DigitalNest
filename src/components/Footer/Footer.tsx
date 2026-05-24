@@ -11,14 +11,14 @@ export default function Footer() {
 						<div className="row">
 							<div className="col-6">
 								<div className="copyright">
-									{currentLang === 'Ru'
+									{currentLang === 'ru'
 										? 'Авторские права © DigitalNest 2022, <br />Все права защищены.'
 										: 'Copyright © DigitalNest 2022, <br />All rights reserved.'}
 								</div>
 							</div>
 							<div className="col-6 right">
 								<Link to="/privacy">
-									{currentLang === 'Ru' ? 'Конфиденциальность' : 'Privacy'}
+									{currentLang === 'ru' ? 'Конфиденциальность' : 'Privacy'}
 								</Link>
 							</div>
 						</div>

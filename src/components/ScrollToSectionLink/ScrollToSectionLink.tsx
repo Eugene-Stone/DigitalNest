@@ -1,11 +1,24 @@
+import { ReactNode, Dispatch, SetStateAction } from 'react';
 import { useLocation, useNavigate } from 'react-router';
 import { Link, scroller } from 'react-scroll';
 
-export const ScrollToSectionLink = ({ className, to, children, setMenuIsOpen }) => {
+type ScrollToSectionLinkType = {
+	className: string;
+	to: string;
+	children: ReactNode;
+	setMenuIsOpen?: Dispatch<SetStateAction<boolean>>;
+};
+
+export const ScrollToSectionLink = ({
+	className,
+	to,
+	children,
+	setMenuIsOpen,
+}: ScrollToSectionLinkType) => {
 	const location = useLocation();
 	const navigate = useNavigate();
 
-	const handleSetActive = (to) => {
+	const handleSetActive = (to: string) => {
 		// console.log(to);
 	};
 
@@ -15,7 +28,7 @@ export const ScrollToSectionLink = ({ className, to, children, setMenuIsOpen }) 
 		}
 	};
 
-	const scrollToSection = (to) => {
+	const scrollToSection = (to: string) => {
 		navigate('/');
 
 		setTimeout(() => {

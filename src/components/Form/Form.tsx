@@ -2,10 +2,24 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { request } from '../../api/request';
 import useLanguageContext from '../../context/useLanguageContext';
-import getLang from '../../utils/getLang.js';
+import getLang from '../../utils/getLang';
+import { SectionType } from '../../types';
 
-export default function Form({ sectionInfo }) {
-	const [status, setStatus] = useState();
+type ValueForm = {
+	dateSend: string;
+	dateSendSt: number;
+	selectField: string;
+	fullName: string;
+	companyPhone: string;
+	email: string;
+	textarea: string;
+	checkboxes: string[];
+};
+
+type FormStatus = 'idle' | 'loading' | 'success' | 'error';
+
+export default function Form({ sectionInfo }: { sectionInfo: SectionType }) {
+	const [status, setStatus] = useState<FormStatus>('idle');
 	const { currentLang } = useLanguageContext();
 	// {getLang(text, currentLang)}
 
@@ -16,19 +30,19 @@ export default function Form({ sectionInfo }) {
 		handleSubmit,
 		reset,
 		formState: { errors, isValid },
-	} = useForm({
+	} = useForm<ValueForm>({
 		mode: 'onChange',
 		defaultValues: {
 			fullName: 'Full Name Initial',
 		},
 	});
 
-	async function sendForm(value) {
+	async function sendForm(value: ValueForm) {
 		const newFormIncome = new Date().toISOString();
 		setStatus('loading');
 
 		try {
-			await request('/requests', {
+			await request<ValueForm>('/requests', {
 				method: 'POST',
 				body: JSON.stringify({
 					dateSend: newFormIncome,
@@ -50,12 +64,12 @@ export default function Form({ sectionInfo }) {
 				reset();
 			}, 2000);
 		} catch (error) {
-			console.log(error.message);
+			// console.log(error.message);
 			setStatus('error');
 		}
 	}
 
-	function onSubmit(data) {
+	function onSubmit(data: ValueForm) {
 		sendForm(data);
 	}
 
@@ -163,12 +177,12 @@ export default function Form({ sectionInfo }) {
 
 			{status === 'success' && (
 				<p className="success">
-					{currentLang === 'Ru' ? 'Форма успешно отправлена' : 'Form send success'}
+					{currentLang === 'ru' ? 'Форма успешно отправлена' : 'Form send success'}
 				</p>
 			)}
 			{status === 'error' && (
 				<p className="error">
-					{currentLang === 'Ru' ? 'Форма не отправлена' : 'Form not send'}
+					{currentLang === 'ru' ? 'Форма не отправлена' : 'Form not send'}
 				</p>
 			)}
 		</form>
