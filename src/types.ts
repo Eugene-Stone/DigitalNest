@@ -42,4 +42,5 @@ export type SectionType = {
 	buttonText?: TranslateField;
 	backgroundImage?: string;
 	titleForm?: TranslateField;
+	images?: string[];
 };

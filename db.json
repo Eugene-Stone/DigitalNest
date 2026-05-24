@@ -163,18 +163,27 @@
       "ru": "О нас"
     },
     "content": [
-      {
-        "en": "DigitalNest — engineering resilient digital ecosystems powered by cloud computing, neural networks, and deep data analytics.",
-        "ru": "DigitalNest — проектирование отказоустойчивых цифровых экосистем на базе облачных вычислений, нейронных сетей и глубокой аналитики данных."
-      },
-      {
-        "en": "Our mission is to fundamentally optimize business workflows, building high-performance environments through cutting-edge protocols and sophisticated system architecture.",
-        "ru": "Наша миссия — фундаментальная оптимизация бизнес-процессов и создание высокопроизводительных сред с использованием передовых протоколов и сложной системной архитектуры."
-      },
-      {
-        "en": "Leveraging nearly a decade of expertise in systems integration, we architect bespoke software products and scalable API frameworks.",
-        "ru": "Используя почти десятилетний опыт системной интеграции, мы разрабатываем индивидуальные программные продукты и масштабируемые API-фреймворки."
-      }
+		{
+			"type": "p",
+			"text": {
+				"en": "DigitalNest — engineering resilient digital ecosystems powered by cloud computing, neural networks, and deep data analytics.",
+				"ru": "DigitalNest — проектирование отказоустойчивых цифровых экосистем на базе облачных вычислений, нейронных сетей и глубокой аналитики данных."
+			}
+		},
+		{
+			"type": "p",
+			"text": {
+				"en": "Our mission is to fundamentally optimize business workflows, building high-performance environments through cutting-edge protocols and sophisticated system architecture.",
+				"ru": "Наша миссия — фундаментальная оптимизация бизнес-процессов и создание высокопроизводительных сред с использованием передовых протоколов и сложной системной архитектуры."
+			}
+		},
+		{
+			"type": "p",
+			"text": {
+				"en": "Leveraging nearly a decade of expertise in systems integration, we architect bespoke software products and scalable API frameworks.",
+				"ru": "Используя почти десятилетний опыт системной интеграции, мы разрабатываем индивидуальные программные продукты и масштабируемые API-фреймворки."
+			}
+		}
     ],
     "images": [
       "/img/inner/4.png",

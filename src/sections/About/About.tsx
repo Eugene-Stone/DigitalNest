@@ -1,6 +1,6 @@
 import { useSectionData } from '../../hooks/useSectionData';
 import useLanguageContext from '../../context/useLanguageContext';
-import getLang from '../../utils/getLang.js';
+import getLang from '../../utils/getLang';
 
 export default function About() {
 	const { section, loading, errorData } = useSectionData('/about');
@@ -29,11 +29,28 @@ export default function About() {
 						</div>
 						<div className="col-lg-9">
 							<div className="title-descr-big">
-								<p>{getLang(content[0], currentLang)}</p>
+								{content?.[0] && (
+									<p
+										dangerouslySetInnerHTML={{
+											__html:
+												'text' in content[0]
+													? getLang(content[0].text, currentLang)
+													: '',
+										}}
+									/>
+								)}
 							</div>
 							<div className="title-descr">
-								<p>{getLang(content[1], currentLang)}</p>
-								<p>{getLang(content[2], currentLang)}</p>
+								{content?.slice(1).map((block, index) => {
+									let text = '';
+									if ('text' in block) {
+										text = getLang(block.text, currentLang);
+									}
+
+									return (
+										<p key={index} dangerouslySetInnerHTML={{ __html: text }} />
+									);
+								})}
 							</div>
 						</div>
 					</div>
@@ -48,14 +65,18 @@ export default function About() {
 							</div>
 						</div>
 						<div className="col-md-6">
-							<div className="about-image">
-								<img src={images[0]} alt="image" />
-							</div>
+							{images && (
+								<div className="about-image">
+									<img src={images[0]} alt="image" />
+								</div>
+							)}
 						</div>
 						<div className="col-6 col-md-3 align-self-end">
-							<div className="about-image">
-								<img src={images[1]} alt="image" />
-							</div>
+							{images && (
+								<div className="about-image">
+									<img src={images[1]} alt="image" />
+								</div>
+							)}
 						</div>
 					</div>
 				</div>

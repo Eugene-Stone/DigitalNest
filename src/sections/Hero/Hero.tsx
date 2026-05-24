@@ -1,7 +1,7 @@
 import { useSectionData } from '../../hooks/useSectionData';
 import { ScrollToSectionLink } from '../../components/ScrollToSectionLink/ScrollToSectionLink';
 import useLanguageContext from '../../context/useLanguageContext';
-import getLang from '../../utils/getLang.js';
+import getLang from '../../utils/getLang';
 
 export default function Hero() {
 	const { section, loading, errorData } = useSectionData('/hero');
@@ -38,7 +38,9 @@ export default function Hero() {
 								<div className="row">
 									<div className="col-lg-8 col-xl-6">
 										<div className="top-screen-txt-brief">
-											<p>{getLang(description, currentLang)}</p>
+											{description?.map((descrItem, index) => {
+												return <p>{getLang(descrItem, currentLang)}</p>;
+											})}
 										</div>
 									</div>
 									<div className="col-lg-4 col-xl-6">
