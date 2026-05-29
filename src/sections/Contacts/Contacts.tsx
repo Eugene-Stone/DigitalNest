@@ -2,7 +2,7 @@ import Form from '../../components/Form/Form';
 import { useSectionData } from '../../hooks/useSectionData';
 import TitleHtml from '../../utils/TitleHtml';
 import useLanguageContext from '../../context/useLanguageContext';
-import getLang from '../../utils/getLang.js';
+import getLang from '../../utils/getLang';
 
 export default function Contacts() {
 	const { section, loading, errorData } = useSectionData('/contacts');
@@ -18,10 +18,6 @@ export default function Contacts() {
 	if (!section) return null;
 
 	const { id, title, description, phone, email, social } = section || {};
-	const iconSocial = {
-		instagram: '/img/_style/_svg/_social/inst.svg',
-		wts: 'img/_style/_svg/_social/wts.svg',
-	};
 
 	return (
 		<section id="contacts" className="sect-contacts">
@@ -68,16 +64,16 @@ export default function Contacts() {
 						{social && (
 							<div className="soc-wrap">
 								<div className="soc-lst">
-									{Object.entries(social || {}).map(([key, url]) => (
+									{social.map((socialItem, index) => (
 										<a
-											key={key}
-											href={url}
+											key={socialItem.type}
+											href={socialItem.link}
 											className="soc-btn"
-											title={key}
+											title={socialItem.type}
 											target="_blank"
 											rel="noreferrer"
 											style={{
-												backgroundImage: `url(${iconSocial[key]})`,
+												backgroundImage: `url(${socialItem.icon})`,
 											}}
 										/>
 									))}

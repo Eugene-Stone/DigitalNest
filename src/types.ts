@@ -33,6 +33,12 @@ export type ImageContent = {
 
 export type ContentType = TextContent | ListContent | ImageContent;
 
+type IconSocialType = {
+	type: string;
+	link: string;
+	icon: string;
+};
+
 export type SectionType = {
 	id: string;
 	title?: TranslateField;
@@ -42,5 +48,8 @@ export type SectionType = {
 	buttonText?: TranslateField;
 	backgroundImage?: string;
 	titleForm?: TranslateField;
+	phone?: number;
+	email?: string;
+	social?: IconSocialType[];
 	images?: string[];
 };

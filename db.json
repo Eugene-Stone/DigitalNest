@@ -617,10 +617,18 @@
     ],
     "phone": "+12345678",
     "email": "dev@digitalnest.tech",
-    "social": {
-      "wts": "https://wts.com/company/digital123",
-      "instagram": "https://instagram.com/digital123"
+    "social": [
+		{
+      "type": "instagram",
+      "link": "https://wts.com/company/digital123",
+      "icon": "/img/_style/_svg/_social/inst.svg"
+    },
+	 {
+      "type": "wts",
+      "link": "https://wts.com/company/digital123",
+      "icon": "img/_style/_svg/_social/wts.svg"
     }
+	 ]
   },
   "requests": [
     {
