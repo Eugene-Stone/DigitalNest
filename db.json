@@ -477,6 +477,7 @@
 		],
 		"content": [
 			{
+				"type": "workflow",
 				"id": "step-1",
 				"step": "01",
 				"title": {
@@ -489,6 +490,7 @@
 				}
 			},
 			{
+				"type": "workflow",
 				"id": "step-2",
 				"step": "02",
 				"title": {
@@ -501,6 +503,7 @@
 				}
 			},
 			{
+				"type": "workflow",
 				"id": "step-3",
 				"step": "03",
 				"title": {
@@ -513,6 +516,7 @@
 				}
 			},
 			{
+				"type": "workflow",
 				"id": "step-4",
 				"step": "04",
 				"title": {

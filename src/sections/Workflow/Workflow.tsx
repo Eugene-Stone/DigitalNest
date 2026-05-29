@@ -2,7 +2,7 @@ import { ScrollToSectionLink } from '../../components/ScrollToSectionLink/Scroll
 import { useSectionData } from '../../hooks/useSectionData';
 import TitleHtml from '../../utils/TitleHtml';
 import useLanguageContext from '../../context/useLanguageContext';
-import getLang from '../../utils/getLang.js';
+import getLang from '../../utils/getLang';
 
 export default function Workflow() {
 	const { section, loading, errorData } = useSectionData('/workflow');
@@ -42,21 +42,30 @@ export default function Workflow() {
 						</div>
 						<div className="how-we-work-txt-cell col-md-5 col-lg-6">
 							<ul className="how-we-work-lst">
-								{content.map((item, i) => {
+								{content?.map((item, i) => {
 									let number = i < 10 ? `0${i + 1}` : `${i + 1}`;
-									return (
-										<li key={i} className="how-we-work-itm">
-											<div className="h3-title how-we-work-itm-number">
-												{number}
-											</div>
-											<div className="h3-title how-we-work-itm-title">
-												{getLang(item.title, currentLang)}
-											</div>
-											<div className="how-we-work-itm-brief">
-												<p>{getLang(item.description, currentLang)}</p>
-											</div>
-										</li>
-									);
+
+									switch (item.type) {
+										case 'workflow':
+											return (
+												<li key={i} className="how-we-work-itm">
+													<div className="h3-title how-we-work-itm-number">
+														{number}
+													</div>
+													<div className="h3-title how-we-work-itm-title">
+														{getLang(item.title, currentLang)}
+													</div>
+													<div className="how-we-work-itm-brief">
+														<p>
+															{getLang(item.description, currentLang)}
+														</p>
+													</div>
+												</li>
+											);
+
+										default:
+											return null;
+									}
 								})}
 							</ul>
 							{/* how-we-work-lst */}
@@ -73,7 +82,7 @@ export default function Workflow() {
 					)}
 
 					<ScrollToSectionLink className="btn" to="sect-contacts">
-						<span>{currentLang === 'Ru' ? 'Начать проект' : 'Start a project'}</span>
+						<span>{currentLang === 'ru' ? 'Начать проект' : 'Start a project'}</span>
 					</ScrollToSectionLink>
 				</div>
 			</div>
