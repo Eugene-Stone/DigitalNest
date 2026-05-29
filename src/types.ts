@@ -31,7 +31,14 @@ export type ImageContent = {
 	alt: TranslateField;
 };
 
-export type ContentType = TextContent | ListContent | ImageContent;
+export type FeatureContent = {
+	type: 'feature';
+	id: string;
+	title: TranslateField;
+	description: TranslateField;
+};
+
+export type ContentType = TextContent | ListContent | ImageContent | FeatureContent;
 
 type IconSocialType = {
 	type: string;

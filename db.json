@@ -1,704 +1,704 @@
 {
-  "pages": [
-    {
-      "id": "home",
-      "slug": "home",
-      "sections": [
-        "hero",
-        "about",
-        "services",
-        "features",
-        "projects",
-        "workflow",
-        "reviews",
-        "contacts"
-      ]
-    }
-  ],
-  "privacy": {
-    "id": "privacy",
-    "title": {
-      "en": "Privacy Policy",
-      "ru": "Политика конфиденциальности"
-    },
-    "description": [
-      {
-        "en": "At DigitalNest, we prioritize the security and confidentiality of your data infrastructure.",
-        "ru": "В DigitalNest мы уделяем приоритетное внимание безопасности и конфиденциальности вашей информационной инфраструктуры."
-      }
-    ],
-    "content": [
-      {
-        "type": "h1",
-        "text": {
-          "en": "h1 - Title styles",
-          "ru": "h1 - Стили заголовка"
-        }
-      },
-      {
-        "type": "h2",
-        "text": {
-          "en": "h2 - Title styles",
-          "ru": "h2 - Стили заголовка"
-        }
-      },
-      {
-        "type": "h3",
-        "text": {
-          "en": "h3 - Title styles",
-          "ru": "h3 - Стили заголовка"
-        }
-      },
-      {
-        "type": "h4",
-        "text": {
-          "en": "h4 - Title styles",
-          "ru": "h4 - Стили заголовка"
-        }
-      },
-      {
-        "type": "h5",
-        "text": {
-          "en": "h5 - Title styles",
-          "ru": "h5 - Стили заголовка"
-        }
-      },
-      {
-        "type": "h6",
-        "text": {
-          "en": "h6 - Title styles",
-          "ru": "h6 - Стили заголовка"
-        }
-      },
-      {
-        "type": "p",
-        "text": {
-          "en": "Lorem ipsum dolor sit amet, <a href='#'>Link styles</a> consectetur adipisicing elit.",
-          "ru": "Лорем ипсум долор сит амет, <a href='#'>Стили ссылок</a> консектетур адипизицинг элит."
-        }
-      },
-      {
-        "type": "ol",
-        "items": [
-          {
-            "en": "Sign the declaration below <a href='#'>Link</a>.",
-            "ru": "Подпишите декларацию ниже <a href='#'>Ссылка</a>."
-          },
-          {
-            "en": "Place the ballot in the envelope.",
-            "ru": "Положите бюллетень в конверт."
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "text": {
-          "en": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-          "ru": "Лорем ипсум долор сит амет, консектетур адипизицинг элит. Лорем ипсум долор сит амет, консектетур адипизицинг элит.Лорем ипсум долор сит амет, консектетур адипизицинг элит. Лорем ипсум долор сит амет, консектетур адипизицинг элит.Лорем ипсум долор сит амет, консектетур адипизицинг элит. Лорем ипсум долор сит амет, консектетур адипизицинг элит."
-        }
-      },
-      {
-        "type": "ul",
-        "items": [
-          {
-            "en": "Standard delivery by post.",
-            "ru": "Стандартная доставка почтой."
-          },
-          {
-            "en": "Handover to the administration.",
-            "ru": "Передача в администрацию."
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "text": {
-          "en": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-          "ru": "Лорем ипсум долор сит амет, консектетур адипизицинг элит. Лорем ипсум долор сит амет, консектетур адипизицинг элит.Лорем ипсум долор сит амет, консектетур адипизицинг элит. Лорем ипсум долор сит амет, консектетур адипизицинг элит.Лорем ипсум долор сит амет, консектетур адипизицинг элит. Лорем ипсум долор сит амет, консектетур адипизицинг элит."
-        }
-      },
-      {
-        "type": "img",
-        "src": "/img/inner/7.png",
-        "alt": {
-          "en": "Architecture",
-          "ru": "Архитектура"
-        }
-      },
-      {
-        "type": "p",
-        "text": {
-          "en": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
-          "ru": "Лорем ипсум долор сит амет, консектетур адипизицинг элит. Лорем ипсум долор сит амет, консектетур адипизицинг элит.Лорем ипсум долор сит амет, консектетур адипизицинг элит. Лорем ипсум долор сит амет, консектетур адипизицинг элит.Лорем ипсум долор сит амет, консектетур адипизицинг элит. Лорем ипсум долор сит амет, консектетур адипизицинг элит."
-        }
-      }
-    ]
-  },
-  "hero": {
-    "id": "hero",
-    "title": {
-      "en": "Advanced Digital Ecosystem Solutions",
-      "ru": "Передовые решения"
-    },
-    "subtitle": {
-      "en": "Scalable Tech & Smart Data Harmony",
-      "ru": "Масштабируемые технологии и гармония интеллектуальных данных"
-    },
-    "description": [
+	"pages": [
 		{
+			"id": "home",
+			"slug": "home",
+			"sections": [
+				"hero",
+				"about",
+				"services",
+				"features",
+				"projects",
+				"workflow",
+				"reviews",
+				"contacts"
+			]
+		}
+	],
+	"privacy": {
+		"id": "privacy",
+		"title": {
+			"en": "Privacy Policy",
+			"ru": "Политика конфиденциальности"
+		},
+		"description": [
+			{
+				"en": "At DigitalNest, we prioritize the security and confidentiality of your data infrastructure.",
+				"ru": "В DigitalNest мы уделяем приоритетное внимание безопасности и конфиденциальности вашей информационной инфраструктуры."
+			}
+		],
+		"content": [
+			{
+				"type": "h1",
+				"text": {
+					"en": "h1 - Title styles",
+					"ru": "h1 - Стили заголовка"
+				}
+			},
+			{
+				"type": "h2",
+				"text": {
+					"en": "h2 - Title styles",
+					"ru": "h2 - Стили заголовка"
+				}
+			},
+			{
+				"type": "h3",
+				"text": {
+					"en": "h3 - Title styles",
+					"ru": "h3 - Стили заголовка"
+				}
+			},
+			{
+				"type": "h4",
+				"text": {
+					"en": "h4 - Title styles",
+					"ru": "h4 - Стили заголовка"
+				}
+			},
+			{
+				"type": "h5",
+				"text": {
+					"en": "h5 - Title styles",
+					"ru": "h5 - Стили заголовка"
+				}
+			},
+			{
+				"type": "h6",
+				"text": {
+					"en": "h6 - Title styles",
+					"ru": "h6 - Стили заголовка"
+				}
+			},
+			{
+				"type": "p",
+				"text": {
+					"en": "Lorem ipsum dolor sit amet, <a href='#'>Link styles</a> consectetur adipisicing elit.",
+					"ru": "Лорем ипсум долор сит амет, <a href='#'>Стили ссылок</a> консектетур адипизицинг элит."
+				}
+			},
+			{
+				"type": "ol",
+				"items": [
+					{
+						"en": "Sign the declaration below <a href='#'>Link</a>.",
+						"ru": "Подпишите декларацию ниже <a href='#'>Ссылка</a>."
+					},
+					{
+						"en": "Place the ballot in the envelope.",
+						"ru": "Положите бюллетень в конверт."
+					}
+				]
+			},
+			{
+				"type": "p",
+				"text": {
+					"en": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+					"ru": "Лорем ипсум долор сит амет, консектетур адипизицинг элит. Лорем ипсум долор сит амет, консектетур адипизицинг элит.Лорем ипсум долор сит амет, консектетур адипизицинг элит. Лорем ипсум долор сит амет, консектетур адипизицинг элит.Лорем ипсум долор сит амет, консектетур адипизицинг элит. Лорем ипсум долор сит амет, консектетур адипизицинг элит."
+				}
+			},
+			{
+				"type": "ul",
+				"items": [
+					{
+						"en": "Standard delivery by post.",
+						"ru": "Стандартная доставка почтой."
+					},
+					{
+						"en": "Handover to the administration.",
+						"ru": "Передача в администрацию."
+					}
+				]
+			},
+			{
+				"type": "p",
+				"text": {
+					"en": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+					"ru": "Лорем ипсум долор сит амет, консектетур адипизицинг элит. Лорем ипсум долор сит амет, консектетур адипизицинг элит.Лорем ипсум долор сит амет, консектетур адипизицинг элит. Лорем ипсум долор сит амет, консектетур адипизицинг элит.Лорем ипсум долор сит амет, консектетур адипизицинг элит. Лорем ипсум долор сит амет, консектетур адипизицинг элит."
+				}
+			},
+			{
+				"type": "img",
+				"src": "/img/inner/7.png",
+				"alt": {
+					"en": "Architecture",
+					"ru": "Архитектура"
+				}
+			},
+			{
+				"type": "p",
+				"text": {
+					"en": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+					"ru": "Лорем ипсум долор сит амет, консектетур адипизицинг элит. Лорем ипсум долор сит амет, консектетур адипизицинг элит.Лорем ипсум долор сит амет, консектетур адипизицинг элит. Лорем ипсум долор сит амет, консектетур адипизицинг элит.Лорем ипсум долор сит амет, консектетур адипизицинг элит. Лорем ипсум долор сит амет, консектетур адипизицинг элит."
+				}
+			}
+		]
+	},
+	"hero": {
+		"id": "hero",
+		"title": {
+			"en": "Advanced Digital Ecosystem Solutions",
+			"ru": "Передовые решения"
+		},
+		"subtitle": {
+			"en": "Scalable Tech & Smart Data Harmony",
+			"ru": "Масштабируемые технологии и гармония интеллектуальных данных"
+		},
+		"description": [
+			{
 				"en": "High-tech infrastructure with cloud systems: efficiency, security, and power for your network—automated and maintenance-free.",
 				"ru": "Высокотехнологичная инфраструктура с облачными системами: эффективность, безопасность и мощность для вашей сети — автоматизировано и без лишних затрат на обслуживание."
-		}
-	 ],
-    "buttonText": {
-      "en": "Contact us",
-      "ru": "Связаться с нами"
-    },
-    "backgroundImage": "/img/inner/1.jpeg"
-  },
-  "about": {
-    "id": "about",
-    "title": {
-      "en": "About",
-      "ru": "О нас"
-    },
-    "content": [
-		{
-			"type": "p",
-			"text": {
-				"en": "DigitalNest — engineering resilient digital ecosystems powered by cloud computing, neural networks, and deep data analytics.",
-				"ru": "DigitalNest — проектирование отказоустойчивых цифровых экосистем на базе облачных вычислений, нейронных сетей и глубокой аналитики данных."
 			}
+		],
+		"buttonText": {
+			"en": "Contact us",
+			"ru": "Связаться с нами"
+		},
+		"backgroundImage": "/img/inner/1.jpeg"
+	},
+	"about": {
+		"id": "about",
+		"title": {
+			"en": "About",
+			"ru": "О нас"
+		},
+		"content": [
+			{
+				"type": "p",
+				"text": {
+					"en": "DigitalNest — engineering resilient digital ecosystems powered by cloud computing, neural networks, and deep data analytics.",
+					"ru": "DigitalNest — проектирование отказоустойчивых цифровых экосистем на базе облачных вычислений, нейронных сетей и глубокой аналитики данных."
+				}
+			},
+			{
+				"type": "p",
+				"text": {
+					"en": "Our mission is to fundamentally optimize business workflows, building high-performance environments through cutting-edge protocols and sophisticated system architecture.",
+					"ru": "Наша миссия — фундаментальная оптимизация бизнес-процессов и создание высокопроизводительных сред с использованием передовых протоколов и сложной системной архитектуры."
+				}
+			},
+			{
+				"type": "p",
+				"text": {
+					"en": "Leveraging nearly a decade of expertise in systems integration, we architect bespoke software products and scalable API frameworks.",
+					"ru": "Используя почти десятилетний опыт системной интеграции, мы разрабатываем индивидуальные программные продукты и масштабируемые API-фреймворки."
+				}
+			}
+		],
+		"images": ["/img/inner/4.png", "/img/inner/5.png"]
+	},
+	"services": {
+		"id": "services",
+		"title": {
+			"en": "<strong>How</strong> we build",
+			"ru": "<strong>Как</strong> мы строим"
+		},
+		"description": [
+			{
+				"en": "Every solution we architect is more than just code – it’s a synergy of performance, security, and scalability, transforming",
+				"ru": "Каждое решение, которое мы проектируем — это больше, чем просто код. Это синергия производительности, безопасности и масштабируемости,"
+			},
+			{
+				"en": "your digital presence into a high-velocity, reliable ecosystem.",
+				"ru": "превращающая ваше цифровое присутствие в высокоскоростную и надежную экосистему."
+			}
+		],
+		"content": [
+			{
+				"id": "service-1",
+				"title": {
+					"en": "Cloud Infrastructure",
+					"ru": "Облачная инфраструктура"
+				},
+				"description": {
+					"en": "Design and deployment of scalable cloud architectures and distributed computing environments.",
+					"ru": "Проектирование и развертывание масштабируемых облачных архитектур и сред распределенных вычислений."
+				},
+				"image": "/img/inner/6.png",
+				"highlight": true
+			},
+			{
+				"id": "service-2",
+				"title": {
+					"en": "Tech Audit & Optimization",
+					"ru": "Технический аудит и оптимизация"
+				},
+				"description": {
+					"en": "Deep infrastructure analysis and performance optimization for enterprise platforms.",
+					"ru": "Глубокий анализ инфраструктуры и оптимизация производительности корпоративных платформ."
+				},
+				"image": "/img/inner/7.png"
+			},
+			{
+				"id": "service-3",
+				"title": {
+					"en": "Custom Web Engineering",
+					"ru": "Веб-инжиниринг на заказ"
+				},
+				"description": {
+					"en": "Development of complex web platforms, SaaS products, and scalable digital ecosystems.",
+					"ru": "Разработка сложных веб-платформ, SaaS-продуктов и масштабируемых цифровых экосистем."
+				},
+				"image": "/img/inner/8.png"
+			},
+			{
+				"id": "service-4",
+				"title": {
+					"en": "UI/UX Product Design",
+					"ru": "UI/UX дизайн продукта"
+				},
+				"description": {
+					"en": "User-centered product design focused on usability, accessibility, and visual clarity.",
+					"ru": "Дизайн продукта, ориентированный на пользователя, с упором на удобство, доступность и визуальную ясность."
+				},
+				"image": "/img/inner/9.png"
+			},
+			{
+				"id": "service-5",
+				"title": {
+					"en": "Enterprise Support",
+					"ru": "Корпоративная поддержка"
+				},
+				"description": {
+					"en": "Dedicated infrastructure monitoring and long-term technical support.",
+					"ru": "Специализированный мониторинг инфраструктуры и долгосрочная техническая поддержка."
+				},
+				"image": "/img/inner/10.png"
+			}
+		],
+		"button": {
+			"en": "Get a quote",
+			"ru": "Получить предложение"
+		},
+		"buttonCard": {
+			"en": "Explore stack",
+			"ru": "Изучите стек"
+		}
+	},
+	"features": {
+		"id": "features",
+		"title": {
+			"en": "<strong>Why</strong> choose DigitalNest?",
+			"ru": "<strong>Почему</strong> выбирают DigitalNest?"
+		},
+		"content": [
+			{
+				"type": "feature",
+				"id": "feature-1",
+				"title": {
+					"en": "9+ years in system engineering",
+					"ru": "9+ лет в системной инженерии"
+				},
+				"description": {
+					"en": "Extensive experience designing scalable digital platforms.",
+					"ru": "Обширный опыт проектирования масштабируемых цифровых платформ."
+				}
+			},
+			{
+				"type": "feature",
+				"id": "feature-2",
+				"title": {
+					"en": "Custom & proprietary stack",
+					"ru": "Индивидуальный и проприетарный стек"
+				},
+				"description": {
+					"en": "Modern technology stack tailored for each project.",
+					"ru": "Современный технологический стек, адаптированный под каждый проект."
+				}
+			},
+			{
+				"type": "feature",
+				"id": "feature-3",
+				"title": {
+					"en": "Scalable for any workload",
+					"ru": "Масштабируемость под любые нагрузки"
+				},
+				"description": {
+					"en": "Infrastructure designed to scale with growing traffic.",
+					"ru": "Инфраструктура, рассчитанная на рост вместе с вашим трафиком."
+				}
+			},
+			{
+				"type": "feature",
+				"id": "feature-4",
+				"title": {
+					"en": "Data-driven architecture",
+					"ru": "Архитектура на основе данных"
+				},
+				"description": {
+					"en": "Architecture decisions based on deep analytics and metrics.",
+					"ru": "Архитектурные решения на основе глубокой аналитики и метрик."
+				}
+			},
+			{
+				"type": "feature",
+				"id": "feature-5",
+				"title": {
+					"en": "Automated & zero-Ops",
+					"ru": "Автоматизация и Zero-Ops"
+				},
+				"description": {
+					"en": "Fully automated deployment and infrastructure management.",
+					"ru": "Полностью автоматизированное развертывание и управление инфраструктурой."
+				}
+			},
+			{
+				"type": "feature",
+				"id": "feature-6",
+				"title": {
+					"en": "High security & encryption",
+					"ru": "Высокая безопасность и шифрование"
+				},
+				"description": {
+					"en": "Advanced security layers protecting enterprise data.",
+					"ru": "Передовые уровни безопасности для защиты корпоративных данных."
+				}
+			}
+		]
+	},
+	"projects": {
+		"id": "projects",
+		"title": {
+			"en": "<strong>Showcase</strong>",
+			"ru": "<strong>Проекты</strong>"
+		},
+		"description": {
+			"en": "Explore our recent digital deployments and architecture solutions.",
+			"ru": "Ознакомьтесь с нашими недавними цифровыми внедрениями и архитектурными решениями."
+		},
+		"content": [
+			{
+				"id": "project-1",
+				"category": {
+					"en": "Cloud Systems",
+					"ru": "Облачные системы"
+				},
+				"images": [
+					"/img/inner/13.png",
+					"/img/inner/14.png",
+					"/img/inner/15.png",
+					"/img/inner/12.png",
+					"/img/inner/12.png",
+					"/img/inner/12.png",
+					"/img/inner/12.png",
+					"/img/inner/12.png",
+					"/img/inner/12.png",
+					"/img/inner/12.png",
+					"/img/inner/12.png",
+					"/img/inner/11.png"
+				],
+				"isActive": false
+			},
+			{
+				"id": "project-2",
+				"category": {
+					"en": "Data Analytics",
+					"ru": "Аналитика данных"
+				},
+				"images": [
+					"/img/inner/13.png",
+					"/img/inner/12.png",
+					"/img/inner/11.png",
+					"/img/inner/11.png",
+					"/img/inner/11.png",
+					"/img/inner/14.png",
+					"/img/inner/15.png"
+				],
+				"isActive": false
+			},
+			{
+				"id": "project-3",
+				"category": {
+					"en": "Mobile Apps",
+					"ru": "Мобильные приложения"
+				},
+				"images": [
+					"/img/inner/14.png",
+					"/img/inner/15.png",
+					"/img/inner/13.png",
+					"/img/inner/12.png",
+					"/img/inner/11.png"
+				],
+				"isActive": false
+			},
+			{
+				"id": "project-4",
+				"category": {
+					"en": "Web Interface",
+					"ru": "Веб-интерфейсы"
+				},
+				"images": [
+					"/img/inner/11.png",
+					"/img/inner/14.png",
+					"/img/inner/13.png",
+					"/img/inner/13.png",
+					"/img/inner/12.png",
+					"/img/inner/15.png"
+				],
+				"isActive": false
+			},
+			{
+				"id": "project-5",
+				"category": {
+					"en": "UI/UX",
+					"ru": "UI/UX дизайн"
+				},
+				"images": [
+					"/img/inner/13.png",
+					"/img/inner/12.png",
+					"/img/inner/12.png",
+					"/img/inner/11.png",
+					"/img/inner/14.png",
+					"/img/inner/14.png",
+					"/img/inner/14.png",
+					"/img/inner/15.png"
+				],
+				"isActive": true
+			}
+		]
+	},
+	"workflow": {
+		"id": "workflow",
+		"title": {
+			"en": "<strong>Our</strong> workflow",
+			"ru": "<strong>Наш</strong> процесс"
+		},
+		"description": [
+			{
+				"en": "Build a resilient digital presence with DigitalNest’s custom engineering. Accelerate your technological growth today!",
+				"ru": "Создайте устойчивое цифровое присутствие с помощью индивидуальной инженерии DigitalNest. Ускорьте свой технологический рост уже сегодня!"
+			}
+		],
+		"descriptionBottom": [
+			{
+				"en": "Ready to scale? Connect with us – we’ll dive into technical details and help you architect the perfect system!",
+				"ru": "Готовы к масштабированию? Свяжитесь с нами — мы погрузимся в технические детали и поможем спроектировать идеальную систему!"
+			}
+		],
+		"content": [
+			{
+				"id": "step-1",
+				"step": "01",
+				"title": {
+					"en": "Discovery & Analysis",
+					"ru": "Анализ и исследование"
+				},
+				"description": {
+					"en": "Understanding product goals, user needs, and system constraints.",
+					"ru": "Понимание целей продукта, потребностей пользователей и системных ограничений."
+				}
+			},
+			{
+				"id": "step-2",
+				"step": "02",
+				"title": {
+					"en": "Architecture Blueprint",
+					"ru": "Проектирование архитектуры"
+				},
+				"description": {
+					"en": "Designing scalable system architecture and data pipelines.",
+					"ru": "Разработка масштабируемой системной архитектуры и конвейеров данных."
+				}
+			},
+			{
+				"id": "step-3",
+				"step": "03",
+				"title": {
+					"en": "Agile Development",
+					"ru": "Agile-разработка"
+				},
+				"description": {
+					"en": "Iterative development with continuous integration and testing.",
+					"ru": "Итеративная разработка с непрерывной интеграцией и тестированием."
+				}
+			},
+			{
+				"id": "step-4",
+				"step": "04",
+				"title": {
+					"en": "Deployment & Support",
+					"ru": "Развертывание и поддержка"
+				},
+				"description": {
+					"en": "Production deployment and long-term system maintenance.",
+					"ru": "Вывод в продакшн и долгосрочное обслуживание системы."
+				}
+			}
+		]
+	},
+	"reviews": {
+		"id": "reviews",
+		"title": {
+			"en": "<strong>Reviews</strong>",
+			"ru": "<strong>Отзывы</strong>"
+		},
+		"description": [
+			{
+				"en": "Every system built by DigitalNest is engineered for stability and exceptional performance.",
+				"ru": "Каждая система, созданная DigitalNest, спроектирована для обеспечения стабильности и исключительной производительности."
+			}
+		],
+		"content": [
+			{
+				"id": "review-1",
+				"name": "Alex R.",
+				"position": {
+					"en": "CTO",
+					"ru": "Технический директор"
+				},
+				"date": {
+					"en": "12 February 2026",
+					"ru": "12 февраля 2026"
+				},
+				"avatar": "/img/reviews/1.jpg",
+				"text": [
+					{
+						"en": "DigitalNest delivered a highly scalable infrastructure solution that significantly improved our platform stability.",
+						"ru": "DigitalNest предоставили высокомасштабируемое инфраструктурное решение, которое значительно повысило стабильность нашей платформы."
+					}
+				]
+			},
+			{
+				"id": "review-2",
+				"name": "Sarah J.",
+				"position": {
+					"en": "Product Owner",
+					"ru": "Владелец продукта"
+				},
+				"date": {
+					"en": "1 February 2026",
+					"ru": "1 февраля 2026"
+				},
+				"avatar": "/img/reviews/2.jpg",
+				"text": [
+					{
+						"en": "Their engineering team transformed our architecture and dramatically improved performance.",
+						"ru": "Их инженерная команда полностью преобразила нашу архитектуру и резко повысила производительность."
+					}
+				]
+			},
+			{
+				"id": "review-3",
+				"name": "Mihesel V.",
+				"position": {
+					"en": "Founder",
+					"ru": "Основатель"
+				},
+				"date": {
+					"en": "25 February 2026",
+					"ru": "25 февраля 2026"
+				},
+				"avatar": "/img/reviews/3.jpg",
+				"text": [
+					{
+						"en": "Professional team with strong expertise in cloud infrastructure and enterprise solutions.",
+						"ru": "Профессиональная команда с глубокой экспертизой в области облачной инфраструктуры и корпоративных решений."
+					}
+				]
+			}
+		]
+	},
+	"contacts": {
+		"id": "contacts-main",
+		"title": {
+			"en": "<strong>Contacts</strong>",
+			"ru": "<strong>Контакты</strong>"
+		},
+		"titleForm": {
+			"en": "Start a conversation about your project and get a free technical infrastructure audit.",
+			"ru": "Начните обсуждение вашего проекта и получите бесплатный аудит технической инфраструктуры."
+		},
+		"description": [
+			{
+				"en": "Let’s build your next digital breakthrough together! We provide remote engineering and on-site consulting across the EU, UK, and North America.",
+				"ru": "Давайте создадим ваш следующий цифровой прорыв вместе! Мы предлагаем удаленную разработку и выездной консалтинг в ЕС, Великобритании и Северной Америке."
+			},
+			{
+				"en": "*Global availability – our distributed team operates across multiple time zones to support you.",
+				"ru": "*Глобальная доступность — наша распределенная команда работает в нескольких часовых поясах, чтобы поддержать вас."
+			}
+		],
+		"phone": "+12345678",
+		"email": "dev@digitalnest.tech",
+		"social": [
+			{
+				"type": "instagram",
+				"link": "https://wts.com/company/digital123",
+				"icon": "/img/_style/_svg/_social/inst.svg"
+			},
+			{
+				"type": "wts",
+				"link": "https://wts.com/company/digital123",
+				"icon": "img/_style/_svg/_social/wts.svg"
+			}
+		]
+	},
+	"requests": [
+		{
+			"id": "e56d",
+			"dateSend": "2026-04-09T11:01:32.013Z",
+			"dateSendSt": 1775732492013,
+			"selectField": "",
+			"fullName": "Full Name Initial",
+			"companyPhone": "фыв",
+			"email": "",
+			"textarea": "",
+			"checkboxes": false
 		},
 		{
-			"type": "p",
-			"text": {
-				"en": "Our mission is to fundamentally optimize business workflows, building high-performance environments through cutting-edge protocols and sophisticated system architecture.",
-				"ru": "Наша миссия — фундаментальная оптимизация бизнес-процессов и создание высокопроизводительных сред с использованием передовых протоколов и сложной системной архитектуры."
-			}
+			"id": "5700",
+			"dateSend": "2026-04-09T11:01:39.102Z",
+			"dateSendSt": 1775732499102,
+			"selectField": "",
+			"fullName": "Full Name Initial",
+			"companyPhone": "фыв",
+			"email": "",
+			"textarea": "",
+			"checkboxes": false
 		},
 		{
-			"type": "p",
-			"text": {
-				"en": "Leveraging nearly a decade of expertise in systems integration, we architect bespoke software products and scalable API frameworks.",
-				"ru": "Используя почти десятилетний опыт системной интеграции, мы разрабатываем индивидуальные программные продукты и масштабируемые API-фреймворки."
-			}
-		}
-    ],
-    "images": [
-      "/img/inner/4.png",
-      "/img/inner/5.png"
-    ]
-  },
-  "services": {
-    "id": "services",
-    "title": {
-      "en": "<strong>How</strong> we build",
-      "ru": "<strong>Как</strong> мы строим"
-    },
-    "description": [
-      {
-        "en": "Every solution we architect is more than just code – it’s a synergy of performance, security, and scalability, transforming",
-        "ru": "Каждое решение, которое мы проектируем — это больше, чем просто код. Это синергия производительности, безопасности и масштабируемости,"
-      },
-      {
-        "en": "your digital presence into a high-velocity, reliable ecosystem.",
-        "ru": "превращающая ваше цифровое присутствие в высокоскоростную и надежную экосистему."
-      }
-    ],
-    "content": [
-      {
-        "id": "service-1",
-        "title": {
-          "en": "Cloud Infrastructure",
-          "ru": "Облачная инфраструктура"
-        },
-        "description": {
-          "en": "Design and deployment of scalable cloud architectures and distributed computing environments.",
-          "ru": "Проектирование и развертывание масштабируемых облачных архитектур и сред распределенных вычислений."
-        },
-        "image": "/img/inner/6.png",
-        "highlight": true
-      },
-      {
-        "id": "service-2",
-        "title": {
-          "en": "Tech Audit & Optimization",
-          "ru": "Технический аудит и оптимизация"
-        },
-        "description": {
-          "en": "Deep infrastructure analysis and performance optimization for enterprise platforms.",
-          "ru": "Глубокий анализ инфраструктуры и оптимизация производительности корпоративных платформ."
-        },
-        "image": "/img/inner/7.png"
-      },
-      {
-        "id": "service-3",
-        "title": {
-          "en": "Custom Web Engineering",
-          "ru": "Веб-инжиниринг на заказ"
-        },
-        "description": {
-          "en": "Development of complex web platforms, SaaS products, and scalable digital ecosystems.",
-          "ru": "Разработка сложных веб-платформ, SaaS-продуктов и масштабируемых цифровых экосистем."
-        },
-        "image": "/img/inner/8.png"
-      },
-      {
-        "id": "service-4",
-        "title": {
-          "en": "UI/UX Product Design",
-          "ru": "UI/UX дизайн продукта"
-        },
-        "description": {
-          "en": "User-centered product design focused on usability, accessibility, and visual clarity.",
-          "ru": "Дизайн продукта, ориентированный на пользователя, с упором на удобство, доступность и визуальную ясность."
-        },
-        "image": "/img/inner/9.png"
-      },
-      {
-        "id": "service-5",
-        "title": {
-          "en": "Enterprise Support",
-          "ru": "Корпоративная поддержка"
-        },
-        "description": {
-          "en": "Dedicated infrastructure monitoring and long-term technical support.",
-          "ru": "Специализированный мониторинг инфраструктуры и долгосрочная техническая поддержка."
-        },
-        "image": "/img/inner/10.png"
-      }
-    ],
-    "button": {
-      "en": "Get a quote",
-      "ru": "Получить предложение"
-    },
-    "buttonCard": {
-      "en": "Explore stack",
-      "ru": "Изучите стек"
-    }
-  },
-  "features": {
-    "id": "features",
-    "title": {
-      "en": "<strong>Why</strong> choose DigitalNest?",
-      "ru": "<strong>Почему</strong> выбирают DigitalNest?"
-    },
-    "content": [
-      {
-        "id": "feature-1",
-        "title": {
-          "en": "9+ years in system engineering",
-          "ru": "9+ лет в системной инженерии"
-        },
-        "description": {
-          "en": "Extensive experience designing scalable digital platforms.",
-          "ru": "Обширный опыт проектирования масштабируемых цифровых платформ."
-        }
-      },
-      {
-        "id": "feature-2",
-        "title": {
-          "en": "Custom & proprietary stack",
-          "ru": "Индивидуальный и проприетарный стек"
-        },
-        "description": {
-          "en": "Modern technology stack tailored for each project.",
-          "ru": "Современный технологический стек, адаптированный под каждый проект."
-        }
-      },
-      {
-        "id": "feature-3",
-        "title": {
-          "en": "Scalable for any workload",
-          "ru": "Масштабируемость под любые нагрузки"
-        },
-        "description": {
-          "en": "Infrastructure designed to scale with growing traffic.",
-          "ru": "Инфраструктура, рассчитанная на рост вместе с вашим трафиком."
-        }
-      },
-      {
-        "id": "feature-4",
-        "title": {
-          "en": "Data-driven architecture",
-          "ru": "Архитектура на основе данных"
-        },
-        "description": {
-          "en": "Architecture decisions based on deep analytics and metrics.",
-          "ru": "Архитектурные решения на основе глубокой аналитики и метрик."
-        }
-      },
-      {
-        "id": "feature-5",
-        "title": {
-          "en": "Automated & zero-Ops",
-          "ru": "Автоматизация и Zero-Ops"
-        },
-        "description": {
-          "en": "Fully automated deployment and infrastructure management.",
-          "ru": "Полностью автоматизированное развертывание и управление инфраструктурой."
-        }
-      },
-      {
-        "id": "feature-6",
-        "title": {
-          "en": "High security & encryption",
-          "ru": "Высокая безопасность и шифрование"
-        },
-        "description": {
-          "en": "Advanced security layers protecting enterprise data.",
-          "ru": "Передовые уровни безопасности для защиты корпоративных данных."
-        }
-      }
-    ]
-  },
-  "projects": {
-    "id": "projects",
-    "title": {
-      "en": "<strong>Showcase</strong>",
-      "ru": "<strong>Проекты</strong>"
-    },
-    "description": {
-      "en": "Explore our recent digital deployments and architecture solutions.",
-      "ru": "Ознакомьтесь с нашими недавними цифровыми внедрениями и архитектурными решениями."
-    },
-    "content": [
-      {
-        "id": "project-1",
-        "category": {
-          "en": "Cloud Systems",
-          "ru": "Облачные системы"
-        },
-        "images": [
-          "/img/inner/13.png",
-          "/img/inner/14.png",
-          "/img/inner/15.png",
-          "/img/inner/12.png",
-          "/img/inner/12.png",
-          "/img/inner/12.png",
-          "/img/inner/12.png",
-          "/img/inner/12.png",
-          "/img/inner/12.png",
-          "/img/inner/12.png",
-          "/img/inner/12.png",
-          "/img/inner/11.png"
-        ],
-        "isActive": false
-      },
-      {
-        "id": "project-2",
-        "category": {
-          "en": "Data Analytics",
-          "ru": "Аналитика данных"
-        },
-        "images": [
-          "/img/inner/13.png",
-          "/img/inner/12.png",
-          "/img/inner/11.png",
-          "/img/inner/11.png",
-          "/img/inner/11.png",
-          "/img/inner/14.png",
-          "/img/inner/15.png"
-        ],
-        "isActive": false
-      },
-      {
-        "id": "project-3",
-        "category": {
-          "en": "Mobile Apps",
-          "ru": "Мобильные приложения"
-        },
-        "images": [
-          "/img/inner/14.png",
-          "/img/inner/15.png",
-          "/img/inner/13.png",
-          "/img/inner/12.png",
-          "/img/inner/11.png"
-        ],
-        "isActive": false
-      },
-      {
-        "id": "project-4",
-        "category": {
-          "en": "Web Interface",
-          "ru": "Веб-интерфейсы"
-        },
-        "images": [
-          "/img/inner/11.png",
-          "/img/inner/14.png",
-          "/img/inner/13.png",
-          "/img/inner/13.png",
-          "/img/inner/12.png",
-          "/img/inner/15.png"
-        ],
-        "isActive": false
-      },
-      {
-        "id": "project-5",
-        "category": {
-          "en": "UI/UX",
-          "ru": "UI/UX дизайн"
-        },
-        "images": [
-          "/img/inner/13.png",
-          "/img/inner/12.png",
-          "/img/inner/12.png",
-          "/img/inner/11.png",
-          "/img/inner/14.png",
-          "/img/inner/14.png",
-          "/img/inner/14.png",
-          "/img/inner/15.png"
-        ],
-        "isActive": true
-      }
-    ]
-  },
-  "workflow": {
-    "id": "workflow",
-    "title": {
-      "en": "<strong>Our</strong> workflow",
-      "ru": "<strong>Наш</strong> процесс"
-    },
-    "description": [
-      {
-        "en": "Build a resilient digital presence with DigitalNest’s custom engineering. Accelerate your technological growth today!",
-        "ru": "Создайте устойчивое цифровое присутствие с помощью индивидуальной инженерии DigitalNest. Ускорьте свой технологический рост уже сегодня!"
-      }
-    ],
-    "descriptionBottom": [
-      {
-        "en": "Ready to scale? Connect with us – we’ll dive into technical details and help you architect the perfect system!",
-        "ru": "Готовы к масштабированию? Свяжитесь с нами — мы погрузимся в технические детали и поможем спроектировать идеальную систему!"
-      }
-    ],
-    "content": [
-      {
-        "id": "step-1",
-        "step": "01",
-        "title": {
-          "en": "Discovery & Analysis",
-          "ru": "Анализ и исследование"
-        },
-        "description": {
-          "en": "Understanding product goals, user needs, and system constraints.",
-          "ru": "Понимание целей продукта, потребностей пользователей и системных ограничений."
-        }
-      },
-      {
-        "id": "step-2",
-        "step": "02",
-        "title": {
-          "en": "Architecture Blueprint",
-          "ru": "Проектирование архитектуры"
-        },
-        "description": {
-          "en": "Designing scalable system architecture and data pipelines.",
-          "ru": "Разработка масштабируемой системной архитектуры и конвейеров данных."
-        }
-      },
-      {
-        "id": "step-3",
-        "step": "03",
-        "title": {
-          "en": "Agile Development",
-          "ru": "Agile-разработка"
-        },
-        "description": {
-          "en": "Iterative development with continuous integration and testing.",
-          "ru": "Итеративная разработка с непрерывной интеграцией и тестированием."
-        }
-      },
-      {
-        "id": "step-4",
-        "step": "04",
-        "title": {
-          "en": "Deployment & Support",
-          "ru": "Развертывание и поддержка"
-        },
-        "description": {
-          "en": "Production deployment and long-term system maintenance.",
-          "ru": "Вывод в продакшн и долгосрочное обслуживание системы."
-        }
-      }
-    ]
-  },
-  "reviews": {
-    "id": "reviews",
-    "title": {
-      "en": "<strong>Reviews</strong>",
-      "ru": "<strong>Отзывы</strong>"
-    },
-    "description": [
-      {
-        "en": "Every system built by DigitalNest is engineered for stability and exceptional performance.",
-        "ru": "Каждая система, созданная DigitalNest, спроектирована для обеспечения стабильности и исключительной производительности."
-      }
-    ],
-    "content": [
-      {
-        "id": "review-1",
-        "name": "Alex R.",
-        "position": {
-          "en": "CTO",
-          "ru": "Технический директор"
-        },
-        "date": {
-          "en": "12 February 2026",
-          "ru": "12 февраля 2026"
-        },
-        "avatar": "/img/reviews/1.jpg",
-        "text": [
-          {
-            "en": "DigitalNest delivered a highly scalable infrastructure solution that significantly improved our platform stability.",
-            "ru": "DigitalNest предоставили высокомасштабируемое инфраструктурное решение, которое значительно повысило стабильность нашей платформы."
-          }
-        ]
-      },
-      {
-        "id": "review-2",
-        "name": "Sarah J.",
-        "position": {
-          "en": "Product Owner",
-          "ru": "Владелец продукта"
-        },
-        "date": {
-          "en": "1 February 2026",
-          "ru": "1 февраля 2026"
-        },
-        "avatar": "/img/reviews/2.jpg",
-        "text": [
-          {
-            "en": "Their engineering team transformed our architecture and dramatically improved performance.",
-            "ru": "Их инженерная команда полностью преобразила нашу архитектуру и резко повысила производительность."
-          }
-        ]
-      },
-      {
-        "id": "review-3",
-        "name": "Mihesel V.",
-        "position": {
-          "en": "Founder",
-          "ru": "Основатель"
-        },
-        "date": {
-          "en": "25 February 2026",
-          "ru": "25 февраля 2026"
-        },
-        "avatar": "/img/reviews/3.jpg",
-        "text": [
-          {
-            "en": "Professional team with strong expertise in cloud infrastructure and enterprise solutions.",
-            "ru": "Профессиональная команда с глубокой экспертизой в области облачной инфраструктуры и корпоративных решений."
-          }
-        ]
-      }
-    ]
-  },
-  "contacts": {
-    "id": "contacts-main",
-    "title": {
-      "en": "<strong>Contacts</strong>",
-      "ru": "<strong>Контакты</strong>"
-    },
-    "titleForm": {
-      "en": "Start a conversation about your project and get a free technical infrastructure audit.",
-      "ru": "Начните обсуждение вашего проекта и получите бесплатный аудит технической инфраструктуры."
-    },
-    "description": [
-      {
-        "en": "Let’s build your next digital breakthrough together! We provide remote engineering and on-site consulting across the EU, UK, and North America.",
-        "ru": "Давайте создадим ваш следующий цифровой прорыв вместе! Мы предлагаем удаленную разработку и выездной консалтинг в ЕС, Великобритании и Северной Америке."
-      },
-      {
-        "en": "*Global availability – our distributed team operates across multiple time zones to support you.",
-        "ru": "*Глобальная доступность — наша распределенная команда работает в нескольких часовых поясах, чтобы поддержать вас."
-      }
-    ],
-    "phone": "+12345678",
-    "email": "dev@digitalnest.tech",
-    "social": [
+			"id": "1498",
+			"dateSend": "2026-04-09T11:01:42.349Z",
+			"dateSendSt": 1775732502349,
+			"selectField": "",
+			"fullName": "Full Name Initial",
+			"companyPhone": "фыв",
+			"email": "",
+			"textarea": "",
+			"checkboxes": false
+		},
 		{
-      "type": "instagram",
-      "link": "https://wts.com/company/digital123",
-      "icon": "/img/_style/_svg/_social/inst.svg"
-    },
-	 {
-      "type": "wts",
-      "link": "https://wts.com/company/digital123",
-      "icon": "img/_style/_svg/_social/wts.svg"
-    }
-	 ]
-  },
-  "requests": [
-    {
-      "id": "e56d",
-      "dateSend": "2026-04-09T11:01:32.013Z",
-      "dateSendSt": 1775732492013,
-      "selectField": "",
-      "fullName": "Full Name Initial",
-      "companyPhone": "фыв",
-      "email": "",
-      "textarea": "",
-      "checkboxes": false
-    },
-    {
-      "id": "5700",
-      "dateSend": "2026-04-09T11:01:39.102Z",
-      "dateSendSt": 1775732499102,
-      "selectField": "",
-      "fullName": "Full Name Initial",
-      "companyPhone": "фыв",
-      "email": "",
-      "textarea": "",
-      "checkboxes": false
-    },
-    {
-      "id": "1498",
-      "dateSend": "2026-04-09T11:01:42.349Z",
-      "dateSendSt": 1775732502349,
-      "selectField": "",
-      "fullName": "Full Name Initial",
-      "companyPhone": "фыв",
-      "email": "",
-      "textarea": "",
-      "checkboxes": false
-    },
-    {
-      "id": "ad5f",
-      "dateSend": "2026-04-09T11:02:05.899Z",
-      "dateSendSt": 1775732525899,
-      "selectField": "",
-      "fullName": "Full Name Initial",
-      "companyPhone": "фыв",
-      "email": "",
-      "textarea": "",
-      "checkboxes": false
-    },
-    {
-      "id": "d1dc",
-      "dateSend": "2026-04-09T11:02:35.223Z",
-      "dateSendSt": 1775732555223,
-      "selectField": "",
-      "fullName": "Full Name Initial",
-      "companyPhone": "фывфыв",
-      "email": "",
-      "textarea": "",
-      "checkboxes": false
-    },
-    {
-      "id": "ba65",
-      "dateSend": "2026-05-20T20:09:47.863Z",
-      "dateSendSt": 1779307787863,
-      "selectField": "audit",
-      "fullName": "Eaton Alford",
-      "companyPhone": "Dillard and Conway Associates",
-      "email": "test@gmail.com",
-      "textarea": "Vitae magna nulla in",
-      "checkboxes": [
-        "Checkbox 1"
-      ]
-    }
-  ],
-  "$schema": "./node_modules/json-server/schema.json"
+			"id": "ad5f",
+			"dateSend": "2026-04-09T11:02:05.899Z",
+			"dateSendSt": 1775732525899,
+			"selectField": "",
+			"fullName": "Full Name Initial",
+			"companyPhone": "фыв",
+			"email": "",
+			"textarea": "",
+			"checkboxes": false
+		},
+		{
+			"id": "d1dc",
+			"dateSend": "2026-04-09T11:02:35.223Z",
+			"dateSendSt": 1775732555223,
+			"selectField": "",
+			"fullName": "Full Name Initial",
+			"companyPhone": "фывфыв",
+			"email": "",
+			"textarea": "",
+			"checkboxes": false
+		},
+		{
+			"id": "ba65",
+			"dateSend": "2026-05-20T20:09:47.863Z",
+			"dateSendSt": 1779307787863,
+			"selectField": "audit",
+			"fullName": "Eaton Alford",
+			"companyPhone": "Dillard and Conway Associates",
+			"email": "test@gmail.com",
+			"textarea": "Vitae magna nulla in",
+			"checkboxes": ["Checkbox 1"]
+		}
+	]
 }
