@@ -540,6 +540,7 @@
 		],
 		"content": [
 			{
+				"type": "reviews",
 				"id": "review-1",
 				"name": "Alex R.",
 				"position": {
@@ -551,7 +552,7 @@
 					"ru": "12 февраля 2026"
 				},
 				"avatar": "/img/reviews/1.jpg",
-				"text": [
+				"textReview": [
 					{
 						"en": "DigitalNest delivered a highly scalable infrastructure solution that significantly improved our platform stability.",
 						"ru": "DigitalNest предоставили высокомасштабируемое инфраструктурное решение, которое значительно повысило стабильность нашей платформы."
@@ -559,6 +560,7 @@
 				]
 			},
 			{
+				"type": "reviews",
 				"id": "review-2",
 				"name": "Sarah J.",
 				"position": {
@@ -570,7 +572,7 @@
 					"ru": "1 февраля 2026"
 				},
 				"avatar": "/img/reviews/2.jpg",
-				"text": [
+				"textReview": [
 					{
 						"en": "Their engineering team transformed our architecture and dramatically improved performance.",
 						"ru": "Их инженерная команда полностью преобразила нашу архитектуру и резко повысила производительность."
@@ -578,6 +580,7 @@
 				]
 			},
 			{
+				"type": "reviews",
 				"id": "review-3",
 				"name": "Mihesel V.",
 				"position": {
@@ -589,7 +592,7 @@
 					"ru": "25 февраля 2026"
 				},
 				"avatar": "/img/reviews/3.jpg",
-				"text": [
+				"textReview": [
 					{
 						"en": "Professional team with strong expertise in cloud infrastructure and enterprise solutions.",
 						"ru": "Профессиональная команда с глубокой экспертизой в области облачной инфраструктуры и корпоративных решений."

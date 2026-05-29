@@ -1,7 +1,7 @@
 import { useSectionData } from '../../hooks/useSectionData';
 import TitleHtml from '../../utils/TitleHtml';
 import useLanguageContext from '../../context/useLanguageContext';
-import getLang from '../../utils/getLang.js';
+import getLang from '../../utils/getLang';
 
 // import Swiper core and required modules
 import { Navigation, Pagination, Scrollbar, A11y, Mousewheel } from 'swiper/modules';
@@ -30,7 +30,9 @@ export default function Reviews() {
 	return (
 		<section className="sect-reviews">
 			<div className="title-sect center">
-				<TitleHtml className="h2-title">{getLang(title, currentLang)}</TitleHtml>
+				<TitleHtml titleTag="h2" titleClass="h2-title">
+					{getLang(title, currentLang)}
+				</TitleHtml>
 
 				{description && (
 					<div className="title-descr">
@@ -61,34 +63,45 @@ export default function Reviews() {
 						forceToAxis: true,
 						sensitivity: 1,
 					}}>
-					{content.map((review, i) => {
-						return (
-							<SwiperSlide>
-								<div className="review-slide-itm">
-									<div className="review-slide-inner">
-										<div className="review-slide-top-line">
-											<div className="review-slide-top-photo">
-												<img src="/img/inner/18.png" alt="Alex R." />
-											</div>
-											<div className="review-slide-top-txt">
-												<div className="review-slide-author">
-													{review.name} <br />
-													{getLang(review.position, currentLang)}
+					{content?.map((review, i) => {
+						switch (review.type) {
+							case 'reviews':
+								return (
+									<SwiperSlide>
+										<div className="review-slide-itm">
+											<div className="review-slide-inner">
+												<div className="review-slide-top-line">
+													<div className="review-slide-top-photo">
+														<img
+															src="/img/inner/18.png"
+															alt="Alex R."
+														/>
+													</div>
+													<div className="review-slide-top-txt">
+														<div className="review-slide-author">
+															{review.name} <br />
+															{getLang(review.position, currentLang)}
+														</div>
+														<div className="review-slide-date">
+															{getLang(review.date, currentLang)}
+														</div>
+													</div>
 												</div>
-												<div className="review-slide-date">
-													{getLang(review.date, currentLang)}
+												<div className="review-slide-txt">
+													{review.textReview.map((p, i) => {
+														return (
+															<p key={i}>{getLang(p, currentLang)}</p>
+														);
+													})}
 												</div>
 											</div>
 										</div>
-										<div className="review-slide-txt">
-											{review.text.map((p, i) => {
-												return <p key={i}>{getLang(p, currentLang)}</p>;
-											})}
-										</div>
-									</div>
-								</div>
-							</SwiperSlide>
-						);
+									</SwiperSlide>
+								);
+
+							default:
+								return null;
+						}
 					})}
 				</Swiper>
 

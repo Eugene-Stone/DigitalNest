@@ -37,8 +37,17 @@ export type FeatureContent = {
 	title: TranslateField;
 	description: TranslateField;
 };
+export type ReviewContent = {
+	type: 'reviews';
+	id: string;
+	name: string;
+	avatar: string;
+	position: TranslateField;
+	date: TranslateField;
+	textReview: TranslateField[];
+};
 
-export type ContentType = TextContent | ListContent | ImageContent | FeatureContent;
+export type ContentType = TextContent | ListContent | ImageContent | FeatureContent | ReviewContent;
 
 type IconSocialType = {
 	type: string;
