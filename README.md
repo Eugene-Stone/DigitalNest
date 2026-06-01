@@ -1,16 +1,71 @@
-# React + Vite
+# DigitalNest - Corporate Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Профессиональный корпоративный веб-сайт (landing page) для цифрового агентства, построенный на современном стеке React, TypeScript и Vite.
 
-Currently, two official plugins are available:
+## 🚀 Особенности
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **React 19** - последняя версия с новыми хуками и оптимизациями
+- **TypeScript** - полная типизация для надежности кода
+- **React Router v7** - удобная навигация между страницами
+- **Многоязычность** - поддержка английского и русского языков с Context API
+- **JSON Server** - фейковый REST API для разработки
+- **SCSS/Sass** - препроцессор для продвинутых стилей
+- **Swiper** - карусели и слайдеры
+- **React Hook Form** - управление формами
+- **Lightbox** - галерея изображений
+- **ESLint** - проверка кода
+- **localStorage** - кеширование контента
 
-## React Compiler
+## 📁 Структура проекта
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```
+src/
+├── pages/           # Страницы (Home, Privacy, 404)
+├── components/      # UI компоненты (Header, Footer, Form, и т.д.)
+├── sections/        # Секции страниц (Hero, About, Services, Features, Projects, Workflow, Reviews, Contacts)
+├── context/         # Context API (многоязычность)
+├── hooks/           # Кастомные React хуки
+├── api/             # API запросы (fetch обертка)
+├── utils/           # Утилит-функции
+├── assets/          # Изображения и медиа
+├── styles/          # Глобальные стили SCSS
+├── types.ts         # TypeScript типы
+├── App.tsx          # Главный компонент
+├── Layout.tsx       # Основной лейаут
+├── router.tsx       # Конфиг маршрутов
+└── main.tsx         # Entry point
+```
 
-## Expanding the ESLint configuration
+## 🛠 Технологический стек
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Технология | Версия | Назначение |
+|-----------|--------|-----------|
+| React | 19.2.4 | Фреймворк |
+| TypeScript | 6.0.3 | Типизация |
+| Vite | 8.0.0 | Сборщик |
+| React Router | 7.13.1 | Маршрутизация |
+| Sass | 1.98.0 | Стили |
+| Swiper | 12.1.2 | Слайдеры |
+| React Hook Form | 7.71.2 | Формы |
+| JSON Server | 1.0.0-beta.13 | Mock API |
+
+
+## 🌍 Многоязычность
+
+Проект поддерживает два языка: **English** и **Русский**
+
+- Реализовано через **Context API** (`LanguageContext`)
+- Выбранный язык сохраняется в `localStorage`
+- Все контентные данные хранятся в двуязычном формате (`en`/`ru`)
+
+
+## ✅ Практики, используемые в проекте
+
+- ✔️ Типизированный TypeScript
+- ✔️ Правильная структура папок
+- ✔️ Context API для глобального состояния
+- ✔️ Кеширование данных в localStorage
+- ✔️ Обработка ошибок при загрузке данных
+- ✔️ SEO-friendly (lang атрибут, meta теги)
+- ✔️ Responsive дизайн (SCSS переменные)
+- ✔️ Clean Code принципы
