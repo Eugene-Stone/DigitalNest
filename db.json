@@ -205,6 +205,7 @@
 		],
 		"content": [
 			{
+				"type": "service",
 				"id": "service-1",
 				"title": {
 					"en": "Cloud Infrastructure",
@@ -215,9 +216,14 @@
 					"ru": "Проектирование и развертывание масштабируемых облачных архитектур и сред распределенных вычислений."
 				},
 				"image": "/img/inner/6.png",
+				"buttonCard": {
+					"en": "Explore stack",
+					"ru": "Изучите стек"
+				},
 				"highlight": true
 			},
 			{
+				"type": "service",
 				"id": "service-2",
 				"title": {
 					"en": "Tech Audit & Optimization",
@@ -230,6 +236,7 @@
 				"image": "/img/inner/7.png"
 			},
 			{
+				"type": "service",
 				"id": "service-3",
 				"title": {
 					"en": "Custom Web Engineering",
@@ -242,6 +249,7 @@
 				"image": "/img/inner/8.png"
 			},
 			{
+				"type": "service",
 				"id": "service-4",
 				"title": {
 					"en": "UI/UX Product Design",
@@ -254,6 +262,7 @@
 				"image": "/img/inner/9.png"
 			},
 			{
+				"type": "service",
 				"id": "service-5",
 				"title": {
 					"en": "Enterprise Support",
@@ -266,13 +275,9 @@
 				"image": "/img/inner/10.png"
 			}
 		],
-		"button": {
+		"buttonText": {
 			"en": "Get a quote",
 			"ru": "Получить предложение"
-		},
-		"buttonCard": {
-			"en": "Explore stack",
-			"ru": "Изучите стек"
 		}
 	},
 	"features": {

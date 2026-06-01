@@ -56,13 +56,24 @@ export type WorkflowContent = {
 	description: TranslateField;
 };
 
+export type ServiceContent = {
+	type: 'service';
+	id: string;
+	title: TranslateField;
+	description: TranslateField;
+	image: string;
+	buttonCard?: TranslateField;
+	highlight?: boolean;
+};
+
 export type ContentType =
 	| TextContent
 	| ListContent
 	| ImageContent
 	| FeatureContent
 	| ReviewContent
-	| WorkflowContent;
+	| WorkflowContent
+	| ServiceContent;
 
 type IconSocialType = {
 	type: string;

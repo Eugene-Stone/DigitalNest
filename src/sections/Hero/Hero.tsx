@@ -39,7 +39,11 @@ export default function Hero() {
 									<div className="col-lg-8 col-xl-6">
 										<div className="top-screen-txt-brief">
 											{description?.map((descrItem, index) => {
-												return <p>{getLang(descrItem, currentLang)}</p>;
+												return (
+													<p key={index}>
+														{getLang(descrItem, currentLang)}
+													</p>
+												);
 											})}
 										</div>
 									</div>
