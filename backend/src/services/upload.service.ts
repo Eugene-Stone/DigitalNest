@@ -1,10 +1,13 @@
+import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 import multer from 'multer';
 import { ApiError } from '../utils/apiError.js';
 
+const uploadsDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../uploads');
+
 const storage = multer.diskStorage({
 	destination: (_req, _file, cb) => {
-		cb(null, path.resolve('src/uploads'));
+		cb(null, uploadsDir);
 	},
 	filename: (_req, file, cb) => {
 		const extension = path.extname(file.originalname);

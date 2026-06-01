@@ -18,6 +18,7 @@ export default function LoginPage() {
 			const data = await apiRequest<{ accessToken: string }>('/api/auth/login', {
 				method: 'POST',
 				body: JSON.stringify({ email, password }),
+				skipAuthRefresh: true,
 			});
 			setAccessToken(data.accessToken);
 			navigate('/admin');
@@ -31,10 +32,14 @@ export default function LoginPage() {
 	return (
 		<div className="admin-login">
 			<form onSubmit={handleSubmit}>
-				<h1>Admin Login</h1>
+				<h2>Admin Login</h2>
 				<label>
 					Email
-					<input value={email} onChange={(event) => setEmail(event.target.value)} type="email" />
+					<input
+						value={email}
+						onChange={(event) => setEmail(event.target.value)}
+						type="email"
+					/>
 				</label>
 				<label>
 					Password

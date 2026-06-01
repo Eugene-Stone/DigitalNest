@@ -27,6 +27,8 @@ npm run dev
 Or run Vite and the API together from the project root:
 
 ```bash
+npm run mongo:up
+npm run backend:seed
 npm run start:api
 ```
 
@@ -35,6 +37,12 @@ Default admin:
 ```text
 admin@digitalnest.local
 admin12345
+```
+
+If login returns `Invalid credentials`, reset only the admin account without touching content:
+
+```bash
+npm run backend:admin:reset
 ```
 
 ## API Contract
