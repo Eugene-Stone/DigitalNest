@@ -4,27 +4,27 @@ import Counter from 'yet-another-react-lightbox/plugins/counter';
 import 'yet-another-react-lightbox/styles.css';
 import 'yet-another-react-lightbox/plugins/counter.css';
 
-import { request } from '../../api/request.js';
-import { useSectionData } from '../../hooks/useSectionData.jsx';
-import TitleHtml from '../../utils/TitleHtml.jsx';
+import { request } from '../../api/request';
+import { useSectionData } from '../../hooks/useSectionData';
+import TitleHtml from '../../utils/TitleHtml';
 import useLanguageContext from '../../context/useLanguageContext';
-import getLang from '../../utils/getLang.js';
+import getLang from '../../utils/getLang';
+import { ProjectContent } from '../../types';
 
 export default function Projects() {
 	const { section, loading, errorData } = useSectionData('/projects');
-	const [categoryList, setCategoryList] = useState([]);
+	const [categoryList, setCategoryList] = useState<ProjectContent[]>([]);
 	const [imagesLimit, setImagesLimit] = useState(5);
 	const [index, setIndex] = useState(-1);
 	const { currentLang } = useLanguageContext();
 	// {getLang(text, currentLang)}
 
 	const updateCategoryList = useEffectEvent(() => {
-		setCategoryList(section.content);
+		if (!section) return;
+		setCategoryList((section.content as ProjectContent[]) || []);
 	});
 
 	useEffect(() => {
-		if (!section) return;
-
 		updateCategoryList();
 	}, [section]);
 
@@ -38,14 +38,14 @@ export default function Projects() {
 
 	const { id, title, description, content } = section || {};
 	const galleryList = categoryList.find((categoryItem) => categoryItem.isActive);
-	// if (!galleryList) return null;
+
 	if (!galleryList) {
 		return <div>No active category</div>;
 	}
 
 	// console.log(galleryList);
 
-	async function toggleActiveCategory(categoryItem) {
+	async function toggleActiveCategory(categoryItem: ProjectContent) {
 		console.log(categoryItem);
 
 		const endpoint = '/projects';
@@ -81,8 +81,7 @@ export default function Projects() {
 	}
 
 	function showAllImages() {
-		setImagesLimit(galleryList?.images.length);
-		console.log(galleryList?.images.length);
+		galleryList && setImagesLimit(galleryList.images.length);
 	}
 
 	const slides =
@@ -94,10 +93,16 @@ export default function Projects() {
 		<section id={id} className="sect-gallery">
 			<div className="container">
 				<div className="title-sect center">
-					<TitleHtml className="h2-title">{getLang(title, currentLang)}</TitleHtml>
-					<div className="title-descr">
-						<p>{getLang(description, currentLang)}</p>
-					</div>
+					<TitleHtml titleTag="h2" titleClass="h2-title">
+						{getLang(title, currentLang)}
+					</TitleHtml>
+					{description && (
+						<div className="title-descr">
+							{description.map((p, i) => {
+								return <p key={i}>{getLang(p, currentLang)}</p>;
+							})}
+						</div>
+					)}
 				</div>
 				<div className="gallery-box">
 					<div className="gallery-filters">
@@ -153,7 +158,7 @@ export default function Projects() {
 						<div className="btn-more-wrap center">
 							<span className="btn-link" onClick={showAllImages}>
 								<span>
-									{currentLang === 'Ru' ? 'Все проекты' : 'View all projects'}
+									{currentLang === 'ru' ? 'Все проекты' : 'View all projects'}
 								</span>
 								<i className="btn-ic">
 									<svg

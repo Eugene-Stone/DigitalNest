@@ -66,6 +66,14 @@ export type ServiceContent = {
 	highlight?: boolean;
 };
 
+export type ProjectContent = {
+	type: 'project';
+	id: string;
+	category: TranslateField;
+	images: string[];
+	isActive: boolean;
+};
+
 export type ContentType =
 	| TextContent
 	| ListContent
@@ -73,7 +81,8 @@ export type ContentType =
 	| FeatureContent
 	| ReviewContent
 	| WorkflowContent
-	| ServiceContent;
+	| ServiceContent
+	| ProjectContent;
 
 type IconSocialType = {
 	type: string;

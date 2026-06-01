@@ -367,12 +367,15 @@
 			"en": "<strong>Showcase</strong>",
 			"ru": "<strong>Проекты</strong>"
 		},
-		"description": {
-			"en": "Explore our recent digital deployments and architecture solutions.",
-			"ru": "Ознакомьтесь с нашими недавними цифровыми внедрениями и архитектурными решениями."
-		},
+		"description": [
+			{
+				"en": "Explore our recent digital deployments and architecture solutions.",
+				"ru": "Ознакомьтесь с нашими недавними цифровыми внедрениями и архитектурными решениями."
+			}
+		],
 		"content": [
 			{
+				"type": "project",
 				"id": "project-1",
 				"category": {
 					"en": "Cloud Systems",
@@ -395,6 +398,7 @@
 				"isActive": false
 			},
 			{
+				"type": "project",
 				"id": "project-2",
 				"category": {
 					"en": "Data Analytics",
@@ -412,6 +416,7 @@
 				"isActive": false
 			},
 			{
+				"type": "project",
 				"id": "project-3",
 				"category": {
 					"en": "Mobile Apps",
@@ -427,6 +432,7 @@
 				"isActive": false
 			},
 			{
+				"type": "project",
 				"id": "project-4",
 				"category": {
 					"en": "Web Interface",
@@ -443,6 +449,7 @@
 				"isActive": false
 			},
 			{
+				"type": "project",
 				"id": "project-5",
 				"category": {
 					"en": "UI/UX",
