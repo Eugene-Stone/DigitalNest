@@ -45,7 +45,7 @@ export default function Header() {
 						<div className="head-cell">
 							<div className="logo-wrap">
 								<NavLink to={'/'} className="logo" onClick={scrollToTop}>
-									<img src="/logo.svg" alt="logo" />
+									<img src={`${import.meta.env.BASE_URL}/logo.svg`} alt="logo" />
 								</NavLink>
 							</div>
 						</div>

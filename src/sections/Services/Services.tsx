@@ -54,7 +54,7 @@ export default function Services() {
 														<div className="col-lg-6 service-image-cell">
 															<div className="service-image">
 																<img
-																	src={serv.image}
+																	src={`${import.meta.env.BASE_URL}/${serv.image}`}
 																	alt={getLang(
 																		serv.title,
 																		currentLang,
@@ -124,7 +124,7 @@ export default function Services() {
 													<div className="col-6 service-image-cell">
 														<div className="service-image">
 															<img
-																src={serv.image}
+																src={`${import.meta.env.BASE_URL}/${serv.image}`}
 																alt={getLang(
 																	serv.title,
 																	currentLang,

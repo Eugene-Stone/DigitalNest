@@ -135,7 +135,7 @@ export default function Projects() {
 								<div key={i} className={classNameItem}>
 									<span className="gallery-image">
 										<img
-											src={image}
+											src={`${import.meta.env.BASE_URL}/${image}`}
 											alt="Image"
 											className="gallery-image"
 											onClick={() => setIndex(i)}

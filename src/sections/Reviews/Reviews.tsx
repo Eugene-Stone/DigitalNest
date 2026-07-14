@@ -73,7 +73,7 @@ export default function Reviews() {
 												<div className="review-slide-top-line">
 													<div className="review-slide-top-photo">
 														<img
-															src="/img/inner/18.png"
+															src={`${import.meta.env.BASE_URL}/img/inner/18.png`}
 															alt="Alex R."
 														/>
 													</div>

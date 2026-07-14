@@ -67,14 +67,20 @@ export default function About() {
 						<div className="col-md-6">
 							{images && (
 								<div className="about-image">
-									<img src={images[0]} alt="image" />
+									<img
+										src={`${import.meta.env.BASE_URL}/${images[0]}`}
+										alt="image"
+									/>
 								</div>
 							)}
 						</div>
 						<div className="col-6 col-md-3 align-self-end">
 							{images && (
 								<div className="about-image">
-									<img src={images[1]} alt="image" />
+									<img
+										src={`${import.meta.env.BASE_URL}/${images[1]}`}
+										alt="image"
+									/>
 								</div>
 							)}
 						</div>

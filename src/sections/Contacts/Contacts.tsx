@@ -73,7 +73,7 @@ export default function Contacts() {
 											target="_blank"
 											rel="noreferrer"
 											style={{
-												backgroundImage: `url(${socialItem.icon})`,
+												backgroundImage: `url(${import.meta.env.BASE_URL}/${socialItem.icon})`,
 											}}
 										/>
 									))}

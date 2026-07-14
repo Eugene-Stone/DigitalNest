@@ -4,15 +4,18 @@ import PageNotFound from './pages/PageNotFound';
 import Privacy from './pages/Privacy';
 import Home from './pages/Home';
 
-export const router = createBrowserRouter([
-	{
-		path: '/',
-		element: <Layout />,
-		children: [
-			{ path: '*', element: <PageNotFound /> },
-			{ index: true, element: <Home /> },
-			{ path: '/privacy', element: <Privacy /> },
-			// { path: '/pages/page/:id', element: <Page /> },
-		],
-	},
-]);
+export const router = createBrowserRouter(
+	[
+		{
+			path: '/',
+			element: <Layout />,
+			children: [
+				{ path: '*', element: <PageNotFound /> },
+				{ index: true, element: <Home /> },
+				{ path: '/privacy', element: <Privacy /> },
+				// { path: '/pages/page/:id', element: <Page /> },
+			],
+		},
+	],
+	{ basename: '/DigitalNest' },
+);

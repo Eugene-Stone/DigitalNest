@@ -94,7 +94,7 @@ export default function Privacy() {
 										return (
 											<p key={index}>
 												<img
-													src={block.src}
+													src={`${import.meta.env.BASE_URL}/${block.src}`}
 													alt={getLang(block.alt, currentLang)}
 												/>
 											</p>

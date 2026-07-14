@@ -37,7 +37,10 @@ export default function Workflow() {
 					<div className="row justify-content-between">
 						<div className="how-we-work-image-cell col-md-6">
 							<div className="how-we-work-image">
-								<img src="/img/inner/17.png" alt="Development Workflow" />
+								<img
+									src={`${import.meta.env.BASE_URL}/img/inner/17.png`}
+									alt="Development Workflow"
+								/>
 							</div>
 						</div>
 						<div className="how-we-work-txt-cell col-md-5 col-lg-6">

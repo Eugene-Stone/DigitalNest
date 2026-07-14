@@ -60,7 +60,12 @@ export default function Hero() {
 					</div>
 				</div>
 				<div className="top-screen-image">
-					<img src={backgroundImage} alt="image" width={1000} height={562} />
+					<img
+						src={`${import.meta.env.BASE_URL}/${backgroundImage}`}
+						alt="image"
+						width={1000}
+						height={562}
+					/>
 				</div>
 			</div>
 		</div>
