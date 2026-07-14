@@ -61,9 +61,11 @@ export default function Home() {
 	useEffect(() => {
 		async function fetchData() {
 			try {
-				const data: PageDataType = await request('/pages/home', {
+				const response: any = await request('/pages/home', {
 					method: 'GET',
 				});
+
+				const data = response[0];
 
 				setPage(data);
 				localStorage.setItem(storageKey, JSON.stringify(data));
@@ -84,10 +86,11 @@ export default function Home() {
 	if (!page) {
 		return <div>Loading HomePage...</div>;
 	}
+	console.log(page);
 
 	return (
 		<>
-			{page.sections.map((sectionName: SectionNameType) => {
+			{page?.sections?.map((sectionName: SectionNameType) => {
 				const SectionComponent = sectionComponents[sectionName];
 
 				if (!SectionComponent) return null;

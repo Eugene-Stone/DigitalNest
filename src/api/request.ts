@@ -1,4 +1,5 @@
-const BASE_URL = 'http://localhost:3001';
+// const BASE_URL = 'http://localhost:3001';
+const BASE_URL = 'https://digitalnest.eugenestone-work.workers.dev';
 
 export async function request<T>(endpoint: string, options: RequestInit = {}): Promise<T> {
 	const response = await fetch(`${BASE_URL}${endpoint}`, {

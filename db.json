@@ -395,7 +395,7 @@
 					"/img/inner/12.png",
 					"/img/inner/11.png"
 				],
-				"isActive": false
+				"isActive": true
 			},
 			{
 				"type": "project",
@@ -465,7 +465,7 @@
 					"/img/inner/14.png",
 					"/img/inner/15.png"
 				],
-				"isActive": true
+				"isActive": false
 			}
 		]
 	},

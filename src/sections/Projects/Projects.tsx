@@ -86,7 +86,7 @@ export default function Projects() {
 
 	const slides =
 		galleryList?.images.slice(0, imagesLimit).map((img, i) => {
-			return { src: img };
+			return { src: `${import.meta.env.BASE_URL}/${img}` };
 		}) || [];
 
 	return (
